@@ -247,7 +247,7 @@ def render_page(output_path):
         f'<a href="{GITHUB_BLOB}README.md#quick-start"><i data-lucide="terminal" aria-hidden="true"></i>How to use</a>',
         f'<a href="{GITHUB_BLOB}README.md#usage-in-the-wild"><i data-lucide="globe" aria-hidden="true"></i>Examples in the wild</a>',
         f'<a href="{GITHUB_BLOB}CONTRIBUTING.md#pr-guidelines"><i data-lucide="circle-check" aria-hidden="true"></i>Best practices</a>',
-        '<a href="https://github.com/shauryagangrade/awesome-ai-prompts"><i data-lucide="git-fork" aria-hidden="true"></i>GitHub</a>',
+        '<a href="https://github.com/shauryagangrade/awesome-ai-prompts"><i data-lucide="star" aria-hidden="true"></i>Star on GitHub</a>',
     ])
 
     page = f"""<!DOCTYPE html>

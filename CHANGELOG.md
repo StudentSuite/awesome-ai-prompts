@@ -13,6 +13,9 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- `scripts/build-all.py` - catalog header CTA is now "Star on GitHub" with a star icon, replacing the fork-icon "GitHub" link
+- README.md - added a "Staying in sync" section framing the star as release notification, with clone and pull commands
+
 ### Removed
 
 ### Fixed

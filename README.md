@@ -64,6 +64,19 @@ Rules: Never modify unrelated code. Verify before claiming. Small commits.
 The agent handles the rest: reading code, planning, testing, and holding itself
 accountable at every step.
 
+## Staying in sync
+
+Star this repo to get notified when new prompts land. Each addition goes under
+[Unreleased](CHANGELOG.md) in the changelog and ships in a tagged release, so a
+star is how you find out the list grew rather than a tip.
+
+```bash
+git clone https://github.com/shauryagangrade/awesome-ai-prompts.git
+cd awesome-ai-prompts && git pull
+```
+
+If you already have the GitHub CLI authenticated, `gh repo clone shauryagangrade/awesome-ai-prompts` does the same in one step.
+
 ## Contributing
 
 Contributions welcome. This catalog stays small and disciplined on purpose, so
