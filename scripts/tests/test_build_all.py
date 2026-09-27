@@ -63,7 +63,10 @@ class PageStructureTest(unittest.TestCase):
             "CONTRIBUTING.md#pr-guidelines",
         ):
             self.assertIn(expected, self.html)
-        self.assertIn('data-lucide="git-fork"', self.html)
+        # The repo header link is a star CTA, not a fork action.
+        self.assertIn('data-lucide="star"', self.html)
+        self.assertIn("Star on GitHub", self.html)
+        self.assertNotIn('data-lucide="git-fork"', self.html)
 
     def test_expand_collapse_controls_present(self):
         self.assertIn('id="expandAll"', self.html)
