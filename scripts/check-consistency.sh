@@ -6,6 +6,8 @@
 #      (needs git history; set BASE_REF, defaults to origin/main)
 #   3. category folders and README sections stay in sync (both directions)
 #   4. README Contents counts and per-section prompt links match the files
+#   5. each category README.md lists exactly that folder's prompts and links
+#      back to the matching main-README section
 set -uo pipefail
 
 repo="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -79,9 +81,11 @@ else
 fi
 
 # 3. Category folders and README sections exist in both directions.
+# scripts/, docs/, and assets/ hold tooling, collateral, and design sources
+# rather than prompts, so they are not categories and need no README section.
 for d in */; do
   d="${d%/}"
-  case "$d" in scripts | docs) continue ;; esac
+  case "$d" in scripts | docs | assets) continue ;; esac
   if git check-ignore -q -- "$d/"; then
     # Skip local-only, gitignored directories (e.g. design assets).
     continue
@@ -155,8 +159,49 @@ while IFS= read -r rel; do
   fi
 done < <(find . -mindepth 2 -name '*-prompt.md' -not -path './.git/*' | sed 's#^\./##' | sort)
 
+# 6. Each category README lists exactly that folder's prompts, and links back
+# to the matching main-README section. A category README that silently drifts
+# from the folder is worse than none, so the listing is checked, not the prose.
+for d in $CATEGORIES; do
+  meta="$(meta_for "$d")"
+  [[ -n "$meta" ]] || continue
+  [[ -d "$d" ]] || continue
+  cat_readme="$d/README.md"
+  if [[ ! -f "$cat_readme" ]]; then
+    echo "FAIL category folder without a README.md: $d/README.md"
+    fail=1
+    continue
+  fi
+
+  anchor="$(anchor_of "$meta")"
+  if ! grep -qF "(../README.md#$anchor)" "$cat_readme"; then
+    echo "FAIL $cat_readme does not link back to ../README.md#$anchor"
+    fail=1
+  fi
+
+  listed="$(grep -oE '\]\([a-z0-9-]+-prompt\.md\)' "$cat_readme" | wc -l | tr -d ' ')"
+  on_disk="$(file_count "$d")"
+  if [[ "$listed" != "$on_disk" ]]; then
+    echo "FAIL $cat_readme lists $listed prompt(s) but $d/ contains $on_disk"
+    fail=1
+  fi
+  # Every prompt in the folder must be named, and nothing may point outside it.
+  while IFS= read -r f; do
+    if ! grep -qF "]($(basename "$f"))" "$cat_readme"; then
+      echo "FAIL $cat_readme does not list $f"
+      fail=1
+    fi
+  done < <(find "$d" -maxdepth 1 -name '*-prompt.md' | sort)
+  while IFS= read -r link; do
+    if [[ ! -e "$d/$link" ]]; then
+      echo "FAIL $cat_readme links to a missing file: $link"
+      fail=1
+    fi
+  done < <(grep -oE '\]\([a-z0-9-]+-prompt\.md\)' "$cat_readme" | sed -E 's/^\]\(//; s/\)$//' | sort -u)
+done
+
 if [[ "$fail" -ne 0 ]]; then
   echo "check-consistency.sh: FAILED"
   exit 1
 fi
-echo "check-consistency.sh: OK ($(total_count) prompts, all listed, counted, and changelogged)"
+echo "check-consistency.sh: OK ($(total_count) prompts, all listed, counted, and changelogged; category READMEs in sync)"

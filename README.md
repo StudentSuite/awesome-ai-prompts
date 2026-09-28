@@ -165,8 +165,9 @@ If you would rather do it by hand, the steps below are the same workflow.
 5. **Sync the index** - Add a one-line entry in the matching README category
    section, format `<name>.md` link followed by a hyphen and a short
    description ending in a period. Bump that category's count in the
-   [Contents](#contents) list. If the prompt takes on a big, risky task, mark
-   its entry with the violet [spec] badge
+   [Contents](#contents) list. Add the same one-line entry to that folder's
+   own `README.md` (every category folder has one). If the prompt takes on a
+   big, risky task, mark its entry with the violet [spec] badge
    (`<img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">`) and bump the
    spec-count badge on the category's Contents line.
 6. **Add a changelog entry** - Under `## [Unreleased]` in

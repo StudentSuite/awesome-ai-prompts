@@ -11,8 +11,27 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- per-category `README.md` in all 13 category folders: what belongs in the
+  category, the prompt list, a backlink to the matching main-README section,
+  and a pointer to the one-page catalog
+- `scripts/check-links.sh` - checks relative links and `<img src>` paths in
+  every category README (resolved relative to each file) and requires a
+  `README.md` in every folder that holds prompts
+- `scripts/check-consistency.sh` - requires each category README to list
+  exactly that folder's prompts and to link back to the correct main-README
+  anchor, so a category README cannot drift from its folder
+- `assets/social-preview.svg` and `assets/social-preview.png` - 1280x640
+  repository social preview (repo name, tagline, category grid with real
+  counts), with the SVG committed as the editable source; uploading it in
+  Settings is still a manual step
+
 ### Changed
 
+- `scripts/check-consistency.sh` - `assets/` is now excluded from the
+  "every folder needs a README section" rule, since it holds design sources
+  rather than prompts
+- `CONTRIBUTING.md` / `README.md` - the "add a prompt" steps now say to add
+  the one-line entry to the category `README.md` as well as the main README
 - `scripts/build-all.py` - catalog header CTA is now "Star on GitHub" with a star icon, replacing the fork-icon "GitHub" link
 - README.md - added a "Staying in sync" section framing the star as release notification, with clone and pull commands
 
