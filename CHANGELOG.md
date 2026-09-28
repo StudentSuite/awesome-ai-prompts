@@ -24,6 +24,9 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   repository social preview (repo name, tagline, category grid with real
   counts), with the SVG committed as the editable source; uploading it in
   Settings is still a manual step
+- `.github/workflows/ci.yml` - the `citation` job now explains how to fix a
+  failure instead of only printing cffconvert's error line; the listed causes
+  were each checked against cffconvert 2.0.0 rather than assumed
 
 ### Changed
 

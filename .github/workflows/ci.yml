@@ -177,7 +177,30 @@ jobs:
         with:
           pypi: cffconvert==2.0.0
       - name: Validate CITATION.cff
-        run: cffconvert --validate --infile CITATION.cff
+        run: |
+          if cffconvert --validate --infile CITATION.cff; then
+            exit 0
+          fi
+          cat >&2 <<'EOF'
+          CITATION.cff is not valid CFF metadata.
+
+          cffconvert 2.0.0 checks this against the CFF 1.2.0 schema. The usual
+          causes, verified against cffconvert 2.0.0:
+
+          - cff-version is not exactly "1.2.0". Any other value, including
+            "1.1.2", is rejected.
+          - a required field is missing: cff-version, message, title, and
+            authors are all required.
+          - a key is misspelled. Unknown keys are rejected outright, so
+            "titel" fails rather than being ignored.
+          - a value has the wrong shape. doi must look like "10.1234/abc";
+            references entries need their own authors and title; contact must
+            be a list.
+
+          Schema: https://citation-file-language.github.io/specification
+          Check locally: pipx run cffconvert --validate --infile CITATION.cff
+          EOF
+          exit 1
 
   ext-links:
     name: New external links (PR only)
