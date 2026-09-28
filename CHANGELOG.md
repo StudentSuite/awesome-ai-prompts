@@ -35,8 +35,15 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   white cards with `#ddd` borders, and the `#2f4f7f` / `#4a6fa5` blue accents,
   replacing a blue-on-navy treatment that matched nothing else in the repo. The
   dark monospace prompt block is gone, and the palette is now a closed set of
-  eight catalog colors; `#888` and `#777` are not used because they fall under
+  seven catalog colors; `#888` and `#777` are not used because they fall under
   4.5:1 contrast on that background
+- `assets/social-preview.*` - the card now carries no numbers: no per-category
+  counts in the pills, no category-count label, no prompt total in the footer.
+  A figure on a social card is a snapshot that goes stale on the next pull
+  request, so the names are all that remain. Adding a prompt no longer requires
+  re-rendering or re-uploading the card; adding or renaming a category still
+  does, and the generator checks the names against the `README.md` headings and
+  the tracked category folders so a drift is caught at build time
 - `scripts/check-consistency.sh` - `assets/` is now excluded from the
   "every folder needs a README section" rule, since it holds design sources
   rather than prompts

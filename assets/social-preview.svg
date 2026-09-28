@@ -1,50 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-label="awesome-ai-prompts: 101 copy-paste AI coding prompts across 13 categories">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-label="awesome-ai-prompts: copy-paste AI coding prompts that verify, don&apos;t guess, across 13 categories: Contributing to this repo, Core coding, System design, Git &amp; GitHub, Code review &amp; quality, Testing &amp; quality, Docs &amp; delivery, Security &amp; performance, DevOps &amp; deploy, Career &amp; learning, Frontend &amp; UI, Data &amp; AI, Mobile development.">
   <rect width="1280" height="640" fill="#f7f7f5"/>
   <rect x="72" y="70" width="26" height="3" fill="#2f4f7f"/>
   <text x="110" y="78" fill="#2f4f7f" font-size="15" font-weight="600" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="1.6">VERIFICATION-FIRST PROMPTS</text>
-  <text x="72" y="208" fill="#1a1a1a" font-size="84" font-weight="700" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="-2">awesome-ai-prompts</text>
-  <text x="72" y="260" fill="#1a1a1a" font-size="33" font-weight="600" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Copy-paste AI prompts that verify, don't guess.</text>
-  <text x="72" y="298" fill="#555" font-size="22" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Works with Claude, ChatGPT, Copilot, Cursor, opencode, and any agent.</text>
-  <rect x="72" y="336" width="1136" height="2" fill="#1a1a1a"/>
-  <text x="72" y="384" fill="#666" font-size="15" font-weight="600" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="1.5">13 CATEGORIES</text>
-  <rect x="72" y="400" width="237" height="36" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
-  <text x="90" y="424" fill="#1a1a1a" font-size="16" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Contributing to this repo</text>
-  <text x="291" y="424" fill="#4a6fa5" font-size="15" font-weight="700" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">6</text>
-  <rect x="321" y="400" width="155" height="36" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
-  <text x="339" y="424" fill="#1a1a1a" font-size="16" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Core coding</text>
-  <text x="458" y="424" fill="#4a6fa5" font-size="15" font-weight="700" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">15</text>
-  <rect x="488" y="400" width="166" height="36" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
-  <text x="506" y="424" fill="#1a1a1a" font-size="16" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">System design</text>
-  <text x="636" y="424" fill="#4a6fa5" font-size="15" font-weight="700" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">5</text>
-  <rect x="666" y="400" width="158" height="36" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
-  <text x="684" y="424" fill="#1a1a1a" font-size="16" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Git &amp; GitHub</text>
-  <text x="806" y="424" fill="#4a6fa5" font-size="15" font-weight="700" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">12</text>
-  <rect x="836" y="400" width="217" height="36" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
-  <text x="854" y="424" fill="#1a1a1a" font-size="16" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Code review &amp; quality</text>
-  <text x="1036" y="424" fill="#4a6fa5" font-size="15" font-weight="700" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">5</text>
-  <rect x="72" y="447" width="180" height="36" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
-  <text x="90" y="471" fill="#1a1a1a" font-size="16" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Testing &amp; quality</text>
-  <text x="234" y="471" fill="#4a6fa5" font-size="15" font-weight="700" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">9</text>
-  <rect x="264" y="447" width="173" height="36" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
-  <text x="282" y="471" fill="#1a1a1a" font-size="16" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Docs &amp; delivery</text>
-  <text x="420" y="471" fill="#4a6fa5" font-size="15" font-weight="700" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">5</text>
-  <rect x="450" y="447" width="233" height="36" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
-  <text x="468" y="471" fill="#1a1a1a" font-size="16" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Security &amp; performance</text>
-  <text x="664" y="471" fill="#4a6fa5" font-size="15" font-weight="700" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">8</text>
-  <rect x="694" y="447" width="186" height="36" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
-  <text x="712" y="471" fill="#1a1a1a" font-size="16" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">DevOps &amp; deploy</text>
-  <text x="862" y="471" fill="#4a6fa5" font-size="15" font-weight="700" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">9</text>
-  <rect x="892" y="447" width="186" height="36" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
-  <text x="910" y="471" fill="#1a1a1a" font-size="16" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Career &amp; learning</text>
-  <text x="1061" y="471" fill="#4a6fa5" font-size="15" font-weight="700" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">6</text>
-  <rect x="72" y="494" width="160" height="36" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
-  <text x="90" y="518" fill="#1a1a1a" font-size="16" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Frontend &amp; UI</text>
-  <text x="214" y="518" fill="#4a6fa5" font-size="15" font-weight="700" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">9</text>
-  <rect x="244" y="494" width="127" height="36" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
-  <text x="262" y="518" fill="#1a1a1a" font-size="16" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Data &amp; AI</text>
-  <text x="353" y="518" fill="#4a6fa5" font-size="15" font-weight="700" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">7</text>
-  <rect x="383" y="494" width="207" height="36" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
-  <text x="401" y="518" fill="#1a1a1a" font-size="16" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Mobile development</text>
-  <text x="572" y="518" fill="#4a6fa5" font-size="15" font-weight="700" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">5</text>
-  <text x="72" y="610" fill="#666" font-size="18" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"><tspan fill="#1a1a1a" font-weight="700">101 prompts</tspan><tspan>&#160;&#160;&#183;&#160;&#160;MIT licensed&#160;&#160;&#183;&#160;&#160;Paste into any agent, keep the evidence</tspan></text>
+  <text x="72" y="214" fill="#1a1a1a" font-size="86" font-weight="700" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="-2">awesome-ai-prompts</text>
+  <text x="72" y="268" fill="#1a1a1a" font-size="34" font-weight="600" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Copy-paste AI prompts that verify, don't guess.</text>
+  <text x="72" y="308" fill="#555" font-size="22" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Works with Claude, ChatGPT, Copilot, Cursor, opencode, and any agent.</text>
+  <rect x="72" y="348" width="1136" height="2" fill="#1a1a1a"/>
+  <rect x="72" y="392" width="253" height="46" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  <text x="96" y="422" fill="#1a1a1a" font-size="19" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Contributing to this repo</text>
+  <rect x="339" y="392" width="151" height="46" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  <text x="363" y="422" fill="#1a1a1a" font-size="19" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Core coding</text>
+  <rect x="504" y="392" width="172" height="46" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  <text x="528" y="422" fill="#1a1a1a" font-size="19" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">System design</text>
+  <rect x="691" y="392" width="154" height="46" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  <text x="715" y="422" fill="#1a1a1a" font-size="19" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Git &amp; GitHub</text>
+  <rect x="859" y="392" width="231" height="46" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  <text x="883" y="422" fill="#1a1a1a" font-size="19" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Code review &amp; quality</text>
+  <rect x="72" y="452" width="188" height="46" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  <text x="96" y="482" fill="#1a1a1a" font-size="19" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Testing &amp; quality</text>
+  <rect x="274" y="452" width="180" height="46" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  <text x="298" y="482" fill="#1a1a1a" font-size="19" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Docs &amp; delivery</text>
+  <rect x="468" y="452" width="249" height="46" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  <text x="492" y="482" fill="#1a1a1a" font-size="19" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Security &amp; performance</text>
+  <rect x="731" y="452" width="195" height="46" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  <text x="755" y="482" fill="#1a1a1a" font-size="19" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">DevOps &amp; deploy</text>
+  <rect x="940" y="452" width="195" height="46" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  <text x="964" y="482" fill="#1a1a1a" font-size="19" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Career &amp; learning</text>
+  <rect x="72" y="512" width="165" height="46" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  <text x="96" y="542" fill="#1a1a1a" font-size="19" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Frontend &amp; UI</text>
+  <rect x="251" y="512" width="127" height="46" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  <text x="275" y="542" fill="#1a1a1a" font-size="19" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Data &amp; AI</text>
+  <rect x="392" y="512" width="220" height="46" rx="8" fill="#ffffff" stroke="#ddd" stroke-width="1"/>
+  <text x="416" y="542" fill="#1a1a1a" font-size="19" font-weight="400" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" letter-spacing="0">Mobile development</text>
+  <text x="72" y="610" fill="#666" font-size="18" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif">MIT licensed  ·  Paste into any agent, keep the evidence</text>
 </svg>
