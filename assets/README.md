@@ -18,6 +18,14 @@ card does not advertise a catalog that has moved on.
 
 The card is checked by measurement, not by eye, so a re-render cannot silently
 regress: the title must stay inside the canvas, no label may overflow its pill,
-and the category pills must not overlap. Dark background, light text, and one
-accent color, so it stays legible when a social card is scaled down to a
-thumbnail.
+the category pills must not overlap, and every text run must clear WCAG AA
+contrast against the surface behind it. That last check is why two of the
+catalog's own grays are not used verbatim: `.toc .count` (`#888`) is 3.30:1 and
+`.prompt .meta` (`#777`) is 4.17:1 on the page background, both under the 4.5:1
+needed for body text, so the card uses `#555` and `#666` instead.
+
+Colors are taken from the CSS in `scripts/build-all.py` so the card reads as the
+same product as `ALL_PROMPTS.html`: the `#f7f7f5` page background, `#1a1a1a`
+ink, white cards with `#ddd` borders and 8px radii, the `#2f4f7f` and `#4a6fa5`
+blue accents, and the `#1e1e1e` monospace block that echoes a prompt's own
+`pre` panel.

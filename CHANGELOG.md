@@ -30,6 +30,11 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- `assets/social-preview.*` - redrawn in the catalog page's own palette (the
+  CSS in `scripts/build-all.py`): `#f7f7f5` background, `#1a1a1a` ink, white
+  cards, and the `#1e1e1e` monospace prompt block, replacing a blue-on-navy
+  treatment that matched nothing else in the repo. `#777` and `#888` are not
+  used because they fall under 4.5:1 contrast on that background
 - `scripts/check-consistency.sh` - `assets/` is now excluded from the
   "every folder needs a README section" rule, since it holds design sources
   rather than prompts
