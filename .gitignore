@@ -27,3 +27,6 @@ Thumbs.db
 instagram\ post\ pictures/
 .ruff_cache
 __pycache__/
+
+# Dependencies
+node_modules/

@@ -257,6 +257,10 @@ def render_page(output_path):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>awesome-ai-prompts - all prompts on one page</title>
 <style>{CSS}</style>
+<script>
+  window.va = window.va || function () {{ (window.vaq = window.vaq || []).push(arguments); }};
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 <div class="wrap">
