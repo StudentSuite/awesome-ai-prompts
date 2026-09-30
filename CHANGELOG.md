@@ -49,6 +49,20 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   prompt body is a set of instructions an agent follows literally, not prose,
   and nothing in the gate chain can tell afterwards that a translation inverted
   a rule
+- `AGENTS.md` - working notes for coding agents, written from the scripts
+  rather than the prose. There is no Makefile and no root `package.json`, so
+  the CI command sequence would otherwise be guesswork, and
+  `CONTRIBUTING.md` describes the conventions without the executable contract:
+  it says to bump the spec badge on a category's Contents line, while
+  `check-consistency.sh` section 4 greps that line whole-line and exact. It
+  also records that the gates do not all discover files the same way.
+  `build-all.py` reads the category list from `git ls-files` but globs the
+  filesystem for the files inside it, `check-links.sh` section 1 reads
+  `git ls-files` while its later sections use `find`, and
+  `check-consistency.sh` reads the disk. So an untracked new category folder is
+  invisible to the catalog and to section 1, and only `check-consistency.sh`
+  catches it by iterating folders on disk: new files need `git add` before the
+  gates are worth trusting
 
 ### Changed
 
