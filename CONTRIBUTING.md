@@ -88,6 +88,60 @@ silently. Run it locally with `python3 scripts/check-external-links.py`.
 
 ---
 
+## Translations
+
+English is the source of truth. Translated prompts live under `i18n/`, which
+mirrors the English tree:
+
+```text
+i18n/<lang>/<category>/<slug>-prompt.md
+```
+
+One top-level `i18n/` folder rather than parallel repositories, so a
+contributor needs one clone and one pull request, and so the English gates also
+cover translated files. Keeping the category inside the language folder keeps
+the upstream mapping readable from the path: drop the `i18n/<lang>/` prefix and
+you have the English file.
+
+### Translating a prompt
+
+1. Pick a prompt from a language folder that has none yet, add the folder if
+   needed (`i18n/<lang>/<category>/`), and copy the English file.
+2. Translate the title, the usage note, the `Keywords:` line (in the target
+   language, since that is what a reader will search in), and the prompt body.
+   Leave code, file paths, commands, and identifiers in English.
+3. Translate the body as instructions to a colleague, not as prose. "Delete the
+   staging branch" and "Never delete the staging branch" are one word apart and
+   produce opposite actions; keep the imperative force intact.
+4. Paste your translation into a real coding agent and watch what it does
+   before opening the PR. A body that reads correctly can still instruct the
+   wrong action.
+5. Add a row to that language's `README.md` marking the prompt `current` or
+   `stale`, so drift from upstream is visible rather than hidden.
+
+`scripts/check-links.sh` requires the same structure in a translation as in an
+English prompt: H1 first, a `---` divider, and exactly one non-empty `Keywords:`
+line above the divider. It enforces the English lowercase-and-comma-separated
+format only on English prompts, so accented and non-Latin scripts are not
+rejected by an English character class.
+
+### Why no prompt here is machine-translated
+
+A prompt body is not prose. It is a set of instructions a coding agent follows
+literally, and a machine translator does not know whether the sentence it is
+looking at forbids an action or performs one. Nothing in the gate chain can
+tell afterwards that it inverted a rule, because a bad translation is valid
+markdown that passes every check.
+
+That is the whole reason this repo exists: prompts you can verify. A machine
+translation is the one artifact we cannot verify, so we do not publish one.
+Translated files here are written by a person who will run them first.
+
+Full detail, including how to check a translation against upstream, is in
+[i18n/README.md](i18n/README.md).
+
+---
+
 ## Good First Issues
 
 Look for issues labeled [`good first issue`](https://github.com/shauryagangrade/awesome-ai-prompts/labels/good%20first%20issue).

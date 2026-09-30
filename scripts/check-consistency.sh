@@ -47,7 +47,14 @@ anchor_of() { printf '%s' "${1##*|}"; }
 
 file_count() { find "$1" -maxdepth 1 -name '*-prompt.md' | wc -l | tr -d ' '; }
 
-total_count() { find . -mindepth 2 -name '*-prompt.md' -not -path './.git/*' | wc -l | tr -d ' '; }
+# English prompts only. i18n/ holds translated mirrors of these same files, so
+# counting them would inflate every total the gate reports, and a translated file
+# is not expected to appear in the English README or CHANGELOG.
+english_prompts() {
+  find . -mindepth 2 -name '*-prompt.md' -not -path './.git/*' -not -path './i18n/*' | sort
+}
+
+total_count() { english_prompts | wc -l | tr -d ' '; }
 
 spec_count_for() {
   local d="$1" n=0 s
@@ -57,14 +64,15 @@ spec_count_for() {
   printf '%s' "$n"
 }
 
-# 1. Every prompt file in a category folder is linked from README.
+# 1. Every English prompt file in a category folder is linked from README.
+# Translated mirrors under i18n/ are indexed by i18n/<lang>/README.md instead.
 while IFS= read -r f; do
   rel="${f#./}"
   if ! grep -qF "($rel)" README.md; then
     echo "FAIL unlisted prompt (not linked in README): $rel"
     fail=1
   fi
-done < <(find . -mindepth 2 -name '*-prompt.md' -not -path './.git/*' | sort)
+done < <(english_prompts)
 
 # 2. Prompt files added on this branch appear in CHANGELOG [Unreleased].
 if git rev-parse --verify --quiet "$BASE_REF" >/dev/null; then
@@ -75,17 +83,18 @@ if git rev-parse --verify --quiet "$BASE_REF" >/dev/null; then
       echo "FAIL newly added prompt missing from CHANGELOG [Unreleased]: $rel"
       fail=1
     fi
-  done < <(git diff --name-only --diff-filter=A "${BASE_REF}...HEAD" -- '*-prompt.md')
+  done < <(git diff --name-only --diff-filter=A "${BASE_REF}...HEAD" -- '*-prompt.md' ':!i18n/*')
 else
   echo "SKIP changelog check: $BASE_REF not found (full clone required)"
 fi
 
 # 3. Category folders and README sections exist in both directions.
-# scripts/, docs/, and assets/ hold tooling, collateral, and design sources
-# rather than prompts, so they are not categories and need no README section.
+# scripts/, docs/, assets/, and i18n/ hold tooling, collateral, design sources,
+# and translated mirrors rather than English prompts, so they are not categories
+# and need no README section.
 for d in */; do
   d="${d%/}"
-  case "$d" in scripts | docs | assets) continue ;; esac
+  case "$d" in scripts | docs | assets | i18n) continue ;; esac
   if git check-ignore -q -- "$d/"; then
     # Skip local-only, gitignored directories (e.g. design assets).
     continue
@@ -157,7 +166,7 @@ while IFS= read -r rel; do
       fail=1
     fi
   fi
-done < <(find . -mindepth 2 -name '*-prompt.md' -not -path './.git/*' | sed 's#^\./##' | sort)
+done < <(english_prompts | sed 's#^\./##')
 
 # 6. Each category README lists exactly that folder's prompts, and links back
 # to the matching main-README section. A category README that silently drifts

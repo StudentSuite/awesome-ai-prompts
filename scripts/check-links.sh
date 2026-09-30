@@ -83,6 +83,11 @@ done < <(git ls-files -- '*/README.md' | sort)
 # generator change.
 #
 # Derived from the file itself, so this adds no hand-maintained list.
+#
+# English prompts must match the exact format documented in CONTRIBUTING.md.
+# Translated prompts under i18n/ are held to presence and non-emptiness only:
+# the lowercase-and-comma-separated rule is an English convention, and applying
+# its character class to Spanish or Hindi would reject a correct translation.
 check_keywords() {
   local file="$1" intro terms found
   intro="$(sed -n '1,/^---$/p' "$file")"
@@ -100,9 +105,16 @@ check_keywords() {
   fi
 
   terms="$(sed -n 's/^Keywords: //p' <<<"$intro")"
-  # Lowercase and comma separated, and non-empty: a leading, trailing, or
-  # doubled comma would otherwise pass as a term and render as an unsearchable
-  # blank.
+  if [[ -z "${terms//[[:space:]]/}" ]]; then
+    echo "$file: Keywords: line is empty"
+    fail=1
+    return 0
+  fi
+  if [[ "$file" == ./i18n/* ]]; then
+    return 0
+  fi
+  # A leading, trailing, or doubled comma would otherwise pass as a term and
+  # render as an unsearchable blank.
   if ! grep -qE '^[a-z0-9][a-z0-9 .-]*(, [a-z0-9][a-z0-9 .-]*)*$' <<<"$terms"; then
     echo "$file: Keywords: must be lowercase, comma separated, and non-empty"
     fail=1

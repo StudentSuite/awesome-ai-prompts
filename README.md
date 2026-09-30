@@ -414,3 +414,21 @@ See [docs/usage-stories/TEMPLATE.md](docs/usage-stories/TEMPLATE.md)
 for the template, and open a PR (or a
 [discussion](https://github.com/shauryagangrade/awesome-ai-prompts/discussions))
 with your story.
+
+---
+
+## Translations
+
+English is the source of truth and stays the only version that appears in the
+[one-page catalog](#printable-one-page-catalog). Translated prompts live under
+`i18n/<lang>/`, mirroring the category folders, and each language keeps a
+README with its own status table.
+
+- [Spanish](i18n/es/README.md) - not started yet
+
+We do not machine-translate these prompts. A prompt body is a set of
+instructions an agent follows literally, not prose: "delete the staging branch"
+and "never delete the staging branch" are one word apart and produce opposite
+actions, and no gate can tell afterwards that a translation inverted a rule.
+Every translation is written and tested by a person. See
+[CONTRIBUTING.md](CONTRIBUTING.md#translations) if you want to add one.

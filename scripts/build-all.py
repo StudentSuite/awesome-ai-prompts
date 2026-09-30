@@ -9,6 +9,8 @@ per-prompt copy buttons, prompt bodies collapsed in <details> by default
 quick-start, examples and best practices, and print styles. Output is
 deliberately deterministic: category and file order are sorted and no
 timestamps or build metadata are embedded, so two runs are byte-identical.
+Translated prompts under i18n/ are excluded; they are indexed by their own
+per-language README instead.
 
 The generated page is committed to the repo root for static hosting (see
 README "Printable one-page catalog"); CI verifies the committed file is in
@@ -116,13 +118,19 @@ def category_order():
     never change the build, so every machine reproduces the committed output.
     Sorting matches the README Contents order, and adding or renaming a
     category only touches the folder and the README.
+
+    i18n/ is excluded explicitly. A translated file lives at
+    i18n/<lang>/<category>/<slug>-prompt.md, so its first path segment is
+    `i18n`, not a category name; taking that segment would invent a fourteenth
+    category called "i18n" holding nothing. Skipping it by name keeps the
+    catalog an English-language catalog, which is what its title claims.
     """
     out = subprocess.check_output(
         ["git", "ls-files", "--", f"*{PROMPT_SUFFIX}"],
         cwd=ROOT,
         text=True,
     ).split()
-    return sorted({rel.split("/", 1)[0] for rel in out})
+    return sorted({rel.split("/", 1)[0] for rel in out if not rel.startswith("i18n/")})
 
 
 def spec_prompt_rels():

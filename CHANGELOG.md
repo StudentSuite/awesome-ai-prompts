@@ -36,8 +36,42 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   per prompt file, in the intro rather than the prompt body. The rule reads
   each file directly, so unlike `CATEGORIES` and `SPEC_PROMPTS` it adds no
   hand-maintained list to `check-consistency.sh`
+- `i18n/` as the home for translated prompts, laid out as
+  `i18n/<lang>/<category>/<slug>-prompt.md` so the mirror path reads back to
+  the English file it copies. One top-level folder was chosen over parallel
+  repositories so a translator needs one clone and one pull request, and so the
+  English gates cover translated files too. `i18n/<lang>/README.md` carries the
+  per-language status table and the conventions; `i18n/es/` is the pilot slot
+  and is deliberately empty of prompts
+- a `Translations` section in `CONTRIBUTING.md` (layout, how to translate, how
+  to check a translation against upstream) and a short pointer to it in the
+  main `README.md`. Both state why no prompt here is machine-translated: a
+  prompt body is a set of instructions an agent follows literally, not prose,
+  and nothing in the gate chain can tell afterwards that a translation inverted
+  a rule
 
 ### Changed
+
+- `scripts/check-consistency.sh` - `i18n/` is now excluded from the set of
+  English prompts. A new `english_prompts()` helper is the single place that
+  decides that set, used by the README-listing check, the `[spec]` badge check,
+  and the reported total, so translated mirrors cannot inflate a count or be
+  required to appear in the English README. `i18n` joins the top-level folder
+  exclusion list, and the `[Unreleased]` CHANGELOG pathspec skips it, since a
+  translation is not a new prompt
+- `scripts/check-links.sh` - the per-folder README requirement now applies to
+  top-level folders only. Translations nest one level deeper, and a README in
+  each of `i18n/<lang>/<category>/` would mean thirteen boilerplate files per
+  language
+- `scripts/check-links.sh` - the `Keywords:` format check (lowercase,
+  comma separated) applies to English prompts only. A translated file still
+  needs exactly one non-empty `Keywords:` line above the divider, but in the
+  target language, so accented and non-Latin scripts are not rejected by an
+  English character class
+- `scripts/build-all.py` - `category_order()` skips `i18n/`. A translated
+  file's first path segment is `i18n`, which is not a category name; taking
+  that segment would have invented a fourteenth category holding nothing. The
+  one-page catalog stays an English-language catalog
 
 - `assets/social-preview.*` - redrawn in the catalog page's own palette (the
   CSS in `scripts/build-all.py`): a light `#f7f7f5` background, `#1a1a1a` ink,
