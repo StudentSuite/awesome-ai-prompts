@@ -5,6 +5,8 @@ across multiple correctness factors, produce a clear, priority-ordered list
 of bugs - and leave behind durable documentation of everything found so the
 team can act on it later.
 
+Keywords: bug finder, documentation audit, spec compliance, correctness, contradiction
+
 ---
 
 Find the real bugs in this repository and document them. Sweep the codebase

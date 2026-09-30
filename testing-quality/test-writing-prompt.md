@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to write tests that
 actually protect the code - meaningful assertions, real edge cases, and the
 repo's own testing conventions.
 
+Keywords: test writing, unit tests, test cases, fixtures, mocking, arrange act assert
+
 ---
 
 Write tests for `[function/module/feature]` in this repository. The goal is

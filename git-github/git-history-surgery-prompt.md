@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to perform tricky git
 operations safely - clean history, find the culprit commit, or rescue lost
 work without damaging the repo.
 
+Keywords: rebase, history rewrite, amend, interactive rebase, force push, split commits
+
 ---
 
 Help me with the git operation I describe in this repository. Work carefully:

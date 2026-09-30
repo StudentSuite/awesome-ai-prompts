@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to find and fix mobile
 performance problems from measurements - startup, frame rate, app size,
 memory, and network - with before/after proof for every change.
 
+Keywords: mobile performance, startup time, battery, jank, scroll smoothness, profiling
+
 ---
 
 Improve `[what is slow: startup, scrolling, bundle size, memory, or network]`

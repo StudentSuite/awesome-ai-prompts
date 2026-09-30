@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to take a project idea
 from vague concept to a polished portfolio piece you'd be proud to show.
 
+Keywords: portfolio, side project, showcase, personal project, build in public
+
 ---
 
 Help me build a portfolio-worthy project. I'll describe the idea; you help me

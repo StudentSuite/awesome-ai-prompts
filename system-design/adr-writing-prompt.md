@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to turn a real technical
 decision into an Architecture Decision Record (ADR) that future teammates
 will actually understand.
 
+Keywords: adr, architecture decision record, decision log, tradeoffs, rfc, documenting decisions
+
 ---
 
 Write an ADR for a decision made (or being made) in this repository. The goal

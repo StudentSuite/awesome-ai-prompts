@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to turn a skill gap into
 a concrete, project-based learning roadmap with checkpoints you can actually
 verify.
 
+Keywords: learning roadmap, study plan, skill gap, curriculum, milestones, how to learn
+
 ---
 
 Build a learning roadmap for the specified skill or goal. The output must be

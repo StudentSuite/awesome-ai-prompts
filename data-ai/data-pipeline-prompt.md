@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to build an ETL/data
 pipeline that survives bad input, reruns, and schema drift - and proves its
 output is correct.
 
+Keywords: data pipeline, etl, ingestion, batch job, orchestration, scheduled job
+
 ---
 
 Build the requested data pipeline (extract, transform, load) in this

@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to implement auth the
 safe way - sessions and tokens done right, authorization checked server-side,
 and the common pitfalls closed.
 
+Keywords: authentication, authorization, login, oauth, sessions, rbac, permissions
+
 ---
 
 Implement the requested authentication/authorization for this application.

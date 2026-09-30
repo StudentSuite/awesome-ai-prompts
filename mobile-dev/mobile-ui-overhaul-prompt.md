@@ -6,6 +6,8 @@ project's conventions, and prove the result on every declared platform with
 before/after evidence. An overhaul that only restyles one screen in a
 hot-reload session is not an overhaul.
 
+Keywords: mobile ui redesign, overhaul, navigation, platform native, refresh, restyle
+
 ---
 
 Overhaul the UI of `[feature / the whole app]` for this mobile project. Define

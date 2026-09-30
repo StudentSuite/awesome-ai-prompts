@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to work interactively the
 way you'd pair with a careful human - small steps, explanations, and
 confirmation before anything big.
 
+Keywords: pair programming, pairing, mentor, collaboration, rubber duck, session
+
 ---
 
 You are my pair-programming partner on this repository. We work in small,

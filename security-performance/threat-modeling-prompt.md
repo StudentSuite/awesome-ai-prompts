@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to threat-model a feature
 or system before or while building it - structured, specific, and ranked by
 real risk.
 
+Keywords: threat model, attack surface, trust boundaries, abuse cases, assets, mitigations
+
 ---
 
 Threat-model the specified feature or system in this repository. Produce a

@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to audit UI code for
 accessibility compliance - WCAG-concrete findings with fixes, not a generic
 "use alt text" checklist.
 
+Keywords: accessibility, a11y, wcag, screen reader, keyboard navigation, aria
+
 ---
 
 Review the accessibility of `[component / page / feature]` in this repository.

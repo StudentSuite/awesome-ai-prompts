@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to debug a problem the
 way a disciplined engineer does: reproduce first, find the root cause, fix
 the smallest thing, and prove it.
 
+Keywords: debugging, root cause, reproduce, stack trace, trace, fix a crash
+
 ---
 
 Debug the reported problem in this repository. Work systematically - do not

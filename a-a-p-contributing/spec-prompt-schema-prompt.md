@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to author a spec prompt
 for this catalog: the repo's heavy format for big, risky work that demands
 scope, hard constraints, and evidence-gated verification.
 
+Keywords: spec, specification, requirements, schema, protocol, constraints
+
 ---
 
 Write `[the new prompt]` as a spec prompt in this repository - the format for

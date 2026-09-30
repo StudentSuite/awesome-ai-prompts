@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to refactor code without
 breaking behavior - the tests are the guardrails.
 
+Keywords: refactor, cleanup, restructure, behavior parity, safe changes, code cleanup
+
 ---
 
 Refactor the code I point you at in this repository. The goal is cleaner,

@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to review a pull request
 that adds or changes prompts in this repository, against its real gates.
 
+Keywords: review a prompt, rubric, prompt quality, pull request, review, checklist
+
 ---
 
 Review pull request `#N`, which changes prompts in this `awesome-ai-prompts`

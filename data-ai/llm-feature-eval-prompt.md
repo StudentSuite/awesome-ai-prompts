@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to evaluate an LLM-powered
 feature rigorously - with a test set, defined metrics, and pass thresholds
 decided before looking at results.
 
+Keywords: llm eval, evaluation, benchmark, eval set, quality regression, scoring
+
 ---
 
 Evaluate the LLM-powered feature in this repository (or a proposed prompt or

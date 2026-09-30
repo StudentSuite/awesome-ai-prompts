@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to deploy a service
 safely - with a rollback plan, verified steps, and no surprises.
 
+Keywords: deployment runbook, release checklist, rollout, go live, on call, steps
+
 ---
 
 Prepare a safe deployment of `[version / branch]` of this application to

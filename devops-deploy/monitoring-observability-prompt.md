@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to set up logging,
 metrics, and alerting - actionable dashboards and alerts, not noisy
 dashboards nobody checks.
 
+Keywords: monitoring, observability, metrics, logs, tracing, alerting, slo, dashboards
+
 ---
 
 Set up monitoring and observability for `[service / application / endpoint]`.

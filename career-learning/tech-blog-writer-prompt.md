@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to turn a project,
 technical concept, or engineering experience into a clear, engaging blog
 post with real content and real insights, not fluff.
 
+Keywords: technical blog, blog post, writing, tutorial, article, developer writing
+
 ---
 
 Help me write a technical blog post about `[topic / project / experience]`.

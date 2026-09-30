@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to make a slow query fast
 with proof - plans before and after, indexes justified, and regressions
 checked.
 
+Keywords: sql, slow query, query optimization, explain analyze, index, execution plan, speed up
+
 ---
 
 Optimize the specified slow SQL query or query set. Work like a DBA: measure,

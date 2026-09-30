@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to build a
 retrieval-augmented generation pipeline with evaluation built in - so answers
 are grounded, cited, and measurably better than raw prompting.
 
+Keywords: rag, retrieval, vector search, embeddings, chunking, context, semantic search
+
 ---
 
 Build the requested retrieval-augmented generation (RAG) feature. The bar:

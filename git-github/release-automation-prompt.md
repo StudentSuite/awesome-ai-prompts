@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to automate versioning,
 tagging, changelog generation, and publishing - a reliable release pipeline,
 not a manual checklist.
 
+Keywords: release automation, versioning, tag, publish, semver, cut a release, npm publish
+
 ---
 
 Automate the release process for this repository. The goal: a CI-driven

@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to turn a backlog of
 untriaged issues into labeled, prioritized, answerable queues.
 
+Keywords: issue triage, maintainer, labels, duplicates, prioritization, backlog
+
 ---
 
 Triage the open issues in this repository. The goal is a backlog a

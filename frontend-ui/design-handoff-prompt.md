@@ -5,6 +5,8 @@ Copy-paste the block below into any AI coding agent to turn a visual design
 it closely and behaves responsively, using a comparison loop that finds the
 gaps.
 
+Keywords: design handoff, figma, mockup, design to code, design specs, assets
+
 ---
 
 Implement `[the page or component]` to match the provided design

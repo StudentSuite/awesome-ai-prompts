@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to untangle or design
 client state - the right home for each kind of state, minimal moving parts,
 no sync bugs.
 
+Keywords: state management, store, client state, server state, global state, re-renders
+
 ---
 
 Design or refactor the client-side state management for this frontend app.

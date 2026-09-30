@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to take an open issue in
 this repository from reading the ticket to a mergeable pull request.
 
+Keywords: resolve an issue, close issue, ticket, reproduce, fix, verify
+
 ---
 
 Help me complete the issue I point you at in this `awesome-ai-prompts`

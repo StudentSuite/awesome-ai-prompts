@@ -15,10 +15,37 @@ Open an issue using the [feature request template](.github/ISSUE_TEMPLATE/featur
 ### Adding a Prompt
 
 1. Fork the repo and create a branch: `git checkout -b docs/add-my-prompt`
-2. Model your file on an existing prompt (or [.github/PROMPT_TEMPLATE.md](.github/PROMPT_TEMPLATE.md) if present): an H1 title, a one-line "copy-paste this block" usage note, then the prompt block separated by a `---` divider.
+2. Model your file on an existing prompt (or [.github/PROMPT_TEMPLATE.md](.github/PROMPT_TEMPLATE.md) if present): an H1 title, a one-line "copy-paste this block" usage note, a `Keywords:` line, then the prompt block separated by a `---` divider.
 3. Name it `kebab-case-prompt.md` and place it in the matching category folder (`a-a-p-contributing/`, `core-coding/`, `git-github/`, `code-review/`, `testing-quality/`, `docs-delivery/`, `security-performance/`, `devops-deploy/`, `career-learning/`, `frontend-ui/`, `system-design/`, `data-ai/`, `mobile-dev/`). Each category folder has a `README.md`; add your one-line entry there too, next to the matching entry in the main README.
 4. Verify locally: `bash scripts/check-links.sh` - must pass clean. This checks that every README link resolves, each category folder has a README that matches its contents, and each prompt file follows the repo's structure.
 5. Open a PR against `main` with a one-line entry added to the matching category in the README. If the prompt takes on a big, risky task, mark its entry with the light-blue [spec] badge (`<img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">`) and bump the spec-count badge on the category's Contents line.
+
+### Prompt Structure
+
+Every `*-prompt.md` file has the same four parts, in this order:
+
+1. An H1 title: `# Reusable prompt: <action>`
+2. A short usage note saying what the block below does
+3. A `Keywords:` line
+4. The prompt block itself, after a `---` divider
+
+The `Keywords:` line is the last thing in the intro, directly above the `---`,
+so it stays out of the copy-paste block. It carries 4 to 7 lowercase,
+comma-separated search terms, because a title does not surface a prompt when
+someone searches for the words they actually have in mind. A reader looking for
+`slow query` or `speed up` should find the SQL and performance prompts without
+already knowing what those prompts are called.
+
+Write the words a reader would type, not words that restate the title. Include
+the colloquial spelling and the synonym, not just the formal one:
+
+```text
+Keywords: sql, slow query, query optimization, explain analyze, index, execution plan, speed up
+```
+
+`scripts/check-links.sh` requires exactly one such line per prompt file, with
+lowercase terms separated by a comma and a space. The check reads each file
+directly, so there is no list to keep in sync by hand.
 
 ---
 
@@ -29,8 +56,9 @@ into parallel jobs that enforce:
 
 - **markdown** - markdownlint and prettier on every `*.md`
 - **docs** - README and category-README relative links resolve, every category
-  folder has a README, no em dashes in any tracked file, and
-  `scripts/build-all.py --check` keeps the all-prompts page builder
+  folder has a README, every prompt file follows the structure above (H1 title,
+  `---` divider, non-empty `Keywords:` line), no em dashes in any tracked file,
+  and `scripts/build-all.py --check` keeps the all-prompts page builder
   deterministic
 - **consistency** - every `*-prompt.md` in a category folder is linked from the
   README and from its category README, newly added prompts need an entry under

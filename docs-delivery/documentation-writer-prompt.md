@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to write or update
 documentation that is accurate, useful, and in the project's voice.
 
+Keywords: documentation, write docs, user guide, information architecture, docs structure
+
 ---
 
 Write/update documentation for this repository: `[README / API docs / setup

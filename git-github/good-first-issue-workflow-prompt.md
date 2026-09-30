@@ -15,6 +15,8 @@ First-time assignees get a welcome comment and keep the issue unless their
 assignment goes stale (no open PR within 14 days), at which point it's
 released back to the pool.
 
+Keywords: good first issue, beginner contributor, newcomer, label guard, scoping, first pr
+
 ---
 
 Create a GitHub Actions workflow for **this** repository that reserves

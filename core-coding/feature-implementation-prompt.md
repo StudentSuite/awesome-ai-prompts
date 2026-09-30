@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to build a feature from
 spec to shipped, with verification at every stage.
 
+Keywords: implement a feature, end to end, ship it, vertical slice, wiring, acceptance criteria
+
 ---
 
 You are implementing a feature in this repository. Work end-to-end: understand

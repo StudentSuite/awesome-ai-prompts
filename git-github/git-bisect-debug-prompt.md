@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to use git bisect to find
 the exact commit that introduced a bug - binary search through history with a
 verified test, not manual git log reading.
 
+Keywords: git bisect, bisect, find the regression, good bad, history search, when did it break
+
 ---
 
 Use git bisect to find the exact commit that introduced `[bug / regression /

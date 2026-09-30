@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to run a disciplined
 security review that produces verified findings, not FUD.
 
+Keywords: security audit, vulnerability, owasp, penetration test, attack surface, review
+
 ---
 
 Audit this repository for security vulnerabilities. Be rigorous and honest:

@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to internationalize an
 app properly - strings extracted, formats localized, layouts resilient, RTL
 handled.
 
+Keywords: i18n, localization, translation, plural forms, right to left, strings, pseudo locale
+
 ---
 
 Internationalize this application so adding a new language is a translation

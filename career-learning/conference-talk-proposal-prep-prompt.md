@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to turn a talk idea into
 a submission that gets accepted and a presentation you can actually deliver
 in the slot you are given.
 
+Keywords: conference talk, cfp, proposal, slides, speaker, lightning talk
+
 ---
 
 Help me prepare a conference talk: `[talk idea / topic / experience]`. The

@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to run structured
 interview practice - hints on demand, honest feedback, and complexity
 analysis, like a good mock interviewer.
 
+Keywords: interview, leetcode, algorithms, whiteboarding, mock interview, complexity
+
 ---
 
 Act as my interview coach for coding problems. I'll give you a problem or ask

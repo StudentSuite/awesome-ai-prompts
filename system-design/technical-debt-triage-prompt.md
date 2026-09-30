@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to inventory a codebase's
 technical debt and get a prioritized paydown plan grounded in evidence, not
 vibes.
 
+Keywords: technical debt, triage, prioritization, payoff, maintenance plan, what to fix first
+
 ---
 
 Inventory the technical debt in this repository and produce a triaged,

@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to add or improve inline
 documentation - accurate JSDoc/docstrings that explain the "why", not ones
 that restate the code.
 
+Keywords: inline comments, docstrings, code comments, godoc, jsdoc, commenting style
+
 ---
 
 Add or improve inline documentation (JSDoc, docstrings, comments) for

@@ -5,6 +5,8 @@ coherent error handling strategy across a component or service: every failure
 mode mapped to a typed error, a log line that can be searched, and a documented
 policy for what is retried versus what reaches the user.
 
+Keywords: error handling, exceptions, retries, failure modes, resilience, error boundaries
+
 ---
 
 Design and apply a consistent error handling strategy for `[component or

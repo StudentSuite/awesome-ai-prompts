@@ -5,6 +5,8 @@ level - with defined scope, hard constraints, and evidence-backed findings
 that cite exact file:line and proposed fixes. Every finding must be
 verifiable against the codebase.
 
+Keywords: ui audit, visual review, spacing, consistency, design system, polish, hierarchy
+
 ---
 
 Audit the UI of `[page / component / feature]` in this repository against the

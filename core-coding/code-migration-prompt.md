@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to migrate code between
 frameworks, languages, or major versions - incrementally, with behavior parity
 verified at every step.
 
+Keywords: migration, port, framework upgrade, version bump, rewrite, codemod
+
 ---
 
 Migrate `[source code / module / feature]` from `[current stack/version]` to

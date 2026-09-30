@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to integrate an external
 REST API into this codebase - typed, tested, and resilient, not a quick hack.
 
+Keywords: api integration, http client, third party api, webhook, retry, rate limit
+
 ---
 
 Integrate the `[API name / endpoint docs]` into this repository's codebase.

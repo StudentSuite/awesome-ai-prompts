@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to perform a technical
 SEO audit - crawlability, metadata, structured data, redirects, and speed -
 with verification at every step.
 
+Keywords: seo, search ranking, metadata, sitemap, serp, search console, crawl
+
 ---
 
 Audit and improve this website's technical SEO. Work from verified

@@ -5,6 +5,8 @@ feature and verify it on real platforms - not just a single simulator
 screen. The agent must prove the feature survives no signal, revoked
 permissions, backgrounding, and platform differences.
 
+Keywords: mobile app, react native, flutter, expo, app development, store submission
+
 ---
 
 Build `[the mobile feature]` for this project and prove it works on a real

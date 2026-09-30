@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to review a PR or diff
 through a security lens - find real vulnerabilities, with evidence.
 
+Keywords: secure code, security review, injection, owasp, vulnerability, input validation
+
 ---
 
 Review this code with a security focus. The author has already had a

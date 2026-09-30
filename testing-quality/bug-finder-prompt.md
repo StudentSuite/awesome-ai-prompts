@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to sweep a codebase
 across multiple correctness factors and produce a clear, evidence-backed,
 priority-ordered list of bugs - not guesses.
 
+Keywords: bug finder, find bugs, defect, static analysis, correctness, bug hunt
+
 ---
 
 Find the real bugs in this repository. Sweep the codebase across the factors

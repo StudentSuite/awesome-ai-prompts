@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to audit dependencies for
 vulnerabilities, license issues, and staleness - with actionable fix
 recommendations, not just a wall of warnings.
 
+Keywords: dependency audit, vulnerabilities, supply chain, lockfile, transitive
+
 ---
 
 Audit the dependencies of this repository. The goal: identify security risks,

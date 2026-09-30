@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to design a system from
 requirements the way a senior engineer would: constraints first, components
 second, tradeoffs stated out loud, and every assumption labeled.
 
+Keywords: system design, scalability, distributed systems, architecture, capacity, design doc
+
 ---
 
 Design the specified system for this project. Produce an architecture a team

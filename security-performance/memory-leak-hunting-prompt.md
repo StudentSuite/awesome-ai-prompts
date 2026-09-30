@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to hunt down a memory leak
 in a running service: measure the growth, isolate what retains memory, apply a
 minimal fix, and verify the allocation curve goes flat under the same load.
 
+Keywords: memory leak, heap, leak detection, retained objects, profiling, valgrind
+
 ---
 
 Find and fix the memory leak in `[service or component]`. Work from

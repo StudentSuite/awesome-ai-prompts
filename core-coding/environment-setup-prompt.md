@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to bootstrap a development
 environment from scratch - every dependency installed, every tool configured,
 first build verified.
 
+Keywords: environment setup, dev setup, local development, dependencies, bootstrap, toolchain
+
 ---
 
 Set up a complete development environment for this repository from scratch.

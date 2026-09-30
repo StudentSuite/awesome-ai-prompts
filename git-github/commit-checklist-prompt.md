@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to add automated PR gates
 that keep a repository's derived artifacts in sync - so forgetting the
 housekeeping becomes structurally impossible.
 
+Keywords: commit, checklist, conventional commits, pre commit hook, consistency, gates
+
 ---
 
 Build a commit checklist for this repository: deterministic checks that fail

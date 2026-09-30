@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to build backups and a DR
 plan that have actually been restored - untested backups are Schrödinger's
 backups.
 
+Keywords: backup, disaster recovery, restore, rpo, rto, recovery drill, snapshots
+
 ---
 
 Set up backups and disaster recovery for this system. The deliverable is not

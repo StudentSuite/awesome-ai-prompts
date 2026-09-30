@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to build a comprehensive
 README from scratch - honest, useful, and structured for someone encountering
 the project for the first time.
 
+Keywords: readme, project docs, badges, quick start, installation, getting started
+
 ---
 
 Build a README.md for this repository from scratch (or rewrite the existing

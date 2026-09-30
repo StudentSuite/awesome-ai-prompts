@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to debug a live incident
 or write a post-mortem - structured triage, root-cause analysis, and
 actionable follow-ups, not blame.
 
+Keywords: incident, outage, on call, severity, mitigation, postmortem, sev1
+
 ---
 
 Help me debug this incident or write a post-mortem for `[incident description

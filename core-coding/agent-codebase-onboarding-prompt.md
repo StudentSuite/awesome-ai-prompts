@@ -8,6 +8,8 @@ and a summary. It is written for the agent to consume itself: no questions to
 the user, file:line anchors instead of pasted bodies, and a living model held
 in context rather than a report to print.
 
+Keywords: agent onboarding, codebase map, context, first task, explore repo, unfamiliar repo
+
 ---
 
 You have been dropped into a repository you have never seen. Before you take on

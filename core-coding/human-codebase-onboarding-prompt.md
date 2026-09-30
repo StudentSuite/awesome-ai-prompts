@@ -5,6 +5,8 @@ detailed understanding of an unfamiliar repository. The agent must confirm
 every claim against real code and configuration, not the README alone, and
 produce a structured report with file:line citations.
 
+Keywords: understand a codebase, walkthrough, architecture tour, how does this work
+
 ---
 
 Build a detailed understanding of this repository. Produce a report that a

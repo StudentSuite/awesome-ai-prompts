@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to make a high-quality
 contribution to an open-source repository you don't own - the right way.
 
+Keywords: open source, contribute, fork, first contribution, community, upstream
+
 ---
 
 Help me contribute to the open-source project I point you at (`OWNER/REPO`).

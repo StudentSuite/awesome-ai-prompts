@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to build code
 test-first. Strict discipline - no code without a failing test, no skipping
 steps.
 
+Keywords: tdd, test driven development, red green refactor, unit test, write test first, cycle
+
 ---
 
 Implement `[feature/task]` using strict test-driven development in this

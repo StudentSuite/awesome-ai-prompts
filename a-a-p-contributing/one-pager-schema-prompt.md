@@ -5,6 +5,8 @@ prompt for this catalog: the repo's compact format for quick, well-scoped
 tasks. This file is itself a one-pager - the block you write must fit the
 same budget.
 
+Keywords: one pager, brief, scope, ticket, planning, requirements
+
 ---
 
 Write `[the new prompt]` as a one-pager in this repository - a

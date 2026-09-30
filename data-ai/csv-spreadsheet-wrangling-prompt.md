@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to clean and load a messy
 CSV or spreadsheet export without silently corrupting or dropping data.
 
+Keywords: csv, spreadsheet, excel, data wrangling, parsing, messy data, pivot
+
 ---
 
 Load and clean the spreadsheet/CSV data described in this task. Messy exports

@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to generate accurate API
 documentation from existing code - OpenAPI specs, endpoint references, or
 SDK guides that match what the code actually does.
 
+Keywords: api documentation, openapi, reference docs, endpoint docs, examples, reference
+
 ---
 
 Generate API documentation for `[endpoint / route group / service]` in this

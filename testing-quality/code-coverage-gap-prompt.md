@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to find real coverage
 gaps and fill them with tests that matter - not lines that bump the
 percentage.
 
+Keywords: test coverage, coverage gap, untested code, coverage report, what is not tested
+
 ---
 
 Find the untested and under-tested parts of this repository and close the gaps

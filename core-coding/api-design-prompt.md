@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to design a well-structured
 REST API - with conventions, validation, and an OpenAPI spec, not ad-hoc routes.
 
+Keywords: api design, endpoints, contracts, versioning, interface design, resource naming
+
 ---
 
 Design a REST API for `[feature / domain]`. The goal: a consistent, documented,

@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to test how the system
 behaves when dependencies fail - and to close the gaps found, with evidence.
 
+Keywords: chaos engineering, resilience, fault injection, failure testing, degrade gracefully
+
 ---
 
 Test this system's resilience by injecting failures. The question is never

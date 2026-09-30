@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to define or change cloud
 infrastructure (Terraform/OpenTofu, CloudFormation, CDK, Pulumi) with the
 same discipline as the rest of your code.
 
+Keywords: infrastructure as code, terraform, cloud resources, drift, modules, provisioning
+
 ---
 
 Set up / modify the infrastructure for this repository using

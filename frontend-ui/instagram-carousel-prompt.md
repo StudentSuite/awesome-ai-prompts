@@ -5,6 +5,8 @@ branded, swipeable Instagram carousel, delivered as self-contained HTML slides
 ready to screenshot and post. Repo-agnostic: it works for any project, in any
 language, with any visual identity.
 
+Keywords: instagram, carousel, social media, slides, marketing, graphics, post
+
 ---
 
 Create an Instagram carousel post about this repository, following the repo's

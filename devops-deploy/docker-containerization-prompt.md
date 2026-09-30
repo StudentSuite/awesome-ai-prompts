@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to containerize an
 application - a small, secure, working image, not a copy-pasted Dockerfile.
 
+Keywords: docker, container, dockerfile, image, compose, build, reproducible builds
+
 ---
 
 Create a Docker image for this application. The goal: a reproducible, small,

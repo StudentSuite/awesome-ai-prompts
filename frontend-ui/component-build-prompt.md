@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to build a reusable,
 accessible UI component - with proper props, variants, and stories, not a
 one-off hardcoded element.
 
+Keywords: component, react component, ui component, props, composition, building ui
+
 ---
 
 Build a reusable UI component for `[component name and purpose]` in this

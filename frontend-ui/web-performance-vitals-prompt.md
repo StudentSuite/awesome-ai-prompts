@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to diagnose and fix real
 Core Web Vitals problems - measured in lab and field, with before/after
 proof.
 
+Keywords: core web vitals, lighthouse, page speed, largest contentful paint, layout shift, inp
+
 ---
 
 Diagnose and improve this site's Core Web Vitals (LCP, INP, CLS). Work from

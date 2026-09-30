@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to audit a repository's
 architecture with evidence-backed scores and a prioritized refactoring plan -
 the heavy format, because a wrong audit ships a misleading roadmap.
 
+Keywords: architecture review, coupling, cohesion, module boundaries, design review, layering
+
 ---
 
 Audit the architecture of this repository as a senior software architect.

@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to handle dates and
 times correctly instead of shipping the timezone bug that only shows up in
 production, months later.
 
+Keywords: datetime, timezone, utc, daylight saving, clock skew, timestamps, off by one
+
 ---
 
 Review or implement the datetime handling in this task. Timezone bugs are

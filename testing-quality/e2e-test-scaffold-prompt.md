@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to scaffold end-to-end or
 integration tests - realistic scenarios with proper setup, not toy smoke tests.
 
+Keywords: end to end tests, e2e, playwright, cypress, browser testing, integration tests
+
 ---
 
 Scaffold end-to-end or integration tests for `[feature / workflow / route]`.

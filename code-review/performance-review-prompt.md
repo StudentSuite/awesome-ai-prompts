@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to review code for
 performance anti-patterns - with evidence and specific fixes, not vague
 "make it faster" advice.
 
+Keywords: performance review, slow code, profiling, hot spots, speed up, optimization
+
 ---
 
 Review the performance of `[file / module / endpoint]` in this repository.

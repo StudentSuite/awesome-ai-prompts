@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to turn git history into
 a clear, honest changelog for a release.
 
+Keywords: changelog, release notes, keep a changelog, versions, commit grouping, release
+
 ---
 
 Write the release notes/changelog for `[version / tag / range of commits]` of

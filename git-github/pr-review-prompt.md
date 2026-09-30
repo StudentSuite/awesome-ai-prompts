@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to get a structured,
 evidence-driven pull request review that prioritises correctness over
 comment volume.
 
+Keywords: pull request review, code review, feedback, approve, merge, diff
+
 ---
 
 You are a senior software engineer reviewing a GitHub Pull Request.

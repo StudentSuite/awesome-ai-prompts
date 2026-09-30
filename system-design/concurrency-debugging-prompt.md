@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to hunt down race
 conditions, deadlocks, and async bugs methodically instead of sprinkling
 sleep calls and hoping.
 
+Keywords: concurrency, race condition, deadlock, thread safety, locks, async bugs
+
 ---
 
 Debug this concurrency problem (race condition, deadlock, flaky parallel

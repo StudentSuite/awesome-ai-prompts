@@ -5,6 +5,8 @@ regular expression the way a senior engineer would: a defined purpose, a corpus
 of cases that proves the behavior, and a check that the pattern cannot blow up
 on adversarial input.
 
+Keywords: regex, regular expression, pattern matching, escaping, catastrophic backtracking, grep
+
 ---
 
 Help me write `[what the regex must match]` in `[language or stack]`. Treat a

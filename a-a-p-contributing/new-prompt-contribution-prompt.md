@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to add a new prompt to
 this repository, in a form a maintainer can merge on the first pass.
 
+Keywords: add a prompt, contribute, new prompt, pull request, authoring, gates
+
 ---
 
 Help me add a new prompt to this `awesome-ai-prompts` repository. Every prompt

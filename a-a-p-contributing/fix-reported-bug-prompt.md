@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to fix a bug reported in
 an issue in this repository, with proof, in the smallest possible change.
 
+Keywords: fix a bug, bug report, patch, regression, triage, reproduce
+
 ---
 
 Fix the bug in issue `#N` in this `awesome-ai-prompts` repository. Do not

@@ -5,6 +5,8 @@ codebase audit across architecture, quality, and maintainability dimensions with
 evidence-backed 0-10 scores and a prioritized refactoring roadmap - the heavy
 format, because a flawed audit produces a misguided roadmap.
 
+Keywords: codebase audit, dead code, duplication, code smells, tech debt, health check
+
 ---
 
 Audit this repo as a senior software architect. Read-only: this produces a

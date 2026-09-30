@@ -6,6 +6,8 @@ states, and theming - with evidence-backed findings that cite exact file:line
 and a verifiable fix for each one. Mobile UI lives on the device, so the audit
 runs on a real screen, not a web-inspector view of a portrait render.
 
+Keywords: mobile ui, tap targets, safe area, platform guidelines, polish, small screens
+
 ---
 
 Audit the UI of `[screen / flow / feature]` in this mobile project against the

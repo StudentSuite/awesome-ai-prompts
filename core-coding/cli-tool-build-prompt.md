@@ -5,6 +5,8 @@ tool that behaves the way real CLI users expect: documented flags, typed
 exit codes, safe pipe and TTY handling, and a logic core that is easy to
 test without spawning subprocesses.
 
+Keywords: cli, command line tool, terminal app, flags, subcommands, argument parsing
+
 ---
 
 Build a command-line tool for `[what the tool does]` in this repository.

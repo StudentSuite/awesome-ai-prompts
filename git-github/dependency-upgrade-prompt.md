@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to upgrade a dependency
 safely - change what breaks, understand what changed, and verify.
 
+Keywords: dependency upgrade, version bump, breaking change, renovate, outdated packages, bump
+
 ---
 
 Upgrade `[package]` from `[old version]` to `[new version]` in this repository.

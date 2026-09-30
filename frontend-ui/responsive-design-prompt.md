@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to audit and implement
 responsive layouts - mobile-first, fluid, and tested at every breakpoint,
 not "looks fine on my screen."
 
+Keywords: responsive, breakpoints, mobile first, media queries, grid, layout
+
 ---
 
 Audit and implement responsive design for `[page / component / layout]` in

@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to design or evolve a
 database schema safely - backward-compatible migrations and a clean rollout.
 
+Keywords: schema migration, zero downtime, backfill, rollback, alter table, deploy safely
+
 ---
 
 Design/update the database schema for `[feature/change]` in this repository

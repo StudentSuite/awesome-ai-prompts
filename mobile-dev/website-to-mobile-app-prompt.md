@@ -5,6 +5,8 @@ website into a mobile app, picking the adaptation strategy from the website's
 actual architecture rather than a preferred toolkit. The choice must be
 justified against the site's code, and the result proven on a real device.
 
+Keywords: web to mobile, wrap a website, app shell, pwa, hybrid app, webview
+
 ---
 
 Turn `[the website]` into `[the mobile app]`. Decide the adaptation strategy

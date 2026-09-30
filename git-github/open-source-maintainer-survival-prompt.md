@@ -5,6 +5,8 @@ project's maintenance practices so it keeps moving without burning out its
 maintainers: clear contribution guidelines, automation for the tedious
 parts, kind ways to say no, and a bus factor that is not one person.
 
+Keywords: maintainer, burnout, sustainability, community management, scope, say no
+
 ---
 
 Review this project's maintenance setup and produce a plan that keeps it

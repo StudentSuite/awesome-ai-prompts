@@ -5,6 +5,8 @@ any repository from reading the ticket to a mergeable pull request, with the
 failure reproduced, the root cause proven, and the fix verified against the
 project's real checks.
 
+Keywords: github issue, resolve issue, close issue, reproduce, bug issue, fix issue
+
 ---
 
 Help me resolve the GitHub issue I point you at (`OWNER/REPO#N`). The goal is

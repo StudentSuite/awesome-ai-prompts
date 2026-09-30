@@ -5,6 +5,8 @@ LLM-powered agent for this project. The agent's behavior and decisions must
 be verifiable against an eval set with measured cost and latency - not
 judged by vibes.
 
+Keywords: ai agent, tool calling, agent loop, orchestration, llm agent, guardrails
+
 ---
 
 Build `[the agent's job in one sentence]` as an LLM agent: a loop that plans,

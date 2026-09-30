@@ -27,6 +27,15 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `.github/workflows/ci.yml` - the `citation` job now explains how to fix a
   failure instead of only printing cffconvert's error line; the listed causes
   were each checked against cffconvert 2.0.0 rather than assumed
+- a `Keywords:` line in the intro of all 101 prompts, holding 4 to 7 lowercase
+  comma-separated search terms. It is the last line of the intro, directly
+  above the `---`, so it stays out of the copy-paste block and flows into
+  `ALL_PROMPTS.html` through the existing `split_prompt()` parse. Titles alone
+  did not surface a prompt when someone searched for `slow query` or `speed up`
+- `scripts/check-links.sh` now requires exactly one non-empty `Keywords:` line
+  per prompt file, in the intro rather than the prompt body. The rule reads
+  each file directly, so unlike `CATEGORIES` and `SPEC_PROMPTS` it adds no
+  hand-maintained list to `check-consistency.sh`
 
 ### Changed
 

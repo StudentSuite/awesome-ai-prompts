@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to add caching that
 actually pays for itself - with invalidation designed up front and hit rates
 measured, not assumed.
 
+Keywords: caching, cache, invalidation, ttl, staleness, redis, memcached
+
 ---
 
 Design and implement caching for this application where measurement shows it

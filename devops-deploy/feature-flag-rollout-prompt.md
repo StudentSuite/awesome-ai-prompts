@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to ship a risky change
 behind a flag with progressive rollout, an instant kill switch, and a cleanup
 plan.
 
+Keywords: feature flag, rollout, progressive delivery, canary, percentage, toggle, dark launch
+
 ---
 
 Ship the requested feature behind a feature flag with a progressive rollout

@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to accomplish exactly this
 one task.
 
+Keywords: one term, two terms, three terms
+
 ---
 
 Write out the prompt body here. Be direct and prescriptive.

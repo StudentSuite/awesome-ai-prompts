@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to model a relational
 database schema from requirements - normalized, indexed, and ready for
 migration.
 
+Keywords: database design, schema, tables, normalization, indexes, data model
+
 ---
 
 Design a database schema for `[feature / domain]`. The goal: a clean,

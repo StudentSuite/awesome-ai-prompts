@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to set up consumer-driven
 contract tests between services, so API drift is caught in CI before it hits
 production.
 
+Keywords: contract testing, api contract, pact, schema compatibility, breaking api
+
 ---
 
 Set up contract testing between this service and its consumers or providers.

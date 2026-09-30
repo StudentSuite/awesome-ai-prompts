@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to build a GitHub Actions
 pipeline that is correct, secure, and actually verified.
 
+Keywords: ci, cd, pipeline, github actions, workflow, automation, build pipeline
+
 ---
 
 Create a CI/CD pipeline for **this** repository using GitHub Actions. Do not

@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to build a scraper that
 respects the site it's reading and survives its next layout change.
 
+Keywords: web scraping, scraper, robots.txt, rate limit, polite crawling, html parsing, legal
+
 ---
 
 Build the requested web scraper/crawler. Scraping without guardrails gets

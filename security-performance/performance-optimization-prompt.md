@@ -3,6 +3,8 @@
 Copy-paste the block below into any AI coding agent to find real bottlenecks
 and fix them with evidence - never guess-and-tune.
 
+Keywords: performance optimization, bottleneck, slow, latency, speed up, make it fast
+
 ---
 
 Optimize the performance of `[feature / endpoint / function / hot path]` in

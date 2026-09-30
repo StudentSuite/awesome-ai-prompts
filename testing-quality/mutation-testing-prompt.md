@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to run mutation testing
 and validate that your test suite actually catches real defects, not just
 achieves coverage numbers.
 
+Keywords: mutation testing, mutation score, test quality, meta testing, weak tests
+
 ---
 
 Run mutation testing on `[module / file / test suite]` in this repository.

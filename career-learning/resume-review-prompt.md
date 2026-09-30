@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to review a technical
 resume - honest feedback on impact, clarity, and keyword density, not generic
 "use action verbs" advice.
 
+Keywords: resume, cv, job application, hiring, bullet points, ats
+
 ---
 
 Review my technical resume for `[role / company / level]`. The goal: honest,

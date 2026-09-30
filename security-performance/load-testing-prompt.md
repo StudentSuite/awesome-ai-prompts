@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to design and run load
 tests with measurable thresholds and reproducible results, not a one-off
 "it felt fast" test.
 
+Keywords: load testing, stress test, throughput, capacity, latency under load, benchmark
+
 ---
 
 Design and run load tests for `[endpoint / service / workflow]` in this

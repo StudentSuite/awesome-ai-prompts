@@ -4,6 +4,8 @@ Copy-paste the block below into any AI coding agent to audit and remediate
 hardcoded secrets - find them, remove them, and set up proper secret
 management.
 
+Keywords: secrets, api keys, credentials, key rotation, environment variables, vault
+
 ---
 
 Audit this repository for hardcoded secrets and set up proper secret
