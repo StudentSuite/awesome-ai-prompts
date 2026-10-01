@@ -31,6 +31,8 @@ Back to the [main index](../README.md#core-coding) or browse
 
 - [graphql-api-design-prompt.md](graphql-api-design-prompt.md) - design a GraphQL schema that scales past the demo: batching over N+1, field-level authz, bounded complexity, stable error shape.
 
+- [websockets-realtime-features-prompt.md](websockets-realtime-features-prompt.md) - build realtime that survives disconnects and horizontal scaling: lifecycle, message contract, stated delivery guarantee, slow-client policy.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,
