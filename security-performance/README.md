@@ -24,7 +24,7 @@ Back to the [main index](../README.md#security--performance) or browse
 
 - [privacy-gdpr-compliance-review-prompt.md](privacy-gdpr-compliance-review-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - systematic privacy pass: data inventory with retention, lawful basis, consent withdrawal, user rights flows, processors, ranked minimization.
 
-- [rate-limiting-abuse-prevention-prompt.md](rate-limiting-abuse-prevention-prompt.md) - protect public endpoints: limits tiered by cost, algorithm chosen for the traffic shape, shared counters, load-test proof.
+- [rate-limiting-abuse-prevention-prompt.md](rate-limiting-abuse-prevention-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - protect public endpoints: limits tiered by cost, algorithm chosen for the traffic shape, shared counters, load-test proof.
 
 ## Adding a prompt here
 

@@ -357,7 +357,7 @@ described above.
 - [memory-leak-hunting-prompt.md](security-performance/memory-leak-hunting-prompt.md) - find and remove a leak from measurements: baseline, reproduced growth, diffed snapshots, and a flat after-curve.
 - [prompt-injection-defense-prompt.md](security-performance/prompt-injection-defense-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - threat-model one attack class: where untrusted text reaches the context, out-of-band tool gating, a red-team suite, honest residual risk.
 - [privacy-gdpr-compliance-review-prompt.md](security-performance/privacy-gdpr-compliance-review-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - systematic privacy pass: data inventory with retention, lawful basis, consent withdrawal, user rights flows, processors, ranked minimization.
-- [rate-limiting-abuse-prevention-prompt.md](security-performance/rate-limiting-abuse-prevention-prompt.md) - protect public endpoints: limits tiered by cost, algorithm chosen for the traffic shape, shared counters, load-test proof.
+- [rate-limiting-abuse-prevention-prompt.md](security-performance/rate-limiting-abuse-prevention-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - protect public endpoints: limits tiered by cost, algorithm chosen for the traffic shape, shared counters, load-test proof.
 
 ## DevOps & deploy
 
