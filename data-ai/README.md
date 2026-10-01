@@ -23,6 +23,8 @@ Back to the [main index](../README.md#data--ai) or browse
 
 - [ab-test-design-analysis-prompt.md](ab-test-design-analysis-prompt.md) - experiments you can trust: hypothesis and metric fixed first, power calculation, contamination checks, stopping rules, effect size with intervals.
 
+- [analytics-event-tracking-prompt.md](analytics-event-tracking-prompt.md) - instrumentation that does not rot: tracking plan as source of truth, machine-readable schema, pre-send validation, PII minimized, delivery proven.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,

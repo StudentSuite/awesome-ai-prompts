@@ -31,6 +31,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `mobile-dev/mobile-app-project-setup-prompt.md` - bootstrap a mobile app: an argued stack choice with the tradeoffs against it, feature-based project structure, a navigation skeleton, iOS and Android builds from a clean clone on CI, and a device testing plan
 - `data-ai/data-visualization-prompt.md` - make charts honest and accessible: match chart type to the question and data shape, keep axes honest and everything labeled, use color-blind-safe palettes plus a non-color encoding, handle every state, and verify against the source numbers
 - `data-ai/ab-test-design-analysis-prompt.md` - design and read online experiments honestly: hypothesis and primary metric fixed before launch, sample size and power, randomization unit with contamination checks, pre-committed stopping rules, and effect size with confidence intervals
+- `data-ai/analytics-event-tracking-prompt.md` - instrument product analytics so it does not rot: a naming convention and property schema, a tracking plan as the source of truth, client-side validation before send, PII minimization, and an end-to-end test that events arrive
 - per-category `README.md` in all 13 category folders: what belongs in the
   category, the prompt list, a backlink to the matching main-README section,
   and a pointer to the one-page catalog
