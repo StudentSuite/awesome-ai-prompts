@@ -17,6 +17,8 @@ Back to the [main index](../README.md#system-design) or browse
 - [concurrency-debugging-prompt.md](concurrency-debugging-prompt.md) - hunt race conditions and deadlocks: prove the interleaving, minimal fix, stress-verified.
 - [caching-strategy-prompt.md](caching-strategy-prompt.md) - add caching that pays for itself: measured wins, invalidation designed up front.
 
+- [message-queues-event-driven-design-prompt.md](message-queues-event-driven-design-prompt.md) - design event-driven systems for duplicates, reordering, and replays: versioned contracts, ordering keys, idempotent consumers, DLQ operations.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,

@@ -16,6 +16,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `core-coding/websockets-realtime-features-prompt.md` - build realtime features that survive disconnects and horizontal scaling: connection lifecycle, versioned message contracts, an explicit delivery guarantee, and a slow-client policy
 - `core-coding/payment-integration-prompt.md` - integrate payments with money-grade discipline: no raw card data, idempotency keys on every mutation, verified webhooks, an order/payment state machine, and reconciliation jobs
 - `core-coding/email-delivery-prompt.md` - send transactional email that reaches the inbox: SPF/DKIM/DMARC domain auth, code templates tested across clients, async sending with retry, and bounce/complaint suppression
+- `system-design/message-queues-event-driven-design-prompt.md` - design event-driven systems for at-least-once delivery: versioned event contracts, per-key ordering, idempotent consumers, replay and backfill strategy, and DLQ operations
 - per-category `README.md` in all 13 category folders: what belongs in the
   category, the prompt list, a backlink to the matching main-README section,
   and a pointer to the one-page catalog

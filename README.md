@@ -248,7 +248,7 @@ described above.
 
 - [Contributing to this repo](#contributing-to-this-repo) (6) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Core coding](#core-coding) (20) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [System design](#system-design) (5) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [System design](#system-design) (6) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Git & GitHub](#git--github) (12) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Code review & quality](#code-review--quality) (5) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Testing & quality](#testing--quality) (9) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
@@ -299,6 +299,7 @@ described above.
 - [technical-debt-triage-prompt.md](system-design/technical-debt-triage-prompt.md) - inventory tech debt with evidence and get a prioritized paydown plan.
 - [concurrency-debugging-prompt.md](system-design/concurrency-debugging-prompt.md) - hunt race conditions and deadlocks: prove the interleaving, minimal fix, stress-verified.
 - [caching-strategy-prompt.md](system-design/caching-strategy-prompt.md) - add caching that pays for itself: measured wins, invalidation designed up front.
+- [message-queues-event-driven-design-prompt.md](system-design/message-queues-event-driven-design-prompt.md) - design event-driven systems for duplicates, reordering, and replays: versioned contracts, ordering keys, idempotent consumers, DLQ operations.
 
 ## Git & GitHub
 
