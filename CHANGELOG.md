@@ -11,6 +11,8 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- promoted `prompt-injection-defense-prompt.md` to a spec prompt: added the `[spec]` badge,
+  `SPEC_PROMPTS` registration, and the spec field contract.
 - promoted `legacy-code-modernization-assessment-prompt.md` to a spec prompt: added the `[spec]` badge,
   `SPEC_PROMPTS` registration, and the spec field contract.
 - promoted `message-queues-event-driven-design-prompt.md` to a spec prompt: added the `[spec]` badge,

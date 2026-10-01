@@ -20,7 +20,7 @@ Back to the [main index](../README.md#security--performance) or browse
 - [auth-implementation-prompt.md](auth-implementation-prompt.md) - implement sessions/OAuth/JWT safely with server-side authorization everywhere.
 - [memory-leak-hunting-prompt.md](memory-leak-hunting-prompt.md) - find and remove a leak from measurements: baseline, reproduced growth, diffed snapshots, and a flat after-curve.
 
-- [prompt-injection-defense-prompt.md](prompt-injection-defense-prompt.md) - threat-model one attack class: where untrusted text reaches the context, out-of-band tool gating, a red-team suite, honest residual risk.
+- [prompt-injection-defense-prompt.md](prompt-injection-defense-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - threat-model one attack class: where untrusted text reaches the context, out-of-band tool gating, a red-team suite, honest residual risk.
 
 - [privacy-gdpr-compliance-review-prompt.md](privacy-gdpr-compliance-review-prompt.md) - systematic privacy pass: data inventory with retention, lawful basis, consent withdrawal, user rights flows, processors, ranked minimization.
 
