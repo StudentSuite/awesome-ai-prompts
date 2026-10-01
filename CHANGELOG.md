@@ -18,6 +18,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `core-coding/email-delivery-prompt.md` - send transactional email that reaches the inbox: SPF/DKIM/DMARC domain auth, code templates tested across clients, async sending with retry, and bounce/complaint suppression
 - `system-design/message-queues-event-driven-design-prompt.md` - design event-driven systems for at-least-once delivery: versioned event contracts, per-key ordering, idempotent consumers, replay and backfill strategy, and DLQ operations
 - `system-design/legacy-code-modernization-assessment-prompt.md` - assess whether a legacy system should be modernized at all: EOL and security inventory, a value-versus-risk map per module, strangler-fig seams, a characterization-test plan, and stop conditions
+- `security-performance/prompt-injection-defense-prompt.md` - threat-model the prompt-injection attack class specifically: an inventory of where untrusted text reaches the context, instruction/data separation with its limits, out-of-band tool gating, a red-team suite, and documented residual risk
 - per-category `README.md` in all 13 category folders: what belongs in the
   category, the prompt list, a backlink to the matching main-README section,
   and a pointer to the one-page catalog
