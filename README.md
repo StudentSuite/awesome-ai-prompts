@@ -247,7 +247,7 @@ Prompts tagged with the light-blue badge are the heavyweight [spec] prompts
 described above.
 
 - [Contributing to this repo](#contributing-to-this-repo) (6) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [Core coding](#core-coding) (19) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [Core coding](#core-coding) (20) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [System design](#system-design) (5) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Git & GitHub](#git--github) (12) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Code review & quality](#code-review--quality) (5) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
@@ -290,6 +290,7 @@ described above.
 - [graphql-api-design-prompt.md](core-coding/graphql-api-design-prompt.md) - design a GraphQL schema that scales past the demo: batching over N+1, field-level authz, bounded complexity, stable error shape.
 - [websockets-realtime-features-prompt.md](core-coding/websockets-realtime-features-prompt.md) - build realtime that survives disconnects and horizontal scaling: lifecycle, message contract, stated delivery guarantee, slow-client policy.
 - [payment-integration-prompt.md](core-coding/payment-integration-prompt.md) - add payments with money-grade discipline: no raw card data, idempotent mutations, verified webhooks, reconciliation.
+- [email-delivery-prompt.md](core-coding/email-delivery-prompt.md) - send transactional mail that lands: domain authentication, code templates, async retries, bounce and complaint handling.
 
 ## System design
 

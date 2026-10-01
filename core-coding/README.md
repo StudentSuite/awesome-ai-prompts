@@ -35,6 +35,8 @@ Back to the [main index](../README.md#core-coding) or browse
 
 - [payment-integration-prompt.md](payment-integration-prompt.md) - add payments with money-grade discipline: no raw card data, idempotent mutations, verified webhooks, reconciliation.
 
+- [email-delivery-prompt.md](email-delivery-prompt.md) - send transactional mail that lands: domain authentication, code templates, async retries, bounce and complaint handling.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,
