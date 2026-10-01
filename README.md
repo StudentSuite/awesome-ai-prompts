@@ -257,7 +257,7 @@ described above.
 - [DevOps & deploy](#devops--deploy) (12)
 - [Career & learning](#career--learning) (6)
 - [Frontend & UI](#frontend--ui) (13) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [Data & AI](#data--ai) (11) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [Data & AI](#data--ai) (12) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Mobile development](#mobile-development) (6) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 
 ## Contributing to this repo
@@ -421,6 +421,7 @@ described above.
 - [ab-test-design-analysis-prompt.md](data-ai/ab-test-design-analysis-prompt.md) - experiments you can trust: hypothesis and metric fixed first, power calculation, contamination checks, stopping rules, effect size with intervals.
 - [analytics-event-tracking-prompt.md](data-ai/analytics-event-tracking-prompt.md) - instrumentation that does not rot: tracking plan as source of truth, machine-readable schema, pre-send validation, PII minimized, delivery proven.
 - [ml-model-deployment-basics-prompt.md](data-ai/ml-model-deployment-basics-prompt.md) - from notebook to service: versioned artifacts, validated inference API, measured latency, drift triggers, a rehearsed rollback.
+- [fine-tune-vs-rag-vs-prompting-decision-prompt.md](data-ai/fine-tune-vs-rag-vs-prompting-decision-prompt.md) - pick the cheapest sufficient LLM technique: requirements first, evidence-backed matrix, eval plan that could disprove it, reversal criteria.
 
 ## Usage in the wild
 

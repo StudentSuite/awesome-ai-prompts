@@ -27,6 +27,8 @@ Back to the [main index](../README.md#data--ai) or browse
 
 - [ml-model-deployment-basics-prompt.md](ml-model-deployment-basics-prompt.md) - from notebook to service: versioned artifacts, validated inference API, measured latency, drift triggers, a rehearsed rollback.
 
+- [fine-tune-vs-rag-vs-prompting-decision-prompt.md](fine-tune-vs-rag-vs-prompting-decision-prompt.md) - pick the cheapest sufficient LLM technique: requirements first, evidence-backed matrix, eval plan that could disprove it, reversal criteria.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,

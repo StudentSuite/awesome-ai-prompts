@@ -33,6 +33,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `data-ai/ab-test-design-analysis-prompt.md` - design and read online experiments honestly: hypothesis and primary metric fixed before launch, sample size and power, randomization unit with contamination checks, pre-committed stopping rules, and effect size with confidence intervals
 - `data-ai/analytics-event-tracking-prompt.md` - instrument product analytics so it does not rot: a naming convention and property schema, a tracking plan as the source of truth, client-side validation before send, PII minimization, and an end-to-end test that events arrive
 - `data-ai/ml-model-deployment-basics-prompt.md` - bridge training artifacts to serving: model artifact versioning and a registry, an inference API with input and output validation, measured latency and batching, drift monitoring with retraining triggers, and a rehearsed rollback
+- `data-ai/fine-tune-vs-rag-vs-prompting-decision-prompt.md` - decide between prompting, RAG, and fine-tuning: requirements for freshness, specificity, cost, and latency first; an evidence-backed decision matrix; the cheapest sufficient option; an eval plan that could disprove the choice; and reversal criteria
 - per-category `README.md` in all 13 category folders: what belongs in the
   category, the prompt list, a backlink to the matching main-README section,
   and a pointer to the one-page catalog
