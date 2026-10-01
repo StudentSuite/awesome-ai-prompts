@@ -29,6 +29,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `frontend-ui/browser-extension-development-prompt.md` - build a browser extension that passes review: manifest v3 structure, minimum permissions, the background worker and content script split, storage and typed messaging, CSP and no-remote-code rules, and a store review checklist
 - `frontend-ui/pwa-offline-support-prompt.md` - implement offline support explicitly: service worker lifecycle and cache versioning, a caching strategy per resource type, offline fallbacks with queued mutations, an update-in-place flow, and Lighthouse verification
 - `mobile-dev/mobile-app-project-setup-prompt.md` - bootstrap a mobile app: an argued stack choice with the tradeoffs against it, feature-based project structure, a navigation skeleton, iOS and Android builds from a clean clone on CI, and a device testing plan
+- `data-ai/data-visualization-prompt.md` - make charts honest and accessible: match chart type to the question and data shape, keep axes honest and everything labeled, use color-blind-safe palettes plus a non-color encoding, handle every state, and verify against the source numbers
 - per-category `README.md` in all 13 category folders: what belongs in the
   category, the prompt list, a backlink to the matching main-README section,
   and a pointer to the one-page catalog
