@@ -27,6 +27,8 @@ Back to the [main index](../README.md#core-coding) or browse
 - [error-handling-strategy-prompt.md](error-handling-strategy-prompt.md) - one coherent error policy: typed errors, context-rich logs, retry vs surface, proven by failure injection.
 - [regular-expressions-prompt.md](regular-expressions-prompt.md) - write or repair a regex with a stated purpose, a test corpus, and a check that it cannot hang on adversarial input.
 
+- [file-uploads-media-handling-prompt.md](file-uploads-media-handling-prompt.md) - take uploads that survive hostile files, traversal, and unreliable networks: server-side validation, streaming, safe storage names, resumable transfers.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,

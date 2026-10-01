@@ -11,6 +11,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- `core-coding/file-uploads-media-handling-prompt.md` - accept uploads safely: server-side validation, streaming for large files, generated storage names, malware scanning hooks, and resumable transfers
 - per-category `README.md` in all 13 category folders: what belongs in the
   category, the prompt list, a backlink to the matching main-README section,
   and a pointer to the one-page catalog

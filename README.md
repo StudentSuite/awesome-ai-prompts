@@ -247,7 +247,7 @@ Prompts tagged with the light-blue badge are the heavyweight [spec] prompts
 described above.
 
 - [Contributing to this repo](#contributing-to-this-repo) (6) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [Core coding](#core-coding) (15) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [Core coding](#core-coding) (16) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [System design](#system-design) (5) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Git & GitHub](#git--github) (12) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Code review & quality](#code-review--quality) (5) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
@@ -286,6 +286,7 @@ described above.
 - [datetime-timezone-correctness-prompt.md](core-coding/datetime-timezone-correctness-prompt.md) - store UTC render local, handle DST, and get calendar/duration math right.
 - [error-handling-strategy-prompt.md](core-coding/error-handling-strategy-prompt.md) - one coherent error policy: typed errors, context-rich logs, retry vs surface, proven by failure injection.
 - [regular-expressions-prompt.md](core-coding/regular-expressions-prompt.md) - write or repair a regex with a stated purpose, a test corpus, and a check that it cannot hang on adversarial input.
+- [file-uploads-media-handling-prompt.md](core-coding/file-uploads-media-handling-prompt.md) - take uploads that survive hostile files, traversal, and unreliable networks: server-side validation, streaming, safe storage names, resumable transfers.
 
 ## System design
 
