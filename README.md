@@ -299,7 +299,7 @@ described above.
 - [technical-debt-triage-prompt.md](system-design/technical-debt-triage-prompt.md) - inventory tech debt with evidence and get a prioritized paydown plan.
 - [concurrency-debugging-prompt.md](system-design/concurrency-debugging-prompt.md) - hunt race conditions and deadlocks: prove the interleaving, minimal fix, stress-verified.
 - [caching-strategy-prompt.md](system-design/caching-strategy-prompt.md) - add caching that pays for itself: measured wins, invalidation designed up front.
-- [message-queues-event-driven-design-prompt.md](system-design/message-queues-event-driven-design-prompt.md) - design event-driven systems for duplicates, reordering, and replays: versioned contracts, ordering keys, idempotent consumers, DLQ operations.
+- [message-queues-event-driven-design-prompt.md](system-design/message-queues-event-driven-design-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - design event-driven systems for duplicates, reordering, and replays: versioned contracts, ordering keys, idempotent consumers, DLQ operations.
 - [legacy-code-modernization-assessment-prompt.md](system-design/legacy-code-modernization-assessment-prompt.md) - decide whether to modernize at all: EOL inventory, value-risk map, strangler seams, characterization tests, stop conditions.
 
 ## Git & GitHub
