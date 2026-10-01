@@ -19,6 +19,8 @@ Back to the [main index](../README.md#system-design) or browse
 
 - [message-queues-event-driven-design-prompt.md](message-queues-event-driven-design-prompt.md) - design event-driven systems for duplicates, reordering, and replays: versioned contracts, ordering keys, idempotent consumers, DLQ operations.
 
+- [legacy-code-modernization-assessment-prompt.md](legacy-code-modernization-assessment-prompt.md) - decide whether to modernize at all: EOL inventory, value-risk map, strangler seams, characterization tests, stop conditions.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,
