@@ -247,7 +247,7 @@ Prompts tagged with the light-blue badge are the heavyweight [spec] prompts
 described above.
 
 - [Contributing to this repo](#contributing-to-this-repo) (6) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [Core coding](#core-coding) (18) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [Core coding](#core-coding) (19) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [System design](#system-design) (5) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Git & GitHub](#git--github) (12) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Code review & quality](#code-review--quality) (5) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
@@ -289,6 +289,7 @@ described above.
 - [file-uploads-media-handling-prompt.md](core-coding/file-uploads-media-handling-prompt.md) - take uploads that survive hostile files, traversal, and unreliable networks: server-side validation, streaming, safe storage names, resumable transfers.
 - [graphql-api-design-prompt.md](core-coding/graphql-api-design-prompt.md) - design a GraphQL schema that scales past the demo: batching over N+1, field-level authz, bounded complexity, stable error shape.
 - [websockets-realtime-features-prompt.md](core-coding/websockets-realtime-features-prompt.md) - build realtime that survives disconnects and horizontal scaling: lifecycle, message contract, stated delivery guarantee, slow-client policy.
+- [payment-integration-prompt.md](core-coding/payment-integration-prompt.md) - add payments with money-grade discipline: no raw card data, idempotent mutations, verified webhooks, reconciliation.
 
 ## System design
 

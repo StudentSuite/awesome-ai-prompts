@@ -33,6 +33,8 @@ Back to the [main index](../README.md#core-coding) or browse
 
 - [websockets-realtime-features-prompt.md](websockets-realtime-features-prompt.md) - build realtime that survives disconnects and horizontal scaling: lifecycle, message contract, stated delivery guarantee, slow-client policy.
 
+- [payment-integration-prompt.md](payment-integration-prompt.md) - add payments with money-grade discipline: no raw card data, idempotent mutations, verified webhooks, reconciliation.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,

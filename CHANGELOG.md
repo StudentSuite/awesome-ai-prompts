@@ -14,6 +14,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `core-coding/file-uploads-media-handling-prompt.md` - accept uploads safely: server-side validation, streaming for large files, generated storage names, malware scanning hooks, and resumable transfers
 - `core-coding/graphql-api-design-prompt.md` - design GraphQL past the demo: schema-first types, resolver N+1 batching, field-level authorization, bounded depth and complexity, stable error shape
 - `core-coding/websockets-realtime-features-prompt.md` - build realtime features that survive disconnects and horizontal scaling: connection lifecycle, versioned message contracts, an explicit delivery guarantee, and a slow-client policy
+- `core-coding/payment-integration-prompt.md` - integrate payments with money-grade discipline: no raw card data, idempotency keys on every mutation, verified webhooks, an order/payment state machine, and reconciliation jobs
 - per-category `README.md` in all 13 category folders: what belongs in the
   category, the prompt list, a backlink to the matching main-README section,
   and a pointer to the one-page catalog
