@@ -26,6 +26,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `devops-deploy/capacity-planning-prompt.md` - turn outages into scheduled upgrades: headroom per bottleneck, a forecast tied to a product metric, dated scaling options with cost and lead time, and alerts that fire well before the wall
 - `frontend-ui/design-tokens-theming-prompt.md` - build theming structurally: a token taxonomy for color, spacing, radius, and type; primitive to semantic to component layers; per-pair dark mode contrast checks; and a migration path off hardcoded values
 - `frontend-ui/animation-performance-prompt.md` - keep motion smooth on mid-range devices: animate only transform and opacity, profile long frames during real interaction, respect reduced motion, use compositor hints sparingly, and measure frame rate before and after
+- `frontend-ui/browser-extension-development-prompt.md` - build a browser extension that passes review: manifest v3 structure, minimum permissions, the background worker and content script split, storage and typed messaging, CSP and no-remote-code rules, and a store review checklist
 - per-category `README.md` in all 13 category folders: what belongs in the
   category, the prompt list, a backlink to the matching main-README section,
   and a pointer to the one-page catalog
