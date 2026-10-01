@@ -25,7 +25,7 @@ Back to the [main index](../README.md#frontend--ui) or browse
 
 - [animation-performance-prompt.md](animation-performance-prompt.md) - motion that stays smooth on a mid-range phone: only transform and opacity, long frames profiled, reduced motion respected, frame rate measured before and after.
 
-- [browser-extension-development-prompt.md](browser-extension-development-prompt.md) - build an extension that passes review: manifest v3, minimum permissions, background worker versus content script, CSP and no-remote-code, load-unpacked loop.
+- [browser-extension-development-prompt.md](browser-extension-development-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - build an extension that passes review: manifest v3, minimum permissions, background worker versus content script, CSP and no-remote-code, load-unpacked loop.
 
 - [pwa-offline-support-prompt.md](pwa-offline-support-prompt.md) - offline-first done explicitly: service worker lifecycle, cache versioning, per-resource caching strategy, queued mutations, update-in-place, Lighthouse proof.
 
