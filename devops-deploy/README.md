@@ -19,6 +19,8 @@ Back to the [main index](../README.md#devops--deploy) or browse
 
 - [background-jobs-scheduled-tasks-prompt.md](background-jobs-scheduled-tasks-prompt.md) - async work that survives duplicates and deploys: idempotent handlers, bounded retries, dead-letter path, queue metrics, graceful drain.
 
+- [cloud-cost-optimization-prompt.md](cloud-cost-optimization-prompt.md) - cut the bill from measurement: ranked offenders, rightsizing off real utilization, lifecycle policies, before/after savings table.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,

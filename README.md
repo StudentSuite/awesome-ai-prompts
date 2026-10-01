@@ -254,7 +254,7 @@ described above.
 - [Testing & quality](#testing--quality) (9) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Docs & delivery](#docs--delivery) (5)
 - [Security & performance](#security--performance) (11) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [DevOps & deploy](#devops--deploy) (10)
+- [DevOps & deploy](#devops--deploy) (11)
 - [Career & learning](#career--learning) (6)
 - [Frontend & UI](#frontend--ui) (9) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Data & AI](#data--ai) (7) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
@@ -371,6 +371,7 @@ described above.
 - [feature-flag-rollout-prompt.md](devops-deploy/feature-flag-rollout-prompt.md) - ship behind flags with progressive rollout, kill switch, and cleanup plan.
 - [backup-disaster-recovery-prompt.md](devops-deploy/backup-disaster-recovery-prompt.md) - backups proven by restore drills plus a scenario-based DR runbook with RTO/RPO.
 - [background-jobs-scheduled-tasks-prompt.md](devops-deploy/background-jobs-scheduled-tasks-prompt.md) - async work that survives duplicates and deploys: idempotent handlers, bounded retries, dead-letter path, queue metrics, graceful drain.
+- [cloud-cost-optimization-prompt.md](devops-deploy/cloud-cost-optimization-prompt.md) - cut the bill from measurement: ranked offenders, rightsizing off real utilization, lifecycle policies, before/after savings table.
 
 ## Career & learning
 
