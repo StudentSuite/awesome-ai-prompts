@@ -23,6 +23,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `security-performance/rate-limiting-abuse-prevention-prompt.md` - protect public endpoints: limits tiered by identity, IP, and route cost, a written rationale for the algorithm, correct 429 and Retry-After semantics, shared-store counters, and a load test proving the limits trip and recover
 - `devops-deploy/background-jobs-scheduled-tasks-prompt.md` - add background jobs that survive retries and deploys: idempotent handlers, bounded retries with backoff, dead-letter handling, queue depth and age metrics, and graceful shutdown drains
 - `devops-deploy/cloud-cost-optimization-prompt.md` - cut cloud spend from measurement: a cost inventory ranked by service, rightsizing from utilization data, idle-resource cleanup, storage lifecycle policies, and a before/after savings table
+- `devops-deploy/capacity-planning-prompt.md` - turn outages into scheduled upgrades: headroom per bottleneck, a forecast tied to a product metric, dated scaling options with cost and lead time, and alerts that fire well before the wall
 - per-category `README.md` in all 13 category folders: what belongs in the
   category, the prompt list, a backlink to the matching main-README section,
   and a pointer to the one-page catalog
