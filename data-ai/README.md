@@ -25,6 +25,8 @@ Back to the [main index](../README.md#data--ai) or browse
 
 - [analytics-event-tracking-prompt.md](analytics-event-tracking-prompt.md) - instrumentation that does not rot: tracking plan as source of truth, machine-readable schema, pre-send validation, PII minimized, delivery proven.
 
+- [ml-model-deployment-basics-prompt.md](ml-model-deployment-basics-prompt.md) - from notebook to service: versioned artifacts, validated inference API, measured latency, drift triggers, a rehearsed rollback.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,
