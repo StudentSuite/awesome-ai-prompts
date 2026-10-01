@@ -17,6 +17,8 @@ Back to the [main index](../README.md#devops--deploy) or browse
 - [feature-flag-rollout-prompt.md](feature-flag-rollout-prompt.md) - ship behind flags with progressive rollout, kill switch, and cleanup plan.
 - [backup-disaster-recovery-prompt.md](backup-disaster-recovery-prompt.md) - backups proven by restore drills plus a scenario-based DR runbook with RTO/RPO.
 
+- [background-jobs-scheduled-tasks-prompt.md](background-jobs-scheduled-tasks-prompt.md) - async work that survives duplicates and deploys: idempotent handlers, bounded retries, dead-letter path, queue metrics, graceful drain.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,

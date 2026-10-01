@@ -21,6 +21,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `security-performance/prompt-injection-defense-prompt.md` - threat-model the prompt-injection attack class specifically: an inventory of where untrusted text reaches the context, instruction/data separation with its limits, out-of-band tool gating, a red-team suite, and documented residual risk
 - `security-performance/privacy-gdpr-compliance-review-prompt.md` - run a systematic privacy review: data inventory with storage and retention, lawful basis and consent withdrawal, user rights flows including backups, the third-party processor list, and ranked minimization work
 - `security-performance/rate-limiting-abuse-prevention-prompt.md` - protect public endpoints: limits tiered by identity, IP, and route cost, a written rationale for the algorithm, correct 429 and Retry-After semantics, shared-store counters, and a load test proving the limits trip and recover
+- `devops-deploy/background-jobs-scheduled-tasks-prompt.md` - add background jobs that survive retries and deploys: idempotent handlers, bounded retries with backoff, dead-letter handling, queue depth and age metrics, and graceful shutdown drains
 - per-category `README.md` in all 13 category folders: what belongs in the
   category, the prompt list, a backlink to the matching main-README section,
   and a pointer to the one-page catalog
