@@ -11,6 +11,8 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- promoted `file-uploads-media-handling-prompt.md` to a spec prompt: added the `[spec]` badge,
+  `SPEC_PROMPTS` registration, and the spec field contract.
 - promoted `payment-integration-prompt.md` to a spec prompt: added the `[spec]` badge,
   `SPEC_PROMPTS` registration, and the spec field contract.
 ### Added
