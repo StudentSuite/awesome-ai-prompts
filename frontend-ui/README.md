@@ -21,6 +21,8 @@ Back to the [main index](../README.md#frontend--ui) or browse
 - [ui-audit-prompt.md](ui-audit-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - audit UI for visual consistency, design system adherence, spacing, typography, and responsive behavior with concrete fixes and file:line evidence.
 - [design-handoff-prompt.md](design-handoff-prompt.md) - turn a mockup into token-aligned, responsive code with a screenshot comparison loop.
 
+- [design-tokens-theming-prompt.md](design-tokens-theming-prompt.md) - theming that survives dark mode and a rebrand: token taxonomy, primitive to semantic to component layers, per-pair contrast, a migration off hardcoded values.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,

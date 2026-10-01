@@ -256,7 +256,7 @@ described above.
 - [Security & performance](#security--performance) (11) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [DevOps & deploy](#devops--deploy) (12)
 - [Career & learning](#career--learning) (6)
-- [Frontend & UI](#frontend--ui) (9) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [Frontend & UI](#frontend--ui) (10) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Data & AI](#data--ai) (7) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Mobile development](#mobile-development) (5) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 
@@ -394,6 +394,7 @@ described above.
 - [instagram-carousel-prompt.md](frontend-ui/instagram-carousel-prompt.md) - turn this repo into a branded, swipeable Instagram carousel delivered as self-contained 1080x1080 HTML slides, mirroring the repo's brand identity.
 - [ui-audit-prompt.md](frontend-ui/ui-audit-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - audit UI for visual consistency, design system adherence, spacing, typography, and responsive behavior with concrete fixes and file:line evidence.
 - [design-handoff-prompt.md](frontend-ui/design-handoff-prompt.md) - turn a mockup into token-aligned, responsive code with a screenshot comparison loop.
+- [design-tokens-theming-prompt.md](frontend-ui/design-tokens-theming-prompt.md) - theming that survives dark mode and a rebrand: token taxonomy, primitive to semantic to component layers, per-pair contrast, a migration off hardcoded values.
 
 ## Mobile development
 
