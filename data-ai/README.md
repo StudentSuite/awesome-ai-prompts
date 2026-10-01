@@ -21,6 +21,8 @@ Back to the [main index](../README.md#data--ai) or browse
 
 - [data-visualization-prompt.md](data-visualization-prompt.md) - charts that are honest and accessible: type matched to the question, honest axes, color-blind-safe plus a second encoding, checked against source numbers.
 
+- [ab-test-design-analysis-prompt.md](ab-test-design-analysis-prompt.md) - experiments you can trust: hypothesis and metric fixed first, power calculation, contamination checks, stopping rules, effect size with intervals.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,
