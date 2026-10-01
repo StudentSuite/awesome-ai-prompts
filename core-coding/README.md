@@ -29,6 +29,8 @@ Back to the [main index](../README.md#core-coding) or browse
 
 - [file-uploads-media-handling-prompt.md](file-uploads-media-handling-prompt.md) - take uploads that survive hostile files, traversal, and unreliable networks: server-side validation, streaming, safe storage names, resumable transfers.
 
+- [graphql-api-design-prompt.md](graphql-api-design-prompt.md) - design a GraphQL schema that scales past the demo: batching over N+1, field-level authz, bounded complexity, stable error shape.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,
