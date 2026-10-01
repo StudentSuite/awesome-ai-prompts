@@ -17,6 +17,12 @@ Back to the [main index](../README.md#devops--deploy) or browse
 - [feature-flag-rollout-prompt.md](feature-flag-rollout-prompt.md) - ship behind flags with progressive rollout, kill switch, and cleanup plan.
 - [backup-disaster-recovery-prompt.md](backup-disaster-recovery-prompt.md) - backups proven by restore drills plus a scenario-based DR runbook with RTO/RPO.
 
+- [background-jobs-scheduled-tasks-prompt.md](background-jobs-scheduled-tasks-prompt.md) - async work that survives duplicates and deploys: idempotent handlers, bounded retries, dead-letter path, queue metrics, graceful drain.
+
+- [cloud-cost-optimization-prompt.md](cloud-cost-optimization-prompt.md) - cut the bill from measurement: ranked offenders, rightsizing off real utilization, lifecycle policies, before/after savings table.
+
+- [capacity-planning-prompt.md](capacity-planning-prompt.md) - name the wall and the date: headroom per bottleneck, forecast off a product metric, dated scaling options, early alerts.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,

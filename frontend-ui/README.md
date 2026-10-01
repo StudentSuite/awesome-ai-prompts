@@ -21,6 +21,14 @@ Back to the [main index](../README.md#frontend--ui) or browse
 - [ui-audit-prompt.md](ui-audit-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - audit UI for visual consistency, design system adherence, spacing, typography, and responsive behavior with concrete fixes and file:line evidence.
 - [design-handoff-prompt.md](design-handoff-prompt.md) - turn a mockup into token-aligned, responsive code with a screenshot comparison loop.
 
+- [design-tokens-theming-prompt.md](design-tokens-theming-prompt.md) - theming that survives dark mode and a rebrand: token taxonomy, primitive to semantic to component layers, per-pair contrast, a migration off hardcoded values.
+
+- [animation-performance-prompt.md](animation-performance-prompt.md) - motion that stays smooth on a mid-range phone: only transform and opacity, long frames profiled, reduced motion respected, frame rate measured before and after.
+
+- [browser-extension-development-prompt.md](browser-extension-development-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - build an extension that passes review: manifest v3, minimum permissions, background worker versus content script, CSP and no-remote-code, load-unpacked loop.
+
+- [pwa-offline-support-prompt.md](pwa-offline-support-prompt.md) - offline-first done explicitly: service worker lifecycle, cache versioning, per-resource caching strategy, queued mutations, update-in-place, Lighthouse proof.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,

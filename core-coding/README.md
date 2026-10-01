@@ -27,6 +27,16 @@ Back to the [main index](../README.md#core-coding) or browse
 - [error-handling-strategy-prompt.md](error-handling-strategy-prompt.md) - one coherent error policy: typed errors, context-rich logs, retry vs surface, proven by failure injection.
 - [regular-expressions-prompt.md](regular-expressions-prompt.md) - write or repair a regex with a stated purpose, a test corpus, and a check that it cannot hang on adversarial input.
 
+- [file-uploads-media-handling-prompt.md](file-uploads-media-handling-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - take uploads that survive hostile files, traversal, and unreliable networks: server-side validation, streaming, safe storage names, resumable transfers.
+
+- [graphql-api-design-prompt.md](graphql-api-design-prompt.md) - design a GraphQL schema that scales past the demo: batching over N+1, field-level authz, bounded complexity, stable error shape.
+
+- [websockets-realtime-features-prompt.md](websockets-realtime-features-prompt.md) - build realtime that survives disconnects and horizontal scaling: lifecycle, message contract, stated delivery guarantee, slow-client policy.
+
+- [payment-integration-prompt.md](payment-integration-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - add payments with money-grade discipline: no raw card data, idempotent mutations, verified webhooks, reconciliation.
+
+- [email-delivery-prompt.md](email-delivery-prompt.md) - send transactional mail that lands: domain authentication, code templates, async retries, bounce and complaint handling.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,

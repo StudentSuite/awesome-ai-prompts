@@ -247,18 +247,18 @@ Prompts tagged with the light-blue badge are the heavyweight [spec] prompts
 described above.
 
 - [Contributing to this repo](#contributing-to-this-repo) (6) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [Core coding](#core-coding) (15) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [System design](#system-design) (5) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [Core coding](#core-coding) (20) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [System design](#system-design) (7) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Git & GitHub](#git--github) (12) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Code review & quality](#code-review--quality) (5) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Testing & quality](#testing--quality) (9) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Docs & delivery](#docs--delivery) (5)
-- [Security & performance](#security--performance) (8) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [DevOps & deploy](#devops--deploy) (9)
+- [Security & performance](#security--performance) (11) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [DevOps & deploy](#devops--deploy) (12)
 - [Career & learning](#career--learning) (6)
-- [Frontend & UI](#frontend--ui) (9) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [Data & AI](#data--ai) (7) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [Mobile development](#mobile-development) (5) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [Frontend & UI](#frontend--ui) (13) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [Data & AI](#data--ai) (12) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [Mobile development](#mobile-development) (6) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 
 ## Contributing to this repo
 
@@ -286,6 +286,11 @@ described above.
 - [datetime-timezone-correctness-prompt.md](core-coding/datetime-timezone-correctness-prompt.md) - store UTC render local, handle DST, and get calendar/duration math right.
 - [error-handling-strategy-prompt.md](core-coding/error-handling-strategy-prompt.md) - one coherent error policy: typed errors, context-rich logs, retry vs surface, proven by failure injection.
 - [regular-expressions-prompt.md](core-coding/regular-expressions-prompt.md) - write or repair a regex with a stated purpose, a test corpus, and a check that it cannot hang on adversarial input.
+- [file-uploads-media-handling-prompt.md](core-coding/file-uploads-media-handling-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - take uploads that survive hostile files, traversal, and unreliable networks: server-side validation, streaming, safe storage names, resumable transfers.
+- [graphql-api-design-prompt.md](core-coding/graphql-api-design-prompt.md) - design a GraphQL schema that scales past the demo: batching over N+1, field-level authz, bounded complexity, stable error shape.
+- [websockets-realtime-features-prompt.md](core-coding/websockets-realtime-features-prompt.md) - build realtime that survives disconnects and horizontal scaling: lifecycle, message contract, stated delivery guarantee, slow-client policy.
+- [payment-integration-prompt.md](core-coding/payment-integration-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - add payments with money-grade discipline: no raw card data, idempotent mutations, verified webhooks, reconciliation.
+- [email-delivery-prompt.md](core-coding/email-delivery-prompt.md) - send transactional mail that lands: domain authentication, code templates, async retries, bounce and complaint handling.
 
 ## System design
 
@@ -294,6 +299,8 @@ described above.
 - [technical-debt-triage-prompt.md](system-design/technical-debt-triage-prompt.md) - inventory tech debt with evidence and get a prioritized paydown plan.
 - [concurrency-debugging-prompt.md](system-design/concurrency-debugging-prompt.md) - hunt race conditions and deadlocks: prove the interleaving, minimal fix, stress-verified.
 - [caching-strategy-prompt.md](system-design/caching-strategy-prompt.md) - add caching that pays for itself: measured wins, invalidation designed up front.
+- [message-queues-event-driven-design-prompt.md](system-design/message-queues-event-driven-design-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - design event-driven systems for duplicates, reordering, and replays: versioned contracts, ordering keys, idempotent consumers, DLQ operations.
+- [legacy-code-modernization-assessment-prompt.md](system-design/legacy-code-modernization-assessment-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - decide whether to modernize at all: EOL inventory, value-risk map, strangler seams, characterization tests, stop conditions.
 
 ## Git & GitHub
 
@@ -348,6 +355,9 @@ described above.
 - [threat-modeling-prompt.md](security-performance/threat-modeling-prompt.md) - STRIDE-style threat model ranked by real risk, with verified mitigations.
 - [auth-implementation-prompt.md](security-performance/auth-implementation-prompt.md) - implement sessions/OAuth/JWT safely with server-side authorization everywhere.
 - [memory-leak-hunting-prompt.md](security-performance/memory-leak-hunting-prompt.md) - find and remove a leak from measurements: baseline, reproduced growth, diffed snapshots, and a flat after-curve.
+- [prompt-injection-defense-prompt.md](security-performance/prompt-injection-defense-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - threat-model one attack class: where untrusted text reaches the context, out-of-band tool gating, a red-team suite, honest residual risk.
+- [privacy-gdpr-compliance-review-prompt.md](security-performance/privacy-gdpr-compliance-review-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - systematic privacy pass: data inventory with retention, lawful basis, consent withdrawal, user rights flows, processors, ranked minimization.
+- [rate-limiting-abuse-prevention-prompt.md](security-performance/rate-limiting-abuse-prevention-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - protect public endpoints: limits tiered by cost, algorithm chosen for the traffic shape, shared counters, load-test proof.
 
 ## DevOps & deploy
 
@@ -360,6 +370,9 @@ described above.
 - [kubernetes-deployment-prompt.md](devops-deploy/kubernetes-deployment-prompt.md) - deploy to Kubernetes securely: real probes, zero-downtime rollouts, non-root pods.
 - [feature-flag-rollout-prompt.md](devops-deploy/feature-flag-rollout-prompt.md) - ship behind flags with progressive rollout, kill switch, and cleanup plan.
 - [backup-disaster-recovery-prompt.md](devops-deploy/backup-disaster-recovery-prompt.md) - backups proven by restore drills plus a scenario-based DR runbook with RTO/RPO.
+- [background-jobs-scheduled-tasks-prompt.md](devops-deploy/background-jobs-scheduled-tasks-prompt.md) - async work that survives duplicates and deploys: idempotent handlers, bounded retries, dead-letter path, queue metrics, graceful drain.
+- [cloud-cost-optimization-prompt.md](devops-deploy/cloud-cost-optimization-prompt.md) - cut the bill from measurement: ranked offenders, rightsizing off real utilization, lifecycle policies, before/after savings table.
+- [capacity-planning-prompt.md](devops-deploy/capacity-planning-prompt.md) - name the wall and the date: headroom per bottleneck, forecast off a product metric, dated scaling options, early alerts.
 
 ## Career & learning
 
@@ -381,6 +394,10 @@ described above.
 - [instagram-carousel-prompt.md](frontend-ui/instagram-carousel-prompt.md) - turn this repo into a branded, swipeable Instagram carousel delivered as self-contained 1080x1080 HTML slides, mirroring the repo's brand identity.
 - [ui-audit-prompt.md](frontend-ui/ui-audit-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - audit UI for visual consistency, design system adherence, spacing, typography, and responsive behavior with concrete fixes and file:line evidence.
 - [design-handoff-prompt.md](frontend-ui/design-handoff-prompt.md) - turn a mockup into token-aligned, responsive code with a screenshot comparison loop.
+- [design-tokens-theming-prompt.md](frontend-ui/design-tokens-theming-prompt.md) - theming that survives dark mode and a rebrand: token taxonomy, primitive to semantic to component layers, per-pair contrast, a migration off hardcoded values.
+- [animation-performance-prompt.md](frontend-ui/animation-performance-prompt.md) - motion that stays smooth on a mid-range phone: only transform and opacity, long frames profiled, reduced motion respected, frame rate measured before and after.
+- [browser-extension-development-prompt.md](frontend-ui/browser-extension-development-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - build an extension that passes review: manifest v3, minimum permissions, background worker versus content script, CSP and no-remote-code, load-unpacked loop.
+- [pwa-offline-support-prompt.md](frontend-ui/pwa-offline-support-prompt.md) - offline-first done explicitly: service worker lifecycle, cache versioning, per-resource caching strategy, queued mutations, update-in-place, Lighthouse proof.
 
 ## Mobile development
 
@@ -389,6 +406,7 @@ described above.
 - [mobile-ui-audit-prompt.md](mobile-dev/mobile-ui-audit-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - audit a mobile UI against platform conventions: touch targets, safe areas, accessibility, states, theming, with file:line fixes.
 - [mobile-ui-overhaul-prompt.md](mobile-dev/mobile-ui-overhaul-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - overhaul a mobile UI end-to-end: target design spec, token layer, reimplemented screens, with before/after proof on every platform.
 - [website-to-mobile-app-prompt.md](mobile-dev/website-to-mobile-app-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - turn a website into a mobile app, choosing the adaptation strategy from the site's actual architecture: wrapper vs shared-logic vs native.
+- [mobile-app-project-setup-prompt.md](mobile-dev/mobile-app-project-setup-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - bootstrap a new mobile app: argued stack choice, feature-based structure, navigation skeleton, both platforms building from a clean clone on CI.
 
 ## Data & AI
 
@@ -399,6 +417,11 @@ described above.
 - [ai-agent-build-prompt.md](data-ai/ai-agent-build-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - design and build an LLM agent: tool contracts, context strategy, guardrails, eval set, cost and latency budget.
 - [csv-spreadsheet-wrangling-prompt.md](data-ai/csv-spreadsheet-wrangling-prompt.md) - clean messy CSV/spreadsheet exports with encoding detection, explicit type overrides, and a validation report.
 - [responsible-web-scraping-prompt.md](data-ai/responsible-web-scraping-prompt.md) - scrape within robots.txt/ToS with resilient selectors, checkpointed crawls, and politeness budgets.
+- [data-visualization-prompt.md](data-ai/data-visualization-prompt.md) - charts that are honest and accessible: type matched to the question, honest axes, color-blind-safe plus a second encoding, checked against source numbers.
+- [ab-test-design-analysis-prompt.md](data-ai/ab-test-design-analysis-prompt.md) - experiments you can trust: hypothesis and metric fixed first, power calculation, contamination checks, stopping rules, effect size with intervals.
+- [analytics-event-tracking-prompt.md](data-ai/analytics-event-tracking-prompt.md) - instrumentation that does not rot: tracking plan as source of truth, machine-readable schema, pre-send validation, PII minimized, delivery proven.
+- [ml-model-deployment-basics-prompt.md](data-ai/ml-model-deployment-basics-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - from notebook to service: versioned artifacts, validated inference API, measured latency, drift triggers, a rehearsed rollback.
+- [fine-tune-vs-rag-vs-prompting-decision-prompt.md](data-ai/fine-tune-vs-rag-vs-prompting-decision-prompt.md) - pick the cheapest sufficient LLM technique: requirements first, evidence-backed matrix, eval plan that could disprove it, reversal criteria.
 
 ## Usage in the wild
 

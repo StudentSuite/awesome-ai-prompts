@@ -9,111 +9,54 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
-### Added
-
-- per-category `README.md` in all 13 category folders: what belongs in the
-  category, the prompt list, a backlink to the matching main-README section,
-  and a pointer to the one-page catalog
-- `scripts/check-links.sh` - checks relative links and `<img src>` paths in
-  every category README (resolved relative to each file) and requires a
-  `README.md` in every folder that holds prompts
-- `scripts/check-consistency.sh` - requires each category README to list
-  exactly that folder's prompts and to link back to the correct main-README
-  anchor, so a category README cannot drift from its folder
-- `assets/social-preview.svg` and `assets/social-preview.png` - 1280x640
-  repository social preview (repo name, tagline, category grid with real
-  counts), with the SVG committed as the editable source; uploading it in
-  Settings is still a manual step
-- `.github/workflows/ci.yml` - the `citation` job now explains how to fix a
-  failure instead of only printing cffconvert's error line; the listed causes
-  were each checked against cffconvert 2.0.0 rather than assumed
-- a `Keywords:` line in the intro of all 101 prompts, holding 4 to 7 lowercase
-  comma-separated search terms. It is the last line of the intro, directly
-  above the `---`, so it stays out of the copy-paste block and flows into
-  `ALL_PROMPTS.html` through the existing `split_prompt()` parse. Titles alone
-  did not surface a prompt when someone searched for `slow query` or `speed up`
-- `scripts/check-links.sh` now requires exactly one non-empty `Keywords:` line
-  per prompt file, in the intro rather than the prompt body. The rule reads
-  each file directly, so unlike `CATEGORIES` and `SPEC_PROMPTS` it adds no
-  hand-maintained list to `check-consistency.sh`
-- `i18n/` as the home for translated prompts, laid out as
-  `i18n/<lang>/<category>/<slug>-prompt.md` so the mirror path reads back to
-  the English file it copies. One top-level folder was chosen over parallel
-  repositories so a translator needs one clone and one pull request, and so the
-  English gates cover translated files too. `i18n/<lang>/README.md` carries the
-  per-language status table and the conventions; `i18n/es/` is the pilot slot
-  and is deliberately empty of prompts
-- a `Translations` section in `CONTRIBUTING.md` (layout, how to translate, how
-  to check a translation against upstream) and a short pointer to it in the
-  main `README.md`. Both state why no prompt here is machine-translated: a
-  prompt body is a set of instructions an agent follows literally, not prose,
-  and nothing in the gate chain can tell afterwards that a translation inverted
-  a rule
-- `AGENTS.md` - working notes for coding agents, written from the scripts
-  rather than the prose. There is no Makefile and no root `package.json`, so
-  the CI command sequence would otherwise be guesswork, and
-  `CONTRIBUTING.md` describes the conventions without the executable contract:
-  it says to bump the spec badge on a category's Contents line, while
-  `check-consistency.sh` section 4 greps that line whole-line and exact. It
-  also records that the gates do not all discover files the same way.
-  `build-all.py` reads the category list from `git ls-files` but globs the
-  filesystem for the files inside it, `check-links.sh` section 1 reads
-  `git ls-files` while its later sections use `find`, and
-  `check-consistency.sh` reads the disk. So an untracked new category folder is
-  invisible to the catalog and to section 1, and only `check-consistency.sh`
-  catches it by iterating folders on disk: new files need `git add` before the
-  gates are worth trusting
-
 ### Changed
 
-- `scripts/check-consistency.sh` - `i18n/` is now excluded from the set of
-  English prompts. A new `english_prompts()` helper is the single place that
-  decides that set, used by the README-listing check, the `[spec]` badge check,
-  and the reported total, so translated mirrors cannot inflate a count or be
-  required to appear in the English README. `i18n` joins the top-level folder
-  exclusion list, and the `[Unreleased]` CHANGELOG pathspec skips it, since a
-  translation is not a new prompt
-- `scripts/check-links.sh` - the per-folder README requirement now applies to
-  top-level folders only. Translations nest one level deeper, and a README in
-  each of `i18n/<lang>/<category>/` would mean thirteen boilerplate files per
-  language
-- `scripts/check-links.sh` - the `Keywords:` format check (lowercase,
-  comma separated) applies to English prompts only. A translated file still
-  needs exactly one non-empty `Keywords:` line above the divider, but in the
-  target language, so accented and non-Latin scripts are not rejected by an
-  English character class
-- `scripts/build-all.py` - `category_order()` skips `i18n/`. A translated
-  file's first path segment is `i18n`, which is not a category name; taking
-  that segment would have invented a fourteenth category holding nothing. The
-  one-page catalog stays an English-language catalog
+- promoted `ml-model-deployment-basics-prompt.md` to a spec prompt: added the `[spec]` badge,
+  `SPEC_PROMPTS` registration, and the spec field contract.
+- promoted `browser-extension-development-prompt.md` to a spec prompt: added the `[spec]` badge,
+  `SPEC_PROMPTS` registration, and the spec field contract.
+- promoted `mobile-app-project-setup-prompt.md` to a spec prompt: added the `[spec]` badge,
+  `SPEC_PROMPTS` registration, and the spec field contract.
+- promoted `rate-limiting-abuse-prevention-prompt.md` to a spec prompt: added the `[spec]` badge,
+  `SPEC_PROMPTS` registration, and the spec field contract.
+- promoted `privacy-gdpr-compliance-review-prompt.md` to a spec prompt: added the `[spec]` badge,
+  `SPEC_PROMPTS` registration, and the spec field contract.
+- promoted `prompt-injection-defense-prompt.md` to a spec prompt: added the `[spec]` badge,
+  `SPEC_PROMPTS` registration, and the spec field contract.
+- promoted `legacy-code-modernization-assessment-prompt.md` to a spec prompt: added the `[spec]` badge,
+  `SPEC_PROMPTS` registration, and the spec field contract.
+- promoted `message-queues-event-driven-design-prompt.md` to a spec prompt: added the `[spec]` badge,
+  `SPEC_PROMPTS` registration, and the spec field contract.
+- promoted `file-uploads-media-handling-prompt.md` to a spec prompt: added the `[spec]` badge,
+  `SPEC_PROMPTS` registration, and the spec field contract.
+- promoted `payment-integration-prompt.md` to a spec prompt: added the `[spec]` badge,
+  `SPEC_PROMPTS` registration, and the spec field contract.
 
-- `assets/social-preview.*` - redrawn in the catalog page's own palette (the
-  CSS in `scripts/build-all.py`): a light `#f7f7f5` background, `#1a1a1a` ink,
-  white cards with `#ddd` borders, and the `#2f4f7f` / `#4a6fa5` blue accents,
-  replacing a blue-on-navy treatment that matched nothing else in the repo. The
-  dark monospace prompt block is gone, and the palette is now a closed set of
-  seven catalog colors; `#888` and `#777` are not used because they fall under
-  4.5:1 contrast on that background
-- `assets/social-preview.*` - the card now carries no numbers: no per-category
-  counts in the pills, no category-count label, no prompt total in the footer.
-  A figure on a social card is a snapshot that goes stale on the next pull
-  request, so the names are all that remain. Adding a prompt no longer requires
-  re-rendering or re-uploading the card; adding or renaming a category still
-  does, and the generator checks the names against the `README.md` headings and
-  the tracked category folders so a drift is caught at build time
-- `scripts/check-consistency.sh` - `assets/` is now excluded from the
-  "every folder needs a README section" rule, since it holds design sources
-  rather than prompts
-- `CONTRIBUTING.md` / `README.md` - the "add a prompt" steps now say to add
-  the one-line entry to the category `README.md` as well as the main README
-- `scripts/build-all.py` - catalog header CTA is now "Star on GitHub" with a star icon, replacing the fork-icon "GitHub" link
-- README.md - added a "Staying in sync" section framing the star as release notification, with clone and pull commands
+### Added
 
-### Removed
-
-### Fixed
-
----
+- `core-coding/file-uploads-media-handling-prompt.md` - accept uploads safely: server-side validation, streaming for large files, generated storage names, malware scanning hooks, and resumable transfers
+- `core-coding/graphql-api-design-prompt.md` - design GraphQL past the demo: schema-first types, resolver N+1 batching, field-level authorization, bounded depth and complexity, stable error shape
+- `core-coding/websockets-realtime-features-prompt.md` - build realtime features that survive disconnects and horizontal scaling: connection lifecycle, versioned message contracts, an explicit delivery guarantee, and a slow-client policy
+- `core-coding/payment-integration-prompt.md` - integrate payments with money-grade discipline: no raw card data, idempotency keys on every mutation, verified webhooks, an order/payment state machine, and reconciliation jobs
+- `core-coding/email-delivery-prompt.md` - send transactional email that reaches the inbox: SPF/DKIM/DMARC domain auth, code templates tested across clients, async sending with retry, and bounce/complaint suppression
+- `system-design/message-queues-event-driven-design-prompt.md` - design event-driven systems for at-least-once delivery: versioned event contracts, per-key ordering, idempotent consumers, replay and backfill strategy, and DLQ operations
+- `system-design/legacy-code-modernization-assessment-prompt.md` - assess whether a legacy system should be modernized at all: EOL and security inventory, a value-versus-risk map per module, strangler-fig seams, a characterization-test plan, and stop conditions
+- `security-performance/prompt-injection-defense-prompt.md` - threat-model the prompt-injection attack class specifically: an inventory of where untrusted text reaches the context, instruction/data separation with its limits, out-of-band tool gating, a red-team suite, and documented residual risk
+- `security-performance/privacy-gdpr-compliance-review-prompt.md` - run a systematic privacy review: data inventory with storage and retention, lawful basis and consent withdrawal, user rights flows including backups, the third-party processor list, and ranked minimization work
+- `security-performance/rate-limiting-abuse-prevention-prompt.md` - protect public endpoints: limits tiered by identity, IP, and route cost, a written rationale for the algorithm, correct 429 and Retry-After semantics, shared-store counters, and a load test proving the limits trip and recover
+- `devops-deploy/background-jobs-scheduled-tasks-prompt.md` - add background jobs that survive retries and deploys: idempotent handlers, bounded retries with backoff, dead-letter handling, queue depth and age metrics, and graceful shutdown drains
+- `devops-deploy/cloud-cost-optimization-prompt.md` - cut cloud spend from measurement: a cost inventory ranked by service, rightsizing from utilization data, idle-resource cleanup, storage lifecycle policies, and a before/after savings table
+- `devops-deploy/capacity-planning-prompt.md` - turn outages into scheduled upgrades: headroom per bottleneck, a forecast tied to a product metric, dated scaling options with cost and lead time, and alerts that fire well before the wall
+- `frontend-ui/design-tokens-theming-prompt.md` - build theming structurally: a token taxonomy for color, spacing, radius, and type; primitive to semantic to component layers; per-pair dark mode contrast checks; and a migration path off hardcoded values
+- `frontend-ui/animation-performance-prompt.md` - keep motion smooth on mid-range devices: animate only transform and opacity, profile long frames during real interaction, respect reduced motion, use compositor hints sparingly, and measure frame rate before and after
+- `frontend-ui/browser-extension-development-prompt.md` - build a browser extension that passes review: manifest v3 structure, minimum permissions, the background worker and content script split, storage and typed messaging, CSP and no-remote-code rules, and a store review checklist
+- `frontend-ui/pwa-offline-support-prompt.md` - implement offline support explicitly: service worker lifecycle and cache versioning, a caching strategy per resource type, offline fallbacks with queued mutations, an update-in-place flow, and Lighthouse verification
+- `mobile-dev/mobile-app-project-setup-prompt.md` - bootstrap a mobile app: an argued stack choice with the tradeoffs against it, feature-based project structure, a navigation skeleton, iOS and Android builds from a clean clone on CI, and a device testing plan
+- `data-ai/data-visualization-prompt.md` - make charts honest and accessible: match chart type to the question and data shape, keep axes honest and everything labeled, use color-blind-safe palettes plus a non-color encoding, handle every state, and verify against the source numbers
+- `data-ai/ab-test-design-analysis-prompt.md` - design and read online experiments honestly: hypothesis and primary metric fixed before launch, sample size and power, randomization unit with contamination checks, pre-committed stopping rules, and effect size with confidence intervals
+- `data-ai/analytics-event-tracking-prompt.md` - instrument product analytics so it does not rot: a naming convention and property schema, a tracking plan as the source of truth, client-side validation before send, PII minimization, and an end-to-end test that events arrive
+- `data-ai/ml-model-deployment-basics-prompt.md` - bridge training artifacts to serving: model artifact versioning and a registry, an inference API with input and output validation, measured latency and batching, drift monitoring with retraining triggers, and a rehearsed rollback
+- `data-ai/fine-tune-vs-rag-vs-prompting-decision-prompt.md` - decide between prompting, RAG, and fine-tuning: requirements for freshness, specificity, cost, and latency first; an evidence-backed decision matrix; the cheapest sufficient option; an eval plan that could disprove the choice; and reversal criteria
 
 ## [0.5.0] - 2026-09-26
 

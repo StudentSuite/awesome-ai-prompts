@@ -19,6 +19,16 @@ Back to the [main index](../README.md#data--ai) or browse
 - [csv-spreadsheet-wrangling-prompt.md](csv-spreadsheet-wrangling-prompt.md) - clean messy CSV/spreadsheet exports with encoding detection, explicit type overrides, and a validation report.
 - [responsible-web-scraping-prompt.md](responsible-web-scraping-prompt.md) - scrape within robots.txt/ToS with resilient selectors, checkpointed crawls, and politeness budgets.
 
+- [data-visualization-prompt.md](data-visualization-prompt.md) - charts that are honest and accessible: type matched to the question, honest axes, color-blind-safe plus a second encoding, checked against source numbers.
+
+- [ab-test-design-analysis-prompt.md](ab-test-design-analysis-prompt.md) - experiments you can trust: hypothesis and metric fixed first, power calculation, contamination checks, stopping rules, effect size with intervals.
+
+- [analytics-event-tracking-prompt.md](analytics-event-tracking-prompt.md) - instrumentation that does not rot: tracking plan as source of truth, machine-readable schema, pre-send validation, PII minimized, delivery proven.
+
+- [ml-model-deployment-basics-prompt.md](ml-model-deployment-basics-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - from notebook to service: versioned artifacts, validated inference API, measured latency, drift triggers, a rehearsed rollback.
+
+- [fine-tune-vs-rag-vs-prompting-decision-prompt.md](fine-tune-vs-rag-vs-prompting-decision-prompt.md) - pick the cheapest sufficient LLM technique: requirements first, evidence-backed matrix, eval plan that could disprove it, reversal criteria.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,
