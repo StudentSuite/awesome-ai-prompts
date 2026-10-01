@@ -9,6 +9,8 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-10-01
+
 ### Changed
 
 - promoted `ml-model-deployment-basics-prompt.md` to a spec prompt: added the `[spec]` badge,
@@ -215,7 +217,8 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
-[Unreleased]: https://github.com/shauryagangrade/awesome-ai-prompts/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/shauryagangrade/awesome-ai-prompts/compare/v0.6.0...HEAD
+[0.6.0]: https://github.com/shauryagangrade/awesome-ai-prompts/releases/tag/v0.6.0
 [0.5.0]: https://github.com/shauryagangrade/awesome-ai-prompts/releases/tag/v0.5.0
 [0.4.0]: https://github.com/shauryagangrade/awesome-ai-prompts/releases/tag/v0.4.0
 [0.3.0]: https://github.com/shauryagangrade/awesome-ai-prompts/releases/tag/v0.3.0
