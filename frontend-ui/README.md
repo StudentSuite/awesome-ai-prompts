@@ -27,6 +27,8 @@ Back to the [main index](../README.md#frontend--ui) or browse
 
 - [browser-extension-development-prompt.md](browser-extension-development-prompt.md) - build an extension that passes review: manifest v3, minimum permissions, background worker versus content script, CSP and no-remote-code, load-unpacked loop.
 
+- [pwa-offline-support-prompt.md](pwa-offline-support-prompt.md) - offline-first done explicitly: service worker lifecycle, cache versioning, per-resource caching strategy, queued mutations, update-in-place, Lighthouse proof.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,

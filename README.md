@@ -256,7 +256,7 @@ described above.
 - [Security & performance](#security--performance) (11) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [DevOps & deploy](#devops--deploy) (12)
 - [Career & learning](#career--learning) (6)
-- [Frontend & UI](#frontend--ui) (12) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [Frontend & UI](#frontend--ui) (13) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Data & AI](#data--ai) (7) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Mobile development](#mobile-development) (5) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 
@@ -397,6 +397,7 @@ described above.
 - [design-tokens-theming-prompt.md](frontend-ui/design-tokens-theming-prompt.md) - theming that survives dark mode and a rebrand: token taxonomy, primitive to semantic to component layers, per-pair contrast, a migration off hardcoded values.
 - [animation-performance-prompt.md](frontend-ui/animation-performance-prompt.md) - motion that stays smooth on a mid-range phone: only transform and opacity, long frames profiled, reduced motion respected, frame rate measured before and after.
 - [browser-extension-development-prompt.md](frontend-ui/browser-extension-development-prompt.md) - build an extension that passes review: manifest v3, minimum permissions, background worker versus content script, CSP and no-remote-code, load-unpacked loop.
+- [pwa-offline-support-prompt.md](frontend-ui/pwa-offline-support-prompt.md) - offline-first done explicitly: service worker lifecycle, cache versioning, per-resource caching strategy, queued mutations, update-in-place, Lighthouse proof.
 
 ## Mobile development
 
