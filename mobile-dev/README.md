@@ -17,6 +17,8 @@ Back to the [main index](../README.md#mobile-development) or browse
 - [mobile-ui-overhaul-prompt.md](mobile-ui-overhaul-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - overhaul a mobile UI end-to-end: target design spec, token layer, reimplemented screens, with before/after proof on every platform.
 - [website-to-mobile-app-prompt.md](website-to-mobile-app-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - turn a website into a mobile app, choosing the adaptation strategy from the site's actual architecture: wrapper vs shared-logic vs native.
 
+- [mobile-app-project-setup-prompt.md](mobile-app-project-setup-prompt.md) - bootstrap a new mobile app: argued stack choice, feature-based structure, navigation skeleton, both platforms building from a clean clone on CI.
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,

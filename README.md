@@ -258,7 +258,7 @@ described above.
 - [Career & learning](#career--learning) (6)
 - [Frontend & UI](#frontend--ui) (13) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Data & AI](#data--ai) (7) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [Mobile development](#mobile-development) (5) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [Mobile development](#mobile-development) (6) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 
 ## Contributing to this repo
 
@@ -406,6 +406,7 @@ described above.
 - [mobile-ui-audit-prompt.md](mobile-dev/mobile-ui-audit-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - audit a mobile UI against platform conventions: touch targets, safe areas, accessibility, states, theming, with file:line fixes.
 - [mobile-ui-overhaul-prompt.md](mobile-dev/mobile-ui-overhaul-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - overhaul a mobile UI end-to-end: target design spec, token layer, reimplemented screens, with before/after proof on every platform.
 - [website-to-mobile-app-prompt.md](mobile-dev/website-to-mobile-app-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - turn a website into a mobile app, choosing the adaptation strategy from the site's actual architecture: wrapper vs shared-logic vs native.
+- [mobile-app-project-setup-prompt.md](mobile-dev/mobile-app-project-setup-prompt.md) - bootstrap a new mobile app: argued stack choice, feature-based structure, navigation skeleton, both platforms building from a clean clone on CI.
 
 ## Data & AI
 

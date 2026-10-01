@@ -28,6 +28,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `frontend-ui/animation-performance-prompt.md` - keep motion smooth on mid-range devices: animate only transform and opacity, profile long frames during real interaction, respect reduced motion, use compositor hints sparingly, and measure frame rate before and after
 - `frontend-ui/browser-extension-development-prompt.md` - build a browser extension that passes review: manifest v3 structure, minimum permissions, the background worker and content script split, storage and typed messaging, CSP and no-remote-code rules, and a store review checklist
 - `frontend-ui/pwa-offline-support-prompt.md` - implement offline support explicitly: service worker lifecycle and cache versioning, a caching strategy per resource type, offline fallbacks with queued mutations, an update-in-place flow, and Lighthouse verification
+- `mobile-dev/mobile-app-project-setup-prompt.md` - bootstrap a mobile app: an argued stack choice with the tradeoffs against it, feature-based project structure, a navigation skeleton, iOS and Android builds from a clean clone on CI, and a device testing plan
 - per-category `README.md` in all 13 category folders: what belongs in the
   category, the prompt list, a backlink to the matching main-README section,
   and a pointer to the one-page catalog
