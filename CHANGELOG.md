@@ -9,6 +9,10 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Changed
+
+- promoted `payment-integration-prompt.md` to a spec prompt: added the `[spec]` badge,
+  `SPEC_PROMPTS` registration, and the spec field contract.
 ### Added
 
 - `core-coding/file-uploads-media-handling-prompt.md` - accept uploads safely: server-side validation, streaming for large files, generated storage names, malware scanning hooks, and resumable transfers

@@ -1,72 +1,115 @@
-# Reusable prompt: mobile app project setup
+# Reusable prompt: mobile app project setup [spec]
 
 Copy-paste the block below into any AI coding agent to bootstrap a new mobile
-app from an empty repository - with a justified stack choice, a runnable
-navigation skeleton, and a clean iOS and Android build you can reproduce.
+app from an empty repository: an argued stack choice, a feature-based
+structure, a typed navigation skeleton, and clean builds on iOS and Android.
+Failure here is expensive, so the stack is decided before any code is written.
 
-Keywords: mobile setup, project scaffold, ios, android, app store, builds
+Keywords: mobile app setup, project scaffold, ios, android, app store, builds
 
 ---
 
-Set up a new mobile app project in this repository for `[what the app does and
-who it is for]`. The rule: **the stack choice must be argued before the first
-file is generated**, and the setup is not done until both platforms build from a
-clean clone on CI.
+Set up a new mobile app project here for `[what the app does and who it is
+for]`. Argue the stack before generating the first file, and finish only when
+both platforms build from a clean clone on CI. Infer every decision from the
+repository and the scope you write first.
 
-## Steps
+## Define the scope first
 
-1. **Choose the stack and write down the tradeoffs** - Compare React Native,
-   Flutter, and native Swift/Kotlin for this app specifically: does it need
-   custom native modules, heavy animation, background work, or an existing team
-   skill set? Weights like reuse of a web codebase and hiring pool count as
-   reasons. Record the decision with the two strongest reasons against your
-   choice, so the decision can be revisited when it turns out wrong.
-2. **Bootstrap without a generator's assumptions** - Create the project, then
-   immediately check in the config that matters: the SDK version pins, the
-   package manifest with exact versions, the build settings for both
-   platforms, and the ignore files. A generated project that will not build on
-   a clean machine is not a setup.
-3. **Establish the project structure** - Organize by feature rather than by
-   platform, with the shared layer (types, API client, theme) clearly separated
-   from platform-specific code. Explain the layout in the README so the next
-   person does not reorganize it. State where a shared module stops being worth
-   sharing.
-4. **Build the navigation skeleton** - Wire the real screen hierarchy with
-   typed route parameters, a root navigator, and the back behavior on both
-   platforms. Deep linking is part of this step if the app has shareable
-   screens, because retrofitting it means rewriting the navigator. No dead
-   placeholder screens beyond what proves the flow works.
-5. **Prove both platforms build from scratch** - Run the iOS and Android builds
-   and the app on a simulator for each. Paste the output. Resolve the first
-   failure rather than noting it as a known issue; a setup task that ends with
-   a broken build has moved the problem, not solved it.
-6. **Add CI builds** - Configure CI to install, build, and test both platforms
-   on every push, with dependency and SDK versions pinned. Cache the build
-   directories but never the toolchain version. A CI badge that is red on the
-   first run is worse than no CI.
-7. **Plan device testing, not just simulator testing** - Simulators do not
-   reproduce real signal, real permissions, low memory, or a real keyboard.
-   List the devices and OS versions to test on, and the specific risks (safe
-   area, notch, permission prompts, keyboard overlap, back gesture) to check.
-   Say how a physical device gets the build without a manual IDE ritual.
-8. **Handle the store listing basics** - Set the bundle identifier and version
-   code correctly and explain how they must increase with every upload, add the
-   required privacy manifest and permission usage strings, and note the app icon
-   and splash requirements per store. Note what signing needs that a public
-   repo must never contain.
+1. **The app and its users** - One sentence on what `[the app]` does and who
+   it is for. If the sentence needs an "and", split it or cut it.
+2. **Target platforms** - iOS, Android, or both, and the minimum OS version
+   for each. Name the exact devices and OS versions you will verify against.
+3. **The team's existing skills** - Languages and mobile frameworks the team
+   already ships, and the hiring or maintenance constraint that matters.
+4. **Out of scope** - Backend services this app calls, ongoing store review
+   work beyond the listing basics, analytics, i18n, and platform-specific
+   workarounds for any platform not named above.
+
+Treat each as a decision you can revise, not a question for the user.
+
+## What to produce
+
+1. **Stack decision** - Native (Swift and Kotlin), React Native, or Flutter,
+   chosen for this app and team. Carry the two strongest reasons against the
+   choice and the condition that reverses it. Evidence: the rejected options.
+2. **Project structure** - A feature-based layout, with the shared layer
+   (types, API client, theme) separated from platform code, plus a rule for
+   when sharing a module stops paying. Evidence: the folder tree and README.
+3. **Navigation skeleton** - The real screen hierarchy with typed route
+   parameters, a root navigator, defined back behavior on both platforms, and
+   deep-link routing if any screen is shareable. Evidence: the route table and
+   the parameter types, cited file:line.
+4. **Clean-checkout build evidence** - Install, build, and launch iOS and
+   Android from a fresh clone; log toolchain and SDK versions per platform.
+5. **CI configuration** - A workflow that installs, builds, and tests both
+   platforms on every push with pinned dependency and SDK versions, caching
+   build directories but never the toolchain. Evidence: the workflow file and
+   a green run URL.
+6. **Device test plan** - The devices and OS versions to test on, and the
+   simulator blind spots each check closes: safe area and notch, permission
+   prompts, low memory, keyboard overlap, the back gesture, real signal.
+   Evidence: a device-by-risk matrix.
+7. **Store listing basics** - Bundle identifier and version-code rules that
+   increase with every upload, the privacy manifest, permission usage strings,
+   and icon and splash requirements per store. Evidence: a value checklist.
+
+## Method
+
+Run the phases in order; each has an exit condition.
+
+1. **Inventory the environment first** - Record the SDKs, package managers,
+   and target OS versions already installed, plus the team skills from scope.
+   Exit: a shortlist with the constraint that eliminates each rejected stack.
+2. **Decide the stack, then write the counter-case** - Choose, then state the
+   two strongest reasons against it and the trigger to revisit. Exit: a
+   decision that names what it is trading away.
+3. **Bootstrap without a generator's assumptions** - Create the project, then
+   check in SDK version pins, exact dependency versions, and both platforms'
+   build settings and ignore files; delete sample content. Exit: a clean tree.
+4. **Lay out by feature** - Build the shared layer and the feature folders,
+   and document where sharing stops paying. Exit: the README layout paragraph
+   matches the tree on disk.
+5. **Wire the navigation skeleton** - Real screens with typed params, a root
+   navigator, back behavior, and deep-link routes. Exit: every declared route
+   resolves on both platforms.
+6. **Prove a clean checkout builds** - Clone into a fresh directory, install,
+   build, and launch both platforms, and log the output. Resolve the first
+   failure. Exit: run logs from a clone with no prior state.
+7. **Add CI and make it green** - Configure the workflow, pin versions, cache
+   build directories, and get one passing run before continuing. Exit: a green
+   run URL.
+8. **Write the device and store plans** - Name the devices, the risks
+   simulators miss, and the listing values. Exit: the matrix and checklist
+   exist and the repo tracks no signing material.
+
+## Verification
+
+Before declaring setup complete, confirm each of these:
+
+- [ ] The stack decision names the two strongest reasons against it and the
+      condition that would reverse it.
+- [ ] Both platforms build and launch from a fresh clone, proven by a run log
+      naming the toolchain and SDK versions.
+- [ ] The navigation skeleton routes are typed, and every declared deep link
+      resolves on both platforms.
+- [ ] The CI workflow pins dependency and SDK versions, builds both platforms,
+      and its latest run is green with a URL recorded.
+- [ ] The device test plan covers safe area and notch, permission prompts, low
+      memory, keyboard overlap, and the back gesture.
+- [ ] The bundle identifier and version rules are configured, permission usage
+      strings and the privacy manifest are present, and every value is cited.
+- [ ] No signing keys, keystores, or provisioning profiles are tracked.
+- [ ] No generator sample content remains, and the README structure paragraph
+      matches the tree on disk.
 
 ## Rules
 
 - Never generate a project and stop before both platforms build.
 - Never pick a stack without naming the strongest reasons against it.
 - Never commit signing keys, keystores, or provisioning profiles.
-- Never call simulator-only verification sufficient. Name the device risks you
-  have not covered.
+- Never call simulator-only verification sufficient, or ship a platform you
+  have not run.
 - Never leave a generator's sample content in the repository.
-
-## Verification
-
-Paste the stack decision with its tradeoffs, the folder layout, the iOS and
-Android build output from a clean checkout, the CI run URL, and the device test
-plan with its named risks. Confirm the version and bundle identifier setup and
-that no signing material is tracked.
+- Never end setup with red CI; a broken first run moves the problem, it does
+  not solve it.

@@ -33,7 +33,7 @@ Back to the [main index](../README.md#core-coding) or browse
 
 - [websockets-realtime-features-prompt.md](websockets-realtime-features-prompt.md) - build realtime that survives disconnects and horizontal scaling: lifecycle, message contract, stated delivery guarantee, slow-client policy.
 
-- [payment-integration-prompt.md](payment-integration-prompt.md) - add payments with money-grade discipline: no raw card data, idempotent mutations, verified webhooks, reconciliation.
+- [payment-integration-prompt.md](payment-integration-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - add payments with money-grade discipline: no raw card data, idempotent mutations, verified webhooks, reconciliation.
 
 - [email-delivery-prompt.md](email-delivery-prompt.md) - send transactional mail that lands: domain authentication, code templates, async retries, bounce and complaint handling.
 
