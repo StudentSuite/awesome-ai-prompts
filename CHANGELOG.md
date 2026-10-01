@@ -11,6 +11,8 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- promoted `mobile-app-project-setup-prompt.md` to a spec prompt: added the `[spec]` badge,
+  `SPEC_PROMPTS` registration, and the spec field contract.
 - promoted `rate-limiting-abuse-prevention-prompt.md` to a spec prompt: added the `[spec]` badge,
   `SPEC_PROMPTS` registration, and the spec field contract.
 - promoted `privacy-gdpr-compliance-review-prompt.md` to a spec prompt: added the `[spec]` badge,
