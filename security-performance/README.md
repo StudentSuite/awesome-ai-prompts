@@ -22,7 +22,7 @@ Back to the [main index](../README.md#security--performance) or browse
 
 - [prompt-injection-defense-prompt.md](prompt-injection-defense-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - threat-model one attack class: where untrusted text reaches the context, out-of-band tool gating, a red-team suite, honest residual risk.
 
-- [privacy-gdpr-compliance-review-prompt.md](privacy-gdpr-compliance-review-prompt.md) - systematic privacy pass: data inventory with retention, lawful basis, consent withdrawal, user rights flows, processors, ranked minimization.
+- [privacy-gdpr-compliance-review-prompt.md](privacy-gdpr-compliance-review-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - systematic privacy pass: data inventory with retention, lawful basis, consent withdrawal, user rights flows, processors, ranked minimization.
 
 - [rate-limiting-abuse-prevention-prompt.md](rate-limiting-abuse-prevention-prompt.md) - protect public endpoints: limits tiered by cost, algorithm chosen for the traffic shape, shared counters, load-test proof.
 
