@@ -17,6 +17,7 @@ Back to the [main index](../README.md#code-review--quality) or browse
 - [architecture-review-prompt.md](architecture-review-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - audit architecture with evidence-backed 0-10 scores, file:line findings, and a prioritized refactoring roadmap.
 - [codebase-audit-prompt.md](codebase-audit-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - audit a codebase as a senior architect: evidence-backed 0-10 scores, structural smell identification, and a prioritized refactoring roadmap.
 
+- [data-model-review-prompt.md](data-model-review-prompt.md) - review schema, migrations, indexes, and integrity with evidence.$
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,

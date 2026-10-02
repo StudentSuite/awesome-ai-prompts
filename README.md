@@ -250,15 +250,15 @@ described above.
 - [Core coding](#core-coding) (20) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [System design](#system-design) (7) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Git & GitHub](#git--github) (12) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [Code review & quality](#code-review--quality) (5) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [Testing & quality](#testing--quality) (9) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [Docs & delivery](#docs--delivery) (5)
+- [Code review & quality](#code-review--quality) (6) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [Testing & quality](#testing--quality) (10) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [Docs & delivery](#docs--delivery) (6)
 - [Security & performance](#security--performance) (11) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [DevOps & deploy](#devops--deploy) (12)
-- [Career & learning](#career--learning) (6)
+- [Career & learning](#career--learning) (7)
 - [Frontend & UI](#frontend--ui) (13) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [Data & AI](#data--ai) (12) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [Mobile development](#mobile-development) (6) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [Data & AI](#data--ai) (13) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [Mobile development](#mobile-development) (7) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 
 ## Contributing to this repo
 
@@ -324,6 +324,7 @@ described above.
 - [accessibility-review-prompt.md](code-review/accessibility-review-prompt.md) - audit UI code for WCAG compliance: semantics, keyboard nav, contrast, screen readers.
 - [architecture-review-prompt.md](code-review/architecture-review-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - audit architecture with evidence-backed 0-10 scores, file:line findings, and a prioritized refactoring roadmap.
 - [codebase-audit-prompt.md](code-review/codebase-audit-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - audit a codebase as a senior architect: evidence-backed 0-10 scores, structural smell identification, and a prioritized refactoring roadmap.
+- [data-model-review-prompt.md](code-review/data-model-review-prompt.md) - review schema, migrations, indexes, and integrity with evidence.
 
 ## Testing & quality
 
@@ -336,10 +337,12 @@ described above.
 - [mutation-testing-prompt.md](testing-quality/mutation-testing-prompt.md) - run mutation testing to validate that tests actually catch real defects.
 - [contract-testing-prompt.md](testing-quality/contract-testing-prompt.md) - consumer-driven contract tests so API drift fails CI, not production.
 - [chaos-resilience-prompt.md](testing-quality/chaos-resilience-prompt.md) - inject failures and close the gaps: timeouts, backoff, graceful degradation.
+- [property-based-testing-prompt.md](testing-quality/property-based-testing-prompt.md) - write property-based tests with generated inputs and shrink evidence.
 
 ## Docs & delivery
 
 - [documentation-writer-prompt.md](docs-delivery/documentation-writer-prompt.md) - accurate, verified docs that match the project's voice.
+- [architecture-documentation-prompt.md](docs-delivery/architecture-documentation-prompt.md) - write architecture docs with evidence, tradeoffs, and verification.
 - [release-notes-changelog-prompt.md](docs-delivery/release-notes-changelog-prompt.md) - turn git history into a clear, honest changelog.
 - [api-documentation-prompt.md](docs-delivery/api-documentation-prompt.md) - generate OpenAPI/Swagger docs from existing code with accurate schemas.
 - [readme-builder-prompt.md](docs-delivery/readme-builder-prompt.md) - build a comprehensive README from scratch: purpose, quickstart, examples.
@@ -382,6 +385,7 @@ described above.
 - [tech-blog-writer-prompt.md](career-learning/tech-blog-writer-prompt.md) - turn a project or technical concept into a clear, engaging blog post.
 - [learning-roadmap-prompt.md](career-learning/learning-roadmap-prompt.md) - turn a skill gap into a project-based roadmap with verifiable checkpoints.
 - [conference-talk-proposal-prep-prompt.md](career-learning/conference-talk-proposal-prep-prompt.md) - write a competitive CFP and rehearse the talk: hook, takeaway, timed outline, demo fallbacks.
+- [mentoring-feedback-prompt.md](career-learning/mentoring-feedback-prompt.md) - give structured, verifiable feedback to a junior engineer with evidence.
 
 ## Frontend & UI
 
@@ -407,6 +411,7 @@ described above.
 - [mobile-ui-overhaul-prompt.md](mobile-dev/mobile-ui-overhaul-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - overhaul a mobile UI end-to-end: target design spec, token layer, reimplemented screens, with before/after proof on every platform.
 - [website-to-mobile-app-prompt.md](mobile-dev/website-to-mobile-app-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - turn a website into a mobile app, choosing the adaptation strategy from the site's actual architecture: wrapper vs shared-logic vs native.
 - [mobile-app-project-setup-prompt.md](mobile-dev/mobile-app-project-setup-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - bootstrap a new mobile app: argued stack choice, feature-based structure, navigation skeleton, both platforms building from a clean clone on CI.
+- [push-notifications-deep-links-prompt.md](mobile-dev/push-notifications-deep-links-prompt.md) - implement notifications and deep links with permission and routing verification.
 
 ## Data & AI
 
@@ -422,6 +427,7 @@ described above.
 - [analytics-event-tracking-prompt.md](data-ai/analytics-event-tracking-prompt.md) - instrumentation that does not rot: tracking plan as source of truth, machine-readable schema, pre-send validation, PII minimized, delivery proven.
 - [ml-model-deployment-basics-prompt.md](data-ai/ml-model-deployment-basics-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - from notebook to service: versioned artifacts, validated inference API, measured latency, drift triggers, a rehearsed rollback.
 - [fine-tune-vs-rag-vs-prompting-decision-prompt.md](data-ai/fine-tune-vs-rag-vs-prompting-decision-prompt.md) - pick the cheapest sufficient LLM technique: requirements first, evidence-backed matrix, eval plan that could disprove it, reversal criteria.
+- [data-quality-validation-prompt.md](data-ai/data-quality-validation-prompt.md) - define data contracts, checks, and failure response for pipelines.
 
 ## Usage in the wild
 

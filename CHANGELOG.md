@@ -8,6 +8,14 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ---
 
 ## [Unreleased]
+- `docs-delivery/architecture-documentation-prompt.md` - architecture docs with evidence and tradeoffs.
+- `career-learning/mentoring-feedback-prompt.md` - structured, verifiable mentoring feedback.
+- `code-review/data-model-review-prompt.md` - schema, migration, and index review with evidence.
+- `testing-quality/property-based-testing-prompt.md` - property-based tests with generated inputs.
+- `mobile-dev/push-notifications-deep-links-prompt.md` - notifications and deep-link verification.
+- `data-ai/data-quality-validation-prompt.md` - data contracts, checks, and failure response.
+
+## [0.6.0] - 2026-10-01
 
 ### Changed
 
@@ -215,7 +223,8 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
-[Unreleased]: https://github.com/shauryagangrade/awesome-ai-prompts/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/shauryagangrade/awesome-ai-prompts/compare/v0.6.0...HEAD
+[0.6.0]: https://github.com/shauryagangrade/awesome-ai-prompts/releases/tag/v0.6.0
 [0.5.0]: https://github.com/shauryagangrade/awesome-ai-prompts/releases/tag/v0.5.0
 [0.4.0]: https://github.com/shauryagangrade/awesome-ai-prompts/releases/tag/v0.4.0
 [0.3.0]: https://github.com/shauryagangrade/awesome-ai-prompts/releases/tag/v0.3.0
