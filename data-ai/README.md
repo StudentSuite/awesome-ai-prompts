@@ -29,6 +29,7 @@ Back to the [main index](../README.md#data--ai) or browse
 
 - [fine-tune-vs-rag-vs-prompting-decision-prompt.md](fine-tune-vs-rag-vs-prompting-decision-prompt.md) - pick the cheapest sufficient LLM technique: requirements first, evidence-backed matrix, eval plan that could disprove it, reversal criteria.
 
+- [data-quality-validation-prompt.md](data-quality-validation-prompt.md) - define data contracts, checks, and failure response for pipelines.$
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,

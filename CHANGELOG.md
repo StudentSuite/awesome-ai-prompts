@@ -8,6 +8,12 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ---
 
 ## [Unreleased]
+- `docs-delivery/architecture-documentation-prompt.md` - architecture docs with evidence and tradeoffs.
+- `career-learning/mentoring-feedback-prompt.md` - structured, verifiable mentoring feedback.
+- `code-review/data-model-review-prompt.md` - schema, migration, and index review with evidence.
+- `testing-quality/property-based-testing-prompt.md` - property-based tests with generated inputs.
+- `mobile-dev/push-notifications-deep-links-prompt.md` - notifications and deep-link verification.
+- `data-ai/data-quality-validation-prompt.md` - data contracts, checks, and failure response.
 
 ## [0.6.0] - 2026-10-01
 

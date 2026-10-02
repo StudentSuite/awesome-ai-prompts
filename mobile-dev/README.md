@@ -19,6 +19,7 @@ Back to the [main index](../README.md#mobile-development) or browse
 
 - [mobile-app-project-setup-prompt.md](mobile-app-project-setup-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - bootstrap a new mobile app: argued stack choice, feature-based structure, navigation skeleton, both platforms building from a clean clone on CI.
 
+- [push-notifications-deep-links-prompt.md](push-notifications-deep-links-prompt.md) - implement notifications and deep links with permission and routing verification.$
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,
