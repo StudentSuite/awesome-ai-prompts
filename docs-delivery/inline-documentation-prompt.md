@@ -1,8 +1,8 @@
 # Reusable prompt: inline documentation
 
 Copy-paste the block below into any AI coding agent to add or improve inline
-documentation - accurate JSDoc/docstrings that explain the "why", not ones
-that restate the code.
+documentation - accurate JSDoc/docstrings that explain the "why", not ones that
+restate the code.
 
 Keywords: inline comments, docstrings, code comments, godoc, jsdoc, commenting style
 
@@ -15,30 +15,35 @@ restates what the code already says.
 
 ## Steps
 
-1. **Read the code first** - Understand what each function, class, and module
-   actually does. Trace the logic, identify edge cases, and note any
-   non-obvious behavior. Do not write docs from the function signature alone.
-2. **Follow the repo's conventions** - Check the existing docstring/JSDoc style
-   in the codebase: format (JSDoc, reST, Google, NumPy), level of detail,
-   where they are used, and where they are omitted. Match the existing
-   conventions exactly.
-3. **Document what matters** - Add documentation to:
-   - Public functions and classes that other developers will use
-   - Non-obvious parameters (what are the valid values, what's the default
-     behavior)
-   - Return values that are not self-explanatory
-   - Side effects, mutations, or state changes
-   - Error conditions and when they are thrown
-   - Comments explaining "why" when the code does something surprising
-4. **Skip what's obvious** - Do not document: getters/setters that do exactly
-   what their name says, trivial one-line functions, private helpers with
-   clear names, or parameters whose types make their purpose obvious.
-5. **Keep it concise** - One to three lines for most functions. A paragraph
-   max for complex classes. Every sentence must add information the code
-   doesn't already convey.
-6. **Verify accuracy** - Read the docs you wrote against the actual code. If
-   the docs describe behavior that doesn't match the implementation, fix the
-   docs.
+1. **Read the code first** - Trace what each function, class, and module
+   actually does; note edge cases and non-obvious behavior. Never document
+   from the signature alone.
+2. **Follow the repo's conventions** - Check the existing docstring style:
+   format (JSDoc, reST, Google, NumPy), level of detail, and where docs are
+   used or deliberately omitted. Match it exactly.
+3. **Document what matters** - Public functions and classes, non-obvious
+   parameters (valid values, default behavior), non-self-explanatory returns,
+   side effects and mutations, error conditions and when they are thrown, and
+   "why" comments where the code surprises.
+4. **Skip the obvious** - No docs for trivial getters and setters, one-line
+   functions, clear private helpers, or self-evident parameters.
+5. **Keep it concise** - One to three lines for most functions, a paragraph
+   max for complex classes. Every sentence must add what the code does not
+   already convey.
+6. **Verify accuracy** - Read each doc back against the code and fix anything
+   that describes behavior the implementation does not have.
+
+## Verification
+
+- [ ] The repo's existing docstring or JSDoc style was matched, including its
+      format.
+- [ ] Every doc comment was read back against the code and is accurate as
+      written.
+- [ ] No docstring merely restates the function name, parameter names, or the
+      obvious.
+- [ ] Public API, non-obvious logic, and every failure mode are documented;
+      trivial getters and setters are not.
+- [ ] Comments stay concise, and no TODO was left in place of a written doc.
 
 ## Rules
 
@@ -46,7 +51,7 @@ restates what the code already says.
   ("this function takes a name and returns a greeting").
 - Never add documentation just to hit a coverage target - quality over
   quantity.
-- Never use TODO comments in documentation - either write the doc or remove
-  the placeholder.
+- Never use TODO comments in documentation - either write the doc or remove the
+  placeholder.
 - If the code is too complex to document concisely, the code may need
   refactoring rather than longer docs.

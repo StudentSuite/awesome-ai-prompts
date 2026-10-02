@@ -38,6 +38,14 @@ prompts - read the conventions before changing anything.
    example `Closes #N` when it truly resolves it), and open the PR with the
    verification output in the description.
 
+## Verification
+
+- [ ] The reproduction or before-state from step 2 is shown, not asserted.
+- [ ] The diff touches only the files named in step 1.
+- [ ] For prompt work, the README entry, the Contents count, and the CHANGELOG entry were updated together.
+- [ ] `check-links.sh`, `check-consistency.sh`, and markdownlint ran, with the outputs pasted.
+- [ ] The commit references the issue with `Closes #N` only if it truly resolves it.
+
 ## Rules
 
 - Never change a prompt's substance to satisfy a check; if a check conflicts,
@@ -45,9 +53,3 @@ prompts - read the conventions before changing anything.
 - Never claim the issue is resolved unless the failing behavior is gone or the
   missing feature demonstrably exists.
 - Keep unrelated files untouched.
-
-## Verification
-
-Confirm the reproduction or before-state from step 2, then the check outputs
-from step 7. For a broken link or script, show that the fix catches the old
-failure.

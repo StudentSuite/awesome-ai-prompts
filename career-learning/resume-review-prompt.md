@@ -12,7 +12,7 @@ Review my technical resume for `[role / company / level]`. The goal: honest,
 specific feedback that helps me stand out as a strong candidate, not polished
 mediocrity.
 
-## What to do
+## Steps
 
 1. **Check the first impression** - Is the summary/objective clear and
    specific? Does it say what kind of engineer I am and what I'm looking
@@ -39,6 +39,14 @@ mediocrity.
 6. **Keyword alignment** - Compare the resume against the target job
    description. Are the key technologies and skills mentioned? Are there
    gaps that would cause it to be filtered out by ATS?
+
+## Verification
+
+- [ ] The first impression names my specialty and seniority within the 6-second scan.
+- [ ] Every suggested rewrite is shown concretely, not as "make it more impactful".
+- [ ] Nothing suggested adds a skill I do not have.
+- [ ] Every overstatement of my role or contribution is flagged, since recruiters verify these.
+- [ ] The key technologies in the target job description appear, and ATS filter risks are listed.
 
 ## Rules
 

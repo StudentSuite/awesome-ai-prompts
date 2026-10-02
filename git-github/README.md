@@ -19,7 +19,7 @@ Back to the [main index](../README.md#git--github) or browse
 - [git-bisect-debug-prompt.md](git-bisect-debug-prompt.md) - use git bisect to find the exact commit that introduced a bug.
 - [release-automation-prompt.md](release-automation-prompt.md) - automate versioning, tagging, changelogs, and publishing with CI.
 - [commit-checklist-prompt.md](commit-checklist-prompt.md) - build deterministic PR gates that keep indexes, changelogs, and counts in sync.
-- [pr-review-prompt.md](pr-review-prompt.md) - thorough PR review: verify claims, run checks, clear verdict, merge-ready.
+- [pr-review-prompt.md](pr-review-prompt.md) <img src="../docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - thorough PR review: verify claims, run checks, clear verdict, merge-ready.
 - [issue-triage-for-maintainers-prompt.md](issue-triage-for-maintainers-prompt.md) - turn an untriaged backlog into labeled, prioritized, answerable queues.
 - [issue-resolving-prompt.md](issue-resolving-prompt.md) - resolve a GitHub issue end-to-end: reproduce the failure, prove the root cause, land a minimal fix with a regression test, and verify against the project's checks.
 - [open-source-maintainer-survival-prompt.md](open-source-maintainer-survival-prompt.md) - harden maintenance practices: guidelines, automation, kind declines, bus factor, handoff.

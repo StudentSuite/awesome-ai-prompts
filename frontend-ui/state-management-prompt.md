@@ -1,22 +1,22 @@
 # Reusable prompt: frontend state management
 
 Copy-paste the block below into any AI coding agent to untangle or design
-client state - the right home for each kind of state, minimal moving parts,
-no sync bugs.
+client state - the right home for each kind of state, minimal moving parts, no
+sync bugs.
 
 Keywords: state management, store, client state, server state, global state, re-renders
 
 ---
 
-Design or refactor the client-side state management for this frontend app.
-The goal: each piece of state has exactly one home and one owner, derived
-data is computed rather than stored, and no component syncs state by hand.
+Design or refactor the client-side state management for this frontend app. The
+goal: each piece of state has exactly one home and one owner, derived data is
+computed rather than stored, and no component syncs state by hand.
 
 ## Steps
 
 1. **Inventory existing state** - Find all state: component-local, lifted or
-   context-based, global stores, URL, server cache. For each: who reads it,
-   who writes it, and does it duplicate something else?
+   context-based, global stores, URL, server cache. For each: who reads it, who
+   writes it, and does it duplicate something else?
 2. **Classify by kind** - Server data (fetched, cacheable - belongs in a
    query/cache library or equivalent, not hand-rolled stores), URL state
    (filters, tabs, pagination - belongs in the URL so it's shareable), true
@@ -26,9 +26,9 @@ data is computed rather than stored, and no component syncs state by hand.
    cache layer; push shareable view state into the URL; keep local UI state
    local until two distant components genuinely need it. Delete duplicated
    copies and their sync effects.
-4. **Simplify the toolkit** - Prefer the fewest mechanisms that work:
-   built-in primitives first, then a store library only for genuinely global
-   client state. Removing a library is a valid outcome.
+4. **Simplify the toolkit** - Prefer the fewest mechanisms that work: built-in
+   primitives first, then a store library only for genuinely global client
+   state. Removing a library is a valid outcome.
 5. **Handle the edges** - Loading/error states per query, optimistic updates
    with rollback, races on rapid refetches (cancel or supersede stale
    responses), persistence where required.
@@ -36,9 +36,22 @@ data is computed rather than stored, and no component syncs state by hand.
    edit, refresh): state survives reload where expected, no stale renders, no
    double fetches, no lost updates. Prove with tests on the trickiest flows.
 
+## Verification
+
+- [ ] Every piece of state was inventoried and classified by kind: server, URL,
+      form, or global UI.
+- [ ] Server state moved out of manual stores, and each item has exactly one
+      home.
+- [ ] No derived state is stored; it is computed at render.
+- [ ] No fact has two sources of truth left after the change.
+- [ ] Each piece of state added answers who owns it, who may write it, and when
+      it is cleared.
+- [ ] Loading, error, empty, and optimistic-update paths were walked for each
+      critical flow.
+
 ## Rules
 
 - Stored derived state is a defect waiting to desync - compute it instead.
 - Two sources of truth for the same fact must be merged, or one deleted.
-- Any state you add must answer: who owns it, who may write it, and when is
-  it invalidated?
+- Any state you add must answer: who owns it, who may write it, and when is it
+  invalidated?

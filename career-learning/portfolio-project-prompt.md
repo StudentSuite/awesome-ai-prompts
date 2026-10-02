@@ -11,7 +11,7 @@ Help me build a portfolio-worthy project. I'll describe the idea; you help me
 shape it into something scoped, real, and presentable - something I can
 explain confidently and that demonstrates actual skill.
 
-## What to do
+## Steps
 
 1. **Shape the idea** - Turn my description into a concrete project: what it
    does, who it's for, and the 1–3 things that make it interesting. Push back
@@ -33,6 +33,14 @@ explain confidently and that demonstrates actual skill.
    it works (with real screenshots/usage), the interesting technical decisions,
    and what I'd do next. Help me write a short "about this project" blurb for
    my portfolio/README that's specific and true.
+
+## Verification
+
+- [ ] The project was scoped down to the smallest version that is still impressive, and the cut is stated.
+- [ ] The stack matches skills I actually have, so I can explain every choice.
+- [ ] Every milestone has a clear "done" definition and a way I will test it.
+- [ ] The repo clones and runs for a stranger, with small commits from the first day.
+- [ ] The README shows real screenshots and only claims the code actually supports.
 
 ## Rules
 

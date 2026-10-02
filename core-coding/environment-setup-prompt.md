@@ -36,6 +36,15 @@ not hours.
 7. **Document gaps** - If anything required manual intervention, undocumented
    steps, or workarounds, update the README or CONTRIBUTING with the fix.
 
+## Verification
+
+- [ ] Every command was run, and the output shown, rather than assumed to work.
+- [ ] Runtime and dependency versions match the repo's lockfiles and version-manager files.
+- [ ] Linters, formatters, hooks, and every service were started and confirmed to accept connections.
+- [ ] The full build completed, the app started, and a health endpoint or UI was reached.
+- [ ] The whole suite passes on a clean setup, with output shown.
+- [ ] Every step that needed manual intervention is now written into the README or CONTRIBUTING.
+
 ## Rules
 
 - Never skip steps or assume "the user will figure it out" - do every step

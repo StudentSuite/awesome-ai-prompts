@@ -11,12 +11,12 @@ Prepare a safe deployment of `[version / branch]` of this application to
 `[environment]`. A deployment is a risky operation: the plan must be precise,
 verifiable, and reversible.
 
-## What to produce
+## Steps
 
 1. **Preflight checklist** - Everything that must be true before deploying:
    CI/tests green, migrations reviewed, env/config changes known, secrets in
-   place, dependencies (DB, cache, external APIs) healthy, backups taken if
-   the deployment mutates data.
+   place, dependencies (DB, cache, external APIs) healthy, backups taken if the
+   deployment mutates data.
 2. **The deploy steps** - Exact, ordered commands (or the platform's steps):
    build/package, run migrations (before or after rollout - state which and
    why), update instances, verify. Include how config/secrets are supplied.
@@ -30,14 +30,26 @@ verifiable, and reversible.
 5. **Risk notes** - Known risks of this specific release (breaking changes,
    perf-sensitive features, data-affecting code) and how to watch for them.
 
-## Method
-
 - Read the repo's existing deploy scripts, CI/CD config, README, and any
   runbooks. Build on what exists; don't invent a parallel process.
 - Verify commands where you can (check scripts, run read-only/`--dry-run`
   variants, confirm config paths and env var names exist). Don't fabricate
   commands you haven't validated.
 - Match the environment's conventions (naming, logging, alerting).
+
+## Verification
+
+- [ ] The preflight checklist covers everything that must be true before
+      deploying, and each item is checkable.
+- [ ] Deploy steps are exact and ordered, with the command or platform action
+      spelled out.
+- [ ] Post-deploy verification is a command with an expected result, not a
+      subjective check.
+- [ ] The rollback plan gives exact revert steps and states the point after
+      which rollback is no longer safe.
+- [ ] No secret value appears in the runbook; only how each is supplied.
+- [ ] Every uncertain step is marked as needing confirmation rather than stated
+      as fact.
 
 ## Rules
 

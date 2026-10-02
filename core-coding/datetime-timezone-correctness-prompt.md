@@ -40,6 +40,14 @@ until proven otherwise.
    India's UTC+5:30) - these are exactly the cases naive implementations get
    wrong.
 
+## Verification
+
+- [ ] Every persisted timestamp is UTC or a fixed epoch value, and conversion happens only at the render boundary.
+- [ ] No stored or transmitted timestamp lacks its offset.
+- [ ] Date math that adds a duration to a local time was tested across a DST transition, with the ambiguous fall-back hour flagged rather than silently resolved.
+- [ ] Untrusted date input is validated against expected formats, with ambiguous input such as `01/02/2026` rejected or explicitly flagged.
+- [ ] Tests cover a leap-year edge, a month-end rollover, and a half-hour zone such as UTC+5:30.
+
 ## Rules
 
 - Never format or compare a "naive" datetime (no timezone attached) against

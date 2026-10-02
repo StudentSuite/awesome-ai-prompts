@@ -3,6 +3,10 @@
 Copy-paste the block below into any AI coding agent to review a PR or diff
 through a security lens - find real vulnerabilities, with evidence.
 
+A short report: confirmed findings (path + severity + fix), then
+lower-confidence items to double-check. Separate blocking security issues from
+nice-to-harden. No fluff, no duplicates.
+
 Keywords: secure code, security review, injection, owasp, vulnerability, input validation
 
 ---
@@ -12,7 +16,7 @@ functional review - your job is to find the ways an attacker or a bad input
 could abuse it. Verify everything; don't flag theoretical risks without a
 real path.
 
-## What to hunt for
+## Steps
 
 1. **Injection & shell** - User input reaching SQL/NoSQL queries, shell
    commands, URLs, templates, or deserializers. Trace input from source to
@@ -29,8 +33,6 @@ real path.
 5. **Dependencies & config** - New dependencies with known vulnerabilities,
    unsafe defaults, debug mode, permissive permissions.
 
-## Method
-
 - Read the actual diff and the surrounding code. For each concern, show the
   input-to-sink path with `file:line`. If you can't show the path, mark it as
   "worth checking" rather than a finding.
@@ -40,11 +42,13 @@ real path.
   with no reachable path is less important than a medium one an attacker can
   actually hit.
 
-## Output
+## Verification
 
-A short report: confirmed findings (path + severity + fix), then
-lower-confidence items to double-check. Separate blocking security issues from
-nice-to-harden. No fluff, no duplicates.
+- [ ] Every confirmed finding shows the input-to-sink path with file:line.
+- [ ] Items with no demonstrable path are listed as worth checking, not as findings.
+- [ ] Each finding is ranked by real exploitability, not theoretical severity.
+- [ ] Blocking security issues are separated from hardening suggestions.
+- [ ] No destructive or write operation was run against a real system during the review.
 
 ## Rules
 

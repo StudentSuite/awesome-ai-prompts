@@ -1,8 +1,10 @@
 # Reusable prompt: Core Web Vitals optimization
 
 Copy-paste the block below into any AI coding agent to diagnose and fix real
-Core Web Vitals problems - measured in lab and field, with before/after
-proof.
+Core Web Vitals problems - measured in lab and field, with before/after proof.
+
+A baseline-vs-after table per vital per page, the changes made ranked by
+impact, and what remains with expected gains.
 
 Keywords: core web vitals, lighthouse, page speed, largest contentful paint, layout shift, inp
 
@@ -25,16 +27,24 @@ Optimizing the wrong thing is wasted effort.
    oversized JS payloads, synchronous layout thrash. Split tasks, defer
    non-critical work, reduce shipped JS, memoize expensive renders.
 4. **Then CLS** - Images/video without dimensions, late-loading fonts (use
-   `font-display` plus preload), injected content above the fold, animations
-   on layout properties. Reserve space; animate transform/opacity only.
+   `font-display` plus preload), injected content above the fold, animations on
+   layout properties. Reserve space; animate transform/opacity only.
 5. **Guard the wins** - Bundle-size budgets and performance assertions in CI
    (Lighthouse CI or equivalent), an enforced image pipeline, and a RUM
    dashboard so regressions are seen in the field, not just the lab.
 
-## Output
+## Verification
 
-A baseline-vs-after table per vital per page, the changes made ranked by
-impact, and what remains with expected gains.
+- [ ] A baseline was measured against a production-like build, with field data
+      alongside it.
+- [ ] LCP, INP, and CLS each have a named culprit and a specific fix.
+- [ ] Before and after numbers were re-measured under the same build and page,
+      not estimated.
+- [ ] Where field and lab data disagree, the field number decided.
+- [ ] Bundle budgets and performance assertions are enforced in CI, so a
+      regression fails the build.
+- [ ] No vital was polished past comfortably green while another was still
+      failing.
 
 ## Rules
 

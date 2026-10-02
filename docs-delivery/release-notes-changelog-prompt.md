@@ -1,7 +1,7 @@
 # Reusable prompt: changelog & release notes
 
-Copy-paste the block below into any AI coding agent to turn git history into
-a clear, honest changelog for a release.
+Copy-paste the block below into any AI coding agent to turn git history into a
+clear, honest changelog for a release.
 
 Keywords: changelog, release notes, keep a changelog, versions, commit grouping, release
 
@@ -21,13 +21,23 @@ write from memory or from the release title alone.
    changelog convention if it has one). Order within each group by importance
    or by tag/date as the repo does.
 3. **Summarize user-visible impact** - Each entry should say what changed and
-   (where it matters) what the user/developer must know: a breaking change
-   must be called out loudly with migration guidance or a link to it.
+   (where it matters) what the user/developer must know: a breaking change must
+   be called out loudly with migration guidance or a link to it.
 4. **Be accurate** - Include only what actually landed. Include dependency
    bumps only if they affect users. Never pad with "improved performance"
    unless a commit actually did that.
-5. **Follow conventions** - Keep the repo's existing changelog format,
-   heading style, and versioning scheme (SemVer if the repo uses it).
+5. **Follow conventions** - Keep the repo's existing changelog format, heading
+   style, and versioning scheme (SemVer if the repo uses it).
+
+## Verification
+
+- [ ] Every entry traces to a commit that was actually read; nothing is
+      invented.
+- [ ] Entries describe user-visible impact, not implementation churn.
+- [ ] Breaking changes sit at the top of their section and are flagged as such.
+- [ ] The existing changelog format and heading style are followed exactly.
+- [ ] Auto-generated release notes are reconciled rather than duplicated.
+- [ ] Every version number and link referenced was checked to exist.
 
 ## Rules
 

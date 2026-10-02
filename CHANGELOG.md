@@ -8,12 +8,22 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ---
 
 ## [Unreleased]
+
+- Promote `git-github/pr-review-prompt.md` and `frontend-ui/instagram-carousel-prompt.md` to spec prompts ([spec] badge) and register both in `SPEC_PROMPTS`.
+- Normalize all remaining one-pager prompts onto the contract (`## Steps`, `## Verification`, `## Rules`) with prompt-specific verification content; rewrite or consolidate Rules where needed.
+- Trim over-budget one-pagers (≤45 lines / ≤550 words) by tightening steps; cut Rules to 3-5 bullets. Preserve Verification content.
+- Regenerate `ALL_PROMPTS.html` via `scripts/build-all.py`.
+
 - `docs-delivery/architecture-documentation-prompt.md` - architecture docs with evidence and tradeoffs.
 - `career-learning/mentoring-feedback-prompt.md` - structured, verifiable mentoring feedback.
 - `code-review/data-model-review-prompt.md` - schema, migration, and index review with evidence.
 - `testing-quality/property-based-testing-prompt.md` - property-based tests with generated inputs.
 - `mobile-dev/push-notifications-deep-links-prompt.md` - notifications and deep-link verification.
 - `data-ai/data-quality-validation-prompt.md` - data contracts, checks, and failure response.
+- aligned all 28 spec prompts with the field contract in `spec-prompt-schema-prompt.md`, and added the
+  missing `[spec]` H1 suffix to the five prompts registered in `SPEC_PROMPTS` without it.
+- trimmed the `Keywords:` lines in `devops-deploy/kubernetes-deployment-prompt.md` and
+  `devops-deploy/monitoring-observability-prompt.md` to the 4-7 term range in CONTRIBUTING.md.
 
 ## [0.6.0] - 2026-10-01
 

@@ -16,52 +16,43 @@ table, the queued mutation path with its conflict rule, and the offline test.
 
 ## Steps
 
-1. **Map every request the app makes** - List the app shell, hashed JavaScript
-   and CSS, images, fonts, and each API call. Tag each with how stale it may be
-   served and whether serving it offline is safe at all.
-2. **Version the caches and the worker together** - One cache name per release
-   derived from a version string, plus an activate handler that deletes every
-   cache whose name does not match the current version. Bump the version in the
-   same commit as any change to the precache list, or old assets outlive the
-   deploy that made them unreachable.
+1. **Map every request the app makes** - The app shell, hashed JavaScript and
+   CSS, images, fonts, and every API call, with which are safe to cache and
+   which are per-user.
+2. **Version the cache and the worker together** - One cache name per release,
+   with the previous names listed and deleted on activate, so a new worker
+   never mixes chunks from an old release.
 3. **Give each resource type a strategy and a reason** - App shell and hashed
-   assets: precache on install, serve cache-first. Images and fonts:
-   stale-while-revalidate, serve immediately, refresh in the background. API
-   reads: network-first with a cached body and an explicit stale flag. Never
-   cache anything that is not a GET, and never share a cache entry across
-   differing authorization headers.
-4. **Design every offline state in the UI** - Define what the user sees for
-   first load with no cache, for cached data with the network down, and for a
-   pending write. Each state needs its own component and copy. A spinner that
-   never resolves is a defect, not a loading state.
-5. **Queue mutations and decide the conflict rule** - Writes made offline go
-   to an append-only queue in IndexedDB with a client-generated id and a
-   timestamp. Replay on reconnect with backoff, and write down what happens on a
-   conflict: discard, take the server value, or prompt for a merge. Surface
-   that outcome in the UI rather than swallowing it.
-6. **Update in place, never half** - Let a new worker take over as soon as it is
-   installed, waiting only for a client that is mid-transaction. When a waiting
-   worker exists, tell the app to prompt a reload instead of serving old HTML
-   with new chunks. A shell and its assets must come from the same release.
-7. **Test offline the way a user hits it** - Add a repeatable check that loads
-   the app, cuts the network, and walks every route plus every mutation path,
-   and a second case that flips a deploy mid-session. Run it headlessly in CI.
-   A checklist in a document is not a test.
-8. **Run the audits** - Lighthouse PWA category, an audit for a failing offline
-   start URL, and a pass over the cache list looking for a version nothing ever
-   deletes. Report the scores and the offline run output as they are.
+   assets cache-first; navigation requests get a cached shell fallback; API
+   calls go network-first or stale-while-revalidate as appropriate.
+4. **Design every offline state in the UI** - What the user sees for offline,
+   slow, stale, and partial data, each with copy and a recovery path rather
+   than an error toast.
+5. **Queue mutations and decide the conflict rule** - Offline writes are queued
+   with a client-generated id so retries are idempotent, and the conflict rule
+   is written down before the first queued write ships.
+6. **Test offline the way a user hits it** - A repeatable check that loads the
+   app, then kills the network, then exercises navigation and a write.
+7. **Run the audits** - Lighthouse PWA category, plus an audit for the failing
+   offline case that must stay fixed.
+
+## Verification
+
+- [ ] Every cache name is versioned, and each version has a deletion path.
+- [ ] No POST, partial response, or auth-varying response is ever written to a
+      shared cache.
+- [ ] Each offline, slow, stale, and partial state has designed copy and a
+      recovery path.
+- [ ] Queued writes carry a client id and the conflict policy is written down.
+- [ ] The repeatable offline test runs: load, kill the network, then navigate
+      and write.
+- [ ] The Lighthouse PWA audit passes, and a cached shell never mixes releases.
 
 ## Rules
 
 - Every cache name is versioned, and every version has a deletion path.
 - No POST, no partial response, and no auth-varying response in a shared cache.
-- Offline is a designed state with copy and a recovery path, not an error toast.
+- Offline is a designed state with copy and a recovery path, not an error
+  toast.
 - Queued writes carry a client id and an explicit, written conflict policy.
 - A cached shell never mixes with chunks from another release.
-
-## Verification
-
-Paste the strategy table with one row per resource type, the cache names plus
-the version bump and the activate-time deletion logic, the headless offline run
-showing every route rendered and every queued write replayed, and the Lighthouse
-PWA scores before and after.

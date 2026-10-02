@@ -7,11 +7,12 @@ Keywords: documentation, write docs, user guide, information architecture, docs 
 
 ---
 
-Write/update documentation for this repository: `[README / API docs / setup
-guide / CONTRIBUTING]`. Good docs are accurate, honest, and easy to skim.
-Never write docs that sound confident but say nothing.
+Write/update documentation for this repository:
+`[README / API docs / setup guide / CONTRIBUTING]`. Good docs are accurate,
+honest, and easy to skim. Never write docs that sound confident but say
+nothing.
 
-## Requirements
+## Steps
 
 1. **Verify first** - Run the actual commands you document (install, build,
    run, test) or read the code, before claiming they work. A doc that says
@@ -19,8 +20,8 @@ Never write docs that sound confident but say nothing.
    docs for stale instructions and correct them.
 2. **Write for the reader** - The reader is a newcomer with your exact task:
    what they need to know to succeed, in order. Lead with the one-sentence
-   value. Then quickstart, then details. No walls of text - use short
-   sections, lists, and code blocks.
+   value. Then quickstart, then details. No walls of text - use short sections,
+   lists, and code blocks.
 3. **Show real examples** - Use concrete examples that match the code's actual
    behavior. Copy real output where it helps. Don't invent flags, options, or
    edge behaviors that don't exist.
@@ -34,10 +35,24 @@ Never write docs that sound confident but say nothing.
    genuinely common issues, from real experience (or clearly-known ones), not
    invented FAQ filler.
 
+## Verification
+
+- [ ] Every command in the documentation was actually run, with its output
+      captured.
+- [ ] Each example matches the code's actual output rather than an idealized
+      version.
+- [ ] The heading style, tone, and terminology match the project's existing
+      docs.
+- [ ] Stale content was removed, not left alongside the new text.
+- [ ] Troubleshooting covers real friction points from the code and issue
+      history, not invented ones.
+- [ ] Nothing documented is absent from the code, and no setup step a newcomer
+      needs is missing.
+
 ## Rules
 
-- Never document features that don't exist, and never omit setup steps that
-  are required.
+- Never document features that don't exist, and never omit setup steps that are
+  required.
 - Don't copy-paste marketing fluff or generic boilerplate - say what THIS
   project does.
 - If the code and the docs disagree, trust the code and fix the docs.

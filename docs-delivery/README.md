@@ -14,6 +14,7 @@ Back to the [main index](../README.md#docs--delivery) or browse
 - [inline-documentation-prompt.md](inline-documentation-prompt.md) - add JSDoc/docstrings to existing code: accurate, concise, non-redundant.
 
 - [architecture-documentation-prompt.md](architecture-documentation-prompt.md) - write architecture docs with evidence, tradeoffs, and verification.$
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,

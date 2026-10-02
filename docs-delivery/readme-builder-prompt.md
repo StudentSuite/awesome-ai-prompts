@@ -38,6 +38,17 @@ does, why they'd use it, and how to get started in under 2 minutes.
    must resolve. Every code snippet must be syntactically correct for the
    project's language.
 
+## Verification
+
+- [ ] The README answers what the project does, who it is for, and how to run
+      it, above the fold.
+- [ ] Every command in it was run and worked; every link resolves.
+- [ ] Every code snippet produces the output shown.
+- [ ] Nothing is described that the project does not do.
+- [ ] No placeholder sections remain, and the copy is short paragraphs, code
+      blocks, and lists.
+- [ ] Badges point at real, working workflows.
+
 ## Rules
 
 - Never write a README that sounds impressive but doesn't answer "what does
@@ -45,5 +56,5 @@ does, why they'd use it, and how to get started in under 2 minutes.
 - Never include commands you haven't verified work.
 - Never add placeholder sections ("TODO: add more docs") - either write the
   section or remove it.
-- Keep the README scannable: short paragraphs, code blocks, and lists. No
-  walls of text.
+- Keep the README scannable: short paragraphs, code blocks, and lists. No walls
+  of text.

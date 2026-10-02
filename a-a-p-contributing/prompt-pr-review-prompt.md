@@ -39,6 +39,14 @@ prompt: ...`), has a short usage note, a `---` divider, then the body. Files
    file, and approve only when the gates pass, the index is in sync, and the
    prompt would actually keep an agent honest.
 
+## Verification
+
+- [ ] Every changed prompt was read in full, both above and below its `---` divider.
+- [ ] The outputs of `check-links.sh`, `check-consistency.sh`, and markdownlint are shown, with the commands used.
+- [ ] The em-dash scan was run and reported clean.
+- [ ] Every finding cites a file and line; style preferences are separated from rule violations.
+- [ ] The verdict is stated explicitly as APPROVE, READY AFTER FIXES, or REQUEST CHANGES.
+
 ## Rules
 
 - Never approve on the author's description alone; the checks must run.
@@ -46,8 +54,3 @@ prompt: ...`), has a short usage note, a `---` divider, then the body. Files
   violation.
 - Keep the review in the repo's terms: mergeable first time, verified, tight
   scope.
-
-## Verification
-
-Show the outputs of the two scripts and the markdownlint run, and state that
-the em-dash scan was clean, with the commands you used.

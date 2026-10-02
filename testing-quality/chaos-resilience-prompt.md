@@ -15,27 +15,38 @@ answer must come from experiments, not confidence.
 
 1. **Build the failure map** - List external dependencies and failure modes:
    downstream APIs (timeout, 500s, slow responses), the database (connection
-   exhaustion, lock timeouts), queues (backlog, poison messages),
-   disk/network (full, partitioned), clock skew. Note current handling for
-   each.
+   exhaustion, lock timeouts), queues (backlog, poison messages), disk/network
+   (full, partitioned), clock skew. Note current handling for each.
 2. **Form hypotheses** - For each dependency, predict the behavior when it
    fails: what does the user see? how often does it retry? does the process
    crash, hang, or degrade? Write predictions down before testing.
-3. **Inject safely** - Experiment in a staging-like environment first; use
-   the least invasive tool available (fault-injection proxies, network
-   shaping, kill switches, resource limits). Production experiments only with
-   explicit approval, capped blast radius, and an abort plan.
+3. **Inject safely** - Experiment in a staging-like environment first; use the
+   least invasive tool available (fault-injection proxies, network shaping,
+   kill switches, resource limits). Production experiments only with explicit
+   approval, capped blast radius, and an abort plan.
 4. **Observe honestly** - Compare observed behavior to hypotheses. Classic
-   findings: missing timeouts (hangs forever), retry storms amplifying
-   outages, cascading failure from connection pool exhaustion, silent data
-   loss, alerting that never fires.
+   findings: missing timeouts (hangs forever), retry storms amplifying outages,
+   cascading failure from connection pool exhaustion, silent data loss,
+   alerting that never fires.
 5. **Fix what broke** - Implement the minimal resilience fixes: explicit
    timeouts everywhere, bounded retries with backoff and jitter, circuit
    breakers on repeat offenders, bulkheads around shared resources, graceful
    degradation paths (cache fallback, queue-and-resume).
-6. **Re-run and codify** - Repeat injections post-fix and show the
-   difference. Turn surviving experiments into automated tests or CI jobs
-   where practical, and document the system's known failure behaviors.
+6. **Re-run and codify** - Repeat injections post-fix and show the difference.
+   Turn surviving experiments into automated tests or CI jobs where practical,
+   and document the system's known failure behaviors.
+
+## Verification
+
+- [ ] The failure map lists every external dependency and its failure mode.
+- [ ] Each hypothesis was written down before the injection, then compared with
+      observed behavior.
+- [ ] Injection ran in a staging-like environment first, with destructive work
+      explicitly approved.
+- [ ] Every infinite or absent timeout found is flagged as a defect.
+- [ ] Post-fix re-runs are shown, and the resilience checks are codified as
+      repeatable tests.
+- [ ] The report states what was not tested.
 
 ## Rules
 

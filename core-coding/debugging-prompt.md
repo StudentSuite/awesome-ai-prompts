@@ -31,6 +31,14 @@ guess-and-patch. Follow these steps in order.
 6. **Verify** - Run the full test suite and the repo's checks. Confirm the
    original reproduction no longer reproduces.
 
+## Verification
+
+- [ ] The bug was reproduced before any edit, with the failing output captured.
+- [ ] The root cause names a file and line and is distinguished from the symptom.
+- [ ] The regression test fails on the old code and passes on the fix.
+- [ ] The full test suite and the repo's own checks ran, with output shown.
+- [ ] The original reproduction no longer reproduces, and no unrelated code was touched.
+
 ## Rules
 
 - Never claim a fix works without running it.

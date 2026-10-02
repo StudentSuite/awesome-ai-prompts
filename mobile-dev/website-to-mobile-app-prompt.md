@@ -13,7 +13,7 @@ Turn `[the website]` into `[the mobile app]`. Decide the adaptation strategy
 from the website's actual architecture, then build and verify the app on the
 declared platforms. The strategy is a decision, not a default.
 
-## Decide the strategy from the code first
+## Define the scope first
 
 1. **Read the website's architecture** - Stack and framework, server-rendered
    vs client-rendered, auth and session handling, API surface and contracts,

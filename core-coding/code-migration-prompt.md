@@ -1,4 +1,4 @@
-# Reusable prompt: code migration
+# Reusable prompt: code migration [spec]
 
 Copy-paste the block below into any AI coding agent to migrate code between
 frameworks, languages, or major versions - incrementally, with behavior parity
@@ -12,17 +12,35 @@ Migrate `[source code / module / feature]` from `[current stack/version]` to
 `[target stack/version]`. The rule: **behavioral parity at every step** - the
 application must work before, between, and after the migration.
 
-## Scope to cover
+## Define the scope first
 
-1. **Inventory** - Map every file, function, API endpoint, and configuration
-   that needs to change. Identify shared code that does not need migration.
-   Count the surface area so the effort is predictable.
-2. **Deprecation and breaking changes** - Read the target version's migration
-   guide and changelog. List every breaking change that affects this codebase
-   with the specific file and line impacted.
-3. **Risk assessment** - Identify the riskiest parts of the migration:
-   dependencies that may not have compatible versions, behavioral differences
-   that could cause silent bugs, and areas with weak test coverage.
+State all of the following before touching a file. Work cannot start until the
+scope is written down and agreed.
+
+1. **The move** - Name the exact source and target: `[current stack/version]`
+   to `[target stack/version]`, plus the `[module or feature]` in scope. List
+   the components explicitly out of scope so they are not silently migrated.
+2. **The surface area** - Map every file, function, API endpoint, and
+   configuration that has to change, and identify shared code that does not.
+   Count it, so the effort is predictable.
+3. **The breaking changes** - Read the target version's migration guide and
+   changelog. List every breaking change that affects this codebase with the
+   file and line it hits.
+4. **The parity contract** - Define behavior parity concretely: the test
+   suite, the smoke paths, and the outputs that must be identical before and
+   after each step. Name anything deliberately excluded from parity.
+5. **The risk** - Identify the riskiest parts: dependencies with no compatible
+   target version, silent behavioral differences, and areas with weak coverage.
+
+## What to produce
+
+1. A written scope covering the five items above, confirmed before any edit.
+2. Characterization tests covering the critical paths, added first so parity is
+   measurable.
+3. The migration as a sequence of small, independently deployable steps, each
+   with its parity evidence.
+4. A cleanup pass removing old code, dependencies, config, and scaffolding, plus
+   the README, docs, and CI updates the new stack requires.
 
 ## Method
 
@@ -44,6 +62,18 @@ application must work before, between, and after the migration.
    baseline. If something changed intentionally, document the reason.
 6. **Clean up** - Remove old code, old dependencies, old config, and migration
    scaffolding. Update documentation, README, and CI to reflect the new stack.
+
+## Verification
+
+- [ ] The scope above was written down and agreed before the first edit.
+- [ ] The test suite passed on the source version before any change was made.
+- [ ] Every migration step left the application in a working state, and the
+      suite was run after each one.
+- [ ] Each step's parity evidence is recorded: the tests that passed and the
+      smoke paths that were exercised.
+- [ ] Any intentional behavior change is documented with its reason, rather
+      than slipped in as part of the port.
+- [ ] No old dependency, dead code, or migration scaffolding is left behind.
 
 ## Rules
 
