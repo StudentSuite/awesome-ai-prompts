@@ -1,23 +1,47 @@
 # Reusable prompt: mobile notifications and deep links
 
-Implement push notifications and deep-link handling safely: permissions, state, deep-link routing, and verification on both platforms.
+Copy-paste the block below into any AI coding agent to add push notifications or
+deep-link handling to a mobile app: permissions, a single routing layer, and
+verification on both platforms in every app state.
+
+Keywords: mobile, push-notifications, deep-links, permissions, routing, verification
 
 ---
 
-You are adding push notifications or deep-link support to a mobile app. Work with platform verification.
+Add `[push notifications / deep-link routing / both]` to the mobile app in this
+repository. Work from platform verification: every path is exercised on a real
+device, not inferred from the simulator.
 
-1. Confirm the mechanism - Read the current architecture; decide local vs remote push, universal links vs URL schemes.
-2. Handle permissions - Confirm the app requests and respects notification permissions; do not assume granted.
-3. Build routing - Map deep-link paths to screens with a clear routing table; reference file:line.
-4. Handle state - Confirm the app opens correctly from killed, background, and foreground states.
-5. Verify both platforms - Confirm behavior on iOS and Android, not just one; reference the verification matrix.
-6. Test with real links - Confirm the link works from an actual message/email, not just the simulator.
+## Steps
 
-Rules:
-- Never hardcode deep-link paths in view files; use a routing layer.
-- Confirm permissions are requested before any notification is shown.
-- Use ASCII hyphens only; no em dashes anywhere.
+1. **Confirm the mechanism** - Read the current app architecture, then decide
+   local versus remote push and universal links versus URL schemes. Record the
+   decision and the reason for it.
+2. **Handle permissions** - Confirm the app requests notification permission at
+   the right moment and handles denial. Never assume the grant.
+3. **Build a routing layer** - Map every deep-link path to its screen in one
+   place, with a path-to-destination table, and reference the file:line.
+4. **Handle every app state** - Confirm the link resolves from killed,
+   background, and foreground, and that the screen receives the right
+   parameters in each case.
+5. **Verify on both platforms** - Check the behavior on iOS and Android rather
+   than one. Record a verification matrix of state by platform.
+6. **Test with real links** - Tap an actual push notification and an actual
+   email or message link, not a URL typed into the simulator.
 
-Verification:
-- Test on device from a real notification and a real deep link.
-- Confirm the routing table covers all intended paths.
+## Verification
+
+- [ ] A real notification tap opens the correct screen on a physical device.
+- [ ] A real deep link from a message or email resolves on both platforms.
+- [ ] The routing table covers every intended path with a file:line.
+- [ ] Killed, background, and foreground launches were each tested.
+- [ ] Permission denial was tested and leaves the app usable, not blocked.
+
+## Rules
+
+- Never hardcode a deep-link path in a view file; route through the single
+  routing layer.
+- Never show a notification before permission is requested and granted.
+- Never verify on one platform and report the result as cross-platform.
+- If an app state cannot be reproduced locally, say so instead of marking it
+  verified.

@@ -15,7 +15,7 @@ what the target UI must be, reimplement the screens, and prove the result on
 every declared platform with before/after evidence - preserving the app's
 behavior, state, and data flows.
 
-## Define the target first
+## Define the scope first
 
 1. **Scope** - Which screens and flows are overhauled, and what stays
    untouched.

@@ -4,7 +4,7 @@ Copy-paste the block below into any AI coding agent to deploy to Kubernetes
 securely: real health probes, zero-downtime rollouts, non-root pods, and
 bounded resources.
 
-Keywords: kubernetes, k8s, pod, helm, manifest, rollout, deployment, ingress
+Keywords: kubernetes, k8s, pod, helm, manifest, rollout, ingress
 
 ---
 

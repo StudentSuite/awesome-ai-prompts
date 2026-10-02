@@ -28,10 +28,13 @@ concrete fix that can be checked against the codebase - not a style wishlist.
 
 Do not begin until the scope and conventions are defined and confirmed.
 
-## Audit dimensions
+## What to produce
 
-For every in-scope screen, check these dimensions in order. Stop on a broken
-layout before moving to spacing nuance.
+A findings report covering every in-scope screen, grouped by the dimension
+below. Each finding carries file:line, the current value, the correct value,
+and the exact change needed, backed by a screenshot where the claim is visual.
+Work the dimensions in order; stop on a broken layout before moving to spacing
+nuance.
 
 1. **Platform conventions** - Layout, controls, and navigation follow the
    platform idiom (iOS or Android): tab bar vs bottom nav, back affordance,

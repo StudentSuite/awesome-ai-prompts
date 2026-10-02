@@ -9,12 +9,12 @@ Keywords: bug finder, documentation audit, spec compliance, correctness, contrad
 
 ---
 
-Find the real bugs in this repository and document them. Sweep the codebase
-across the factors below, read the actual code, and produce a clear,
-priority-ordered list of confirmed bugs. Then record every finding in the
-repo's documentation so the list survives as a durable artifact. Accuracy
-beats volume: only report what you can verify with evidence. Do not change
-any code - fix nothing, but do leave the documentation behind.
+Find the real bugs in `[the repository, module, or commit range]` and document
+them. Sweep the codebase across the factors below, read the actual code, and
+produce a clear, priority-ordered list of confirmed bugs. Then record every
+finding in the repo's documentation so the list survives as a durable artifact.
+Accuracy beats volume: only report what you can verify with evidence. Do not
+change any code - fix nothing, but do leave the documentation behind.
 
 ## Define the scope first
 
@@ -31,46 +31,7 @@ Before reading, state:
    a `docs/` page, or somewhere the repo already keeps known issues. Propose
    what fits this repo and say so.
 
-## Factors to examine
-
-1. **Logic & control flow** - Off-by-one errors, inverted or missing
-   conditions, dead/unreachable branches, incorrect operators, wrong
-   early-returns, missing edge cases (empty input, zero, null, max values).
-2. **Data handling** - Off-by-one and boundary issues, type/encoding
-   mismatches, integer overflow, truncation, units and timezone mistakes,
-   NaN/Infinity, silent data loss.
-3. **State & concurrency** - Shared mutable state, race conditions, stale
-   closures/caches, resource leaks not closed on error paths, reentrancy,
-   unintentional shared references (alias bugs).
-4. **Error handling** - Swallowed exceptions, unhandled error paths, wrong
-   error recovery, partial-failure inconsistency (some steps done, others
-   not), missing rollback/cleanup.
-5. **API & integration** - Wrong argument order, mismatched types, broken
-   contracts between callers and callees, incorrect external calls,
-   off-by-one pagination/offsets, encoding/locale differences.
-6. **Configuration & environment** - Wrong defaults, env vars required but
-   unchecked, mismatched toggles, incorrect config values for the
-   environment.
-7. **Null & reference safety** - Null/undefined dereferences, nullable
-   values treated as non-null, missing existence checks, stale object
-   references.
-
-## Method
-
-1. **Read before concluding** - No claim without reading the code path that
-   proves it. Trace inputs from entry point through the buggy line.
-2. **Verify each candidate** - For every suspected bug, confirm it is real:
-   check the surrounding code, types, callers, and expected behavior. Reject
-   anything you cannot prove. A bug you cannot demonstrate is not reported.
-3. **Trace the impact** - Show how the bug manifests for a user or system:
-   what input triggers it and what wrong thing happens.
-4. **Check whether tests cover it** - Note if an existing test should have
-   caught it but doesn't, or if one is missing. This shows confidence.
-5. **Confirm, don't assume** - Where possible run the repo's tooling (tests,
-   linters, type checker) to support a finding, but only report the bug when
-   reasoning and/or an executable check confirms it.
-
-## Output
+## What to produce
 
 ### Part 1 - The bug report
 
@@ -109,6 +70,55 @@ Then end the report with:
 4. **Leave the code alone** - Update docs only. Do not fix, refactor, or
    annotate source files unless fixing a doc comment that is wrong
    specifically because it documents the bug's behavior as correct.
+
+## Method
+
+1. **Sweep every factor below** - Work through these bug families in order,
+   weighted per your scope statement but none of them skipped:
+   - **Logic & control flow** - off-by-one errors, inverted or missing
+     conditions, dead branches, wrong early returns, missing edge cases
+     (empty input, zero, null, max values).
+   - **Data handling** - boundary issues, type and encoding mismatches,
+     integer overflow, truncation, units and timezone mistakes, NaN/Infinity,
+     silent data loss.
+   - **State & concurrency** - shared mutable state, race conditions, stale
+     closures and caches, resource leaks on error paths, reentrancy, alias
+     bugs.
+   - **Error handling** - swallowed exceptions, unhandled paths, wrong
+     recovery, partial-failure inconsistency, missing rollback or cleanup.
+   - **API & integration** - wrong argument order, mismatched types, broken
+     caller/callee contracts, incorrect external calls, off-by-one pagination,
+     encoding and locale differences.
+   - **Configuration & environment** - wrong defaults, unchecked env vars,
+     mismatched toggles, values wrong for the environment.
+   - **Null & reference safety** - dereferences, nullable values treated as
+     non-null, missing existence checks, stale object references.
+2. **Read before concluding** - No claim without reading the code path that
+   proves it. Trace inputs from entry point through the buggy line.
+3. **Verify each candidate** - For every suspected bug, confirm it is real:
+   check the surrounding code, types, callers, and expected behavior. Reject
+   anything you cannot prove. A bug you cannot demonstrate is not reported.
+4. **Trace the impact** - Show how the bug manifests for a user or system:
+   what input triggers it and what wrong thing happens.
+5. **Check whether tests cover it** - Note if an existing test should have
+   caught it but doesn't, or if one is missing. This shows confidence.
+6. **Confirm, don't assume** - Where possible run the repo's tooling (tests,
+   linters, type checker) to support a finding, but only report the bug when
+   reasoning and/or an executable check confirms it.
+
+## Verification
+
+- [ ] The target, the prioritized factors, and the documentation destination
+      were stated before the sweep began.
+- [ ] Every reported bug shows a path traced from an entry point through the
+      buggy line, with the input that triggers it.
+- [ ] Every finding was checked against the surrounding code, types, and
+      callers; unproven candidates were rejected or moved to "needs
+      confirmation".
+- [ ] The ledger exists at the agreed destination, with ID, severity,
+      `file:line`, and status for every confirmed bug.
+- [ ] The ledger is reachable from the README or the repo's docs index.
+- [ ] No source file was modified; documentation only.
 
 ## Rules
 

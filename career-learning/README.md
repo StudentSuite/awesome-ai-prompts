@@ -15,6 +15,7 @@ Back to the [main index](../README.md#career--learning) or browse
 - [conference-talk-proposal-prep-prompt.md](conference-talk-proposal-prep-prompt.md) - write a competitive CFP and rehearse the talk: hook, takeaway, timed outline, demo fallbacks.
 
 - [mentoring-feedback-prompt.md](mentoring-feedback-prompt.md) - give structured, verifiable feedback to a junior engineer with evidence.$
+
 ## Adding a prompt here
 
 Read [CONTRIBUTING.md](../CONTRIBUTING.md) for the file format and the gates,

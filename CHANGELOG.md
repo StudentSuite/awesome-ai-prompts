@@ -8,12 +8,17 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ---
 
 ## [Unreleased]
+
 - `docs-delivery/architecture-documentation-prompt.md` - architecture docs with evidence and tradeoffs.
 - `career-learning/mentoring-feedback-prompt.md` - structured, verifiable mentoring feedback.
 - `code-review/data-model-review-prompt.md` - schema, migration, and index review with evidence.
 - `testing-quality/property-based-testing-prompt.md` - property-based tests with generated inputs.
 - `mobile-dev/push-notifications-deep-links-prompt.md` - notifications and deep-link verification.
 - `data-ai/data-quality-validation-prompt.md` - data contracts, checks, and failure response.
+- aligned all 28 spec prompts with the field contract in `spec-prompt-schema-prompt.md`, and added the
+  missing `[spec]` H1 suffix to the five prompts registered in `SPEC_PROMPTS` without it.
+- trimmed the `Keywords:` lines in `devops-deploy/kubernetes-deployment-prompt.md` and
+  `devops-deploy/monitoring-observability-prompt.md` to the 4-7 term range in CONTRIBUTING.md.
 
 ## [0.6.0] - 2026-10-01
 

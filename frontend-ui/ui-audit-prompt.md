@@ -29,9 +29,11 @@ Before auditing, state clearly:
 Do not begin the audit until the scope and design system are defined and
 confirmed.
 
-## Audit dimensions
+## What to produce
 
-For every in-scope element, check these dimensions in order. Stop on a broken
+A findings report covering every in-scope element, grouped by the dimension
+below. Each finding carries file:line, the current value, the correct value,
+and the exact change needed. Work the dimensions in order; stop on a broken
 layout before moving to spacing nuance.
 
 1. **Design system adherence** - Compare each component's styles (colors,
