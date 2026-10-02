@@ -1,8 +1,8 @@
 # Reusable prompt: monitoring and observability
 
-Copy-paste the block below into any AI coding agent to set up logging,
-metrics, and alerting - actionable dashboards and alerts, not noisy
-dashboards nobody checks.
+Copy-paste the block below into any AI coding agent to set up logging, metrics,
+and alerting - actionable dashboards and alerts, not noisy dashboards nobody
+checks.
 
 Keywords: monitoring, observability, metrics, logs, tracing, alerting, slo
 
@@ -14,34 +14,37 @@ minutes, not hours of log-diving.
 
 ## Steps
 
-1. **Understand the system** - Read the code to identify the critical paths,
-   external dependencies, error conditions, and performance-sensitive
-   operations. Understand what "healthy" looks like before defining what
-   "broken" looks like.
-2. **Structured logging** - Add structured (JSON) logging at key points:
-   request entry/exit, external service calls, database queries, error
-   paths, and business-critical operations. Use consistent log levels
-   (error, warn, info, debug) and include correlation IDs for request
-   tracing. Follow the repo's existing logging conventions.
-3. **Define metrics** - Instrument the four golden signals:
-   - **Latency** - response time for requests (p50, p95, p99)
-   - **Traffic** - requests per second
-   - **Errors** - error rate and error types
-   - **Saturation** - CPU, memory, connection pool usage
-     Use the repo's existing metrics library (Prometheus client, StatsD,
-     OpenTelemetry).
-4. **Set up dashboards** - Create dashboards that answer the questions you'd
-   ask during an incident: Is the service healthy? What's the error rate?
-   Which endpoints are slow? Are dependencies responding? Keep dashboards
-   focused - one service per dashboard, key signals visible at a glance.
-5. **Configure alerts** - Create alerts for actionable conditions only:
-   error rate above threshold, latency exceeding SLA, dependency
-   unreachable, disk/memory critical. Every alert must have a clear
-   severity, a runbook link, and a person/team who owns the response.
-   Avoid alert fatigue from noisy or informational alerts.
-6. **Verify** - Trigger a real error or simulate one (kill a dependency,
-   return an error). Confirm the logs capture it, the metrics reflect it,
-   the dashboard shows it, and the alert fires.
+1. **Map the system first** - Read the code for critical paths, external
+   dependencies, error conditions, and performance-sensitive operations. Define
+   what "healthy" looks like before what "broken" looks like.
+2. **Add structured logging** - Emit JSON at request entry/exit, external
+   calls, database queries, error paths, and business-critical operations. Use
+   the repo's consistent levels and correlation IDs.
+3. **Instrument the four signals** - Latency (p50, p95, p99), traffic (requests
+   per second), errors (rate and types), and saturation (CPU, memory,
+   connection pool usage), per critical path, on the repo's existing metrics
+   library.
+4. **Build incident dashboards** - Answer the on-call questions: is the service
+   healthy, what is the error rate, which endpoints are slow, are dependencies
+   responding. One service per dashboard, key signals at a glance.
+5. **Configure and verify alerts** - Alert only on actionable conditions: error
+   rate above threshold, latency exceeding SLA, dependency unreachable, disk or
+   memory critical. Each alert carries a severity, a runbook link, and an
+   owning team. Then trigger or simulate a real failure and show the log line,
+   the metric, the dashboard, and the alert.
+
+## Verification
+
+- [ ] Existing observability tooling was extended rather than replaced.
+- [ ] Structured JSON logging exists at the critical points, with no logging
+      added to a hot loop.
+- [ ] The four golden signals are instrumented per critical path, not globally.
+- [ ] Every alert states the action it expects, and no alert fires on a
+      condition nobody would act on.
+- [ ] A real or simulated failure was triggered and the resulting log line,
+      metric, and alert were shown.
+- [ ] Dashboards answer the named on-call questions rather than just displaying
+      available data.
 
 ## Rules
 

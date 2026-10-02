@@ -16,36 +16,20 @@ only after we agree on the behavior it must have.
 
 ## Steps
 
-1. **State the purpose in plain words** - One sentence: what strings must
-   match, what must not, and where the pattern runs (validation, extraction,
-   a hot path, user-supplied input or not). If the plain statement is hard to
-   write, the regex is the wrong tool; say so and propose ordinary string
-   handling instead.
-2. **Choose the simplest expression** - Prefer the smallest pattern that meets
-   the purpose. A string method, an index operation, or a tiny state machine
-   often beats a regex entirely. If the language offers a parser for the
-   format being matched (JSON, URL, email, numbers), use it instead of a regex.
-3. **Write it with anchors and boundaries** - Anchor start and end or use word
-   boundaries where the behavior demands it. Match what the caller needs, not
-   a fuzzy subproblem, and avoid dot-all or unconstrained groups unless the
-   purpose requires them.
-4. **Build a corpus and test** - List the inputs that must match, must not
-   match, edge cases (empty, whitespace, unicode, mixed case, very long
-   strings, lookalike characters, embedded newlines), and run the pattern over
-   all of them in a throwaway test. Paste the results; do not assert them.
-5. **Hunt for catastrophic backtracking** - Inspect for nested quantifiers and
-   alternatives that re-scan the same text (`(a+)+`, `(a|a)*`), especially on
-   untrusted input. Check that the pattern either cannot backtrack
-   quadratically or that input length is bounded first. If in doubt, time the
-   worst-case input you found in step 4 and show it returns quickly.
-6. **Make it maintainable** - Add a short comment in a place the team will see
-   it: the purpose in plain words, the matching corpus, and why this
-   construction. Keep flags and escaping explicit so the next reader can
-   predict the behavior.
-7. **Land it as a test, not a script** - The adopted pattern ships with its
-   corpus as a repeatable test (unit test or checked-in script) that fails if
-   the regex behavior changes. A regex without its test cases is a bug waiting
-   for an anecdote.
+1. **State the purpose in plain words** - What must match, what must not, and where the pattern runs: validation, extraction, a hot path, or user-supplied input. If the plain statement is hard to write, the regex is the wrong tool - say so and propose ordinary string handling.
+2. **Choose the simplest expression** - Prefer the smallest pattern that meets the purpose. A string method or a tiny state machine often beats a regex, and a language-provided parser for a structured format (JSON, URL, email) beats both.
+3. **Anchor and bound it** - Anchor start and end or use word boundaries where the behavior demands. Match what the caller needs, not a fuzzy subproblem, and avoid dot-all or unconstrained groups.
+4. **Build a corpus and test** - List must-match, must-not-match, and edge inputs (empty, whitespace, unicode, mixed case, very long, lookalikes, embedded newlines), run them in a throwaway test, and paste the results rather than asserting them.
+5. **Hunt catastrophic backtracking** - Inspect for nested quantifiers and alternatives that rescan the same text, `(a+)+` and `(a|a)*`, especially on untrusted input. Bound the input length, or time the worst-case input from step 4 and show it returning fast.
+6. **Ship the corpus as a test** - The adopted pattern lands with its corpus as a repeatable test that fails if the behavior changes, plus a short comment giving the purpose, the corpus, and why this construction. Regexes are for text with a shape; parsers are for formats with grammar.
+
+## Verification
+
+- [ ] The corpus test ran, showing both the passes and the intended non-matches.
+- [ ] The worst-case adversarial input from the corpus was timed, and it returns fast.
+- [ ] Any nested quantifier over user-controlled input is bounded, or the pattern was rewritten to remove it.
+- [ ] The corpus test landed in the repo in the same change as the pattern.
+- [ ] The final pattern is pasted, with a comment stating the purpose and the corpus.
 
 ## Rules
 
@@ -58,9 +42,3 @@ only after we agree on the behavior it must have.
   formats with grammar.
 - No pattern change in production code without the corpus test landing in the
   same change.
-
-## Verification
-
-Paste the test run over the corpus (passes and intended non-matches), the
-worst-case timing for any adversarial input you constructed, and the final
-pattern. Confirm the behavior is pinned by a repeatable test in the repo.

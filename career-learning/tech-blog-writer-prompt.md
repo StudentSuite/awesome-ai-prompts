@@ -39,6 +39,14 @@ demonstrates technical depth without being inaccessible.
 6. **Polish** - Cut unnecessary words. Simplify complex sentences. Add
    transitions between sections. Ensure the post reads well end-to-end.
 
+## Verification
+
+- [ ] Every technical claim was checked, and every code example was run rather than written from memory.
+- [ ] Every link resolves.
+- [ ] Uncertain claims are flagged instead of guessed.
+- [ ] The post leads with a hook, not an "in this post I will discuss" preamble.
+- [ ] The reader's single takeaway is stated and actually delivered by the post.
+
 ## Rules
 
 - Never write a post that restates the official documentation without

@@ -34,6 +34,14 @@ confidently.
    equivalent). Confirm routes don't collide and naming is consistent
    throughout.
 
+## Verification
+
+- [ ] Every endpoint maps to real data or an operation that exists in the codebase; none were invented.
+- [ ] URLs are noun-based, HTTP verbs carry the operation, and nesting stays at two levels or fewer.
+- [ ] Pagination and the error response format are identical across every list endpoint.
+- [ ] Each error case names its status code, with conflict, not-found, and unauthorized all covered.
+- [ ] The spec validates cleanly with the repo's own validator, with the output shown.
+
 ## Rules
 
 - Never invent endpoints that don't map to actual data or operations in the

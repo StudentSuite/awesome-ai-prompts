@@ -17,45 +17,36 @@ would reverse the decision.
 
 ## Steps
 
-1. **Write the requirements before the options** - State what the feature must
-   do: knowledge freshness (daily, weekly, or never), domain specificity (in the
-   pretraining corpus or private to this business), output format and style
-   constraints, a quality bar with a concrete failure definition, a latency
-   target, request volume and token estimates, a unit cost budget, data
-   sensitivity, and who owns maintenance.
-2. **Score the options against a matrix** - Rows are prompting (better
-   instructions, few-shot examples, structured output), RAG (retrieve known
-   context at query time), and fine-tuning (train on curated examples or a
-   preference set). Columns are the requirements from step 1. Score each cell
-   strong, weak, or not viable and attach evidence: a citation, a vendor
-   capability, a price, a measured latency, a small experiment. Weight and state
-   the columns. A matrix with no evidence is an opinion; mark unverified cells.
-3. **Start with the cheapest thing that could work** - By cost and time:
-   prompting first (hours, no new infrastructure), RAG next (days, indexing to
-   maintain), fine-tuning last (weeks, curation, retraining loop, a model to
-   serve). Check the cheapest option against the quality bar honestly. If
-   prompting clears the bar, stop and record that. Escalate only when the
-   cheaper option fails for a reason the other fixes.
-4. **Predict the tradeoffs of each choice** - Write down what the chosen option
-   costs and what it makes worse: latency and tokens for RAG, curation and
-   forgetting risk for fine-tuning, prompt fragility across model versions for
-   prompting. Include the ongoing maintenance burden and the numbers you expect.
-5. **Design an eval that could prove the choice wrong** - Build a representative
-   set of real inputs before building anything (at least 30: common case, edge
-   cases, known past failures, and inputs the designers did not imagine). Keep a
-   held-out split untouched until the final run. Define pass criteria and
-   thresholds in advance. Score the baseline and each candidate on the same set
-   with the same settings, over multiple runs when outputs vary.
-6. **Document the reversal criteria** - Before building, write down what would
-   make you switch: a named quality gap prompting cannot close, a retrieval
-   recall ceiling, a volume or latency target one option cannot meet, a data
-   sensitivity rule that forbids sending context to the model, or a maintenance
-   cost the team cannot carry. Attach the metric, threshold, and decision owner.
-7. **Record the decision and review date** - Write a short decision doc:
-   requirements, matrix, chosen option, predicted tradeoffs, eval results, the
-   rejected options with reasons, and reversal criteria. Include the cost and
-   latency model. Set a review date and note which matrix cells are assumptions
-   to re-check as the model or corpus changes.
+1. **Requirements before options** - Freshness (daily, weekly, never),
+   specificity (corpus or private), output format and style, a quality bar with
+   a failure definition, a latency target, volume, tokens, a cost budget, and
+   data sensitivity.
+2. **Score the matrix** - Rows are prompting, RAG, and fine-tuning; columns are
+   step 1's requirements. Score each cell strong, weak, or not viable, attach
+   evidence (a citation, a price, a latency) and state the weights.
+3. **Cheapest sufficient first** - Prompting first (hours), RAG next (days, an
+   index to keep), fine-tuning last (weeks, curation, retraining). Test the
+   cheapest against the quality bar; name what it makes worse.
+4. **Eval on real inputs** - Build at least 30 real inputs first: common, edge,
+   and known-failure cases. Keep a held-out split untouched to the final run,
+   fix thresholds first, score every candidate on one set.
+5. **Reversal criteria** - Name what would switch it: a named quality gap
+   prompting cannot close, a retrieval recall ceiling, a latency target it
+   cannot meet, or a cost the team cannot carry, each with metric, threshold,
+   and owner. Add eval results, cost, latency, and a review date.
+
+## Verification
+
+- [ ] The requirement list is pasted, with freshness, specificity, quality bar,
+      latency, volume, cost, and sensitivity all covered.
+- [ ] The scored matrix has evidence attached to every cell, unverified cells
+      marked, and the column weights stated.
+- [ ] The cheapest sufficient option was tested first and recorded if it
+      cleared the bar.
+- [ ] The held-out split was scored once, with baseline and chosen option on
+      the same set and the cost and latency delta shown.
+- [ ] The reversal criteria carry metric, threshold, and decision owner, and a
+      review date is set.
 
 ## Rules
 
@@ -65,12 +56,6 @@ would reverse the decision.
   unknown and say what experiment would resolve it.
 - The eval set is built before the system, and the held-out split is scored
   once.
-- Report cost and latency per option next to quality. Cheapest sufficient
-  wins; sufficient is defined by the thresholds you set first.
+- Report cost and latency per option next to quality. Cheapest sufficient wins;
+  sufficient is defined by the thresholds you set first.
 - If two options score equally, take the one you can undo in a day.
-
-## Verification
-
-Paste the requirement list, the scored matrix with the evidence attached to
-each cell and the weights stated, the baseline-versus-chosen-option results on
-the held-out split with cost and latency, and the reversal criteria.

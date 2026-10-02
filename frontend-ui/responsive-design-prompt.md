@@ -1,43 +1,49 @@
 # Reusable prompt: responsive design
 
 Copy-paste the block below into any AI coding agent to audit and implement
-responsive layouts - mobile-first, fluid, and tested at every breakpoint,
-not "looks fine on my screen."
+responsive layouts - mobile-first, fluid, and tested at every breakpoint, not
+"looks fine on my screen."
 
 Keywords: responsive, breakpoints, mobile first, media queries, grid, layout
 
 ---
 
-Audit and implement responsive design for `[page / component / layout]` in
-this repository. The goal: a UI that works well at every screen size, built
+Audit and implement responsive design for `[page / component / layout]` in this
+repository. The goal: a UI that works well at every screen size, built
 mobile-first with fluid techniques, not breakpoint hacks.
 
 ## Steps
 
-1. **Audit the current state** - Read the existing CSS/styling and identify:
-   fixed widths, hardcoded pixel values, missing viewport meta tags, images
-   without responsive handling, and layouts that break at narrow widths.
-   Check the repo's existing breakpoint values and responsive utilities.
-2. **Define the breakpoint strategy** - Use the repo's existing breakpoints
-   if defined. If not, establish a standard mobile-first set: sm (640px),
-   md (768px), lg (1024px), xl (1280px). Document the breakpoints for the
-   team.
-3. **Implement mobile-first** - Start with the smallest screen layout and
-   add complexity as width increases. Use relative units (rem, em, %, vw)
-   over fixed pixels. Apply fluid techniques: flexbox/grid for layout,
-   clamp() for fluid typography, aspect-ratio for media.
-4. **Fix layout issues** - Address: overflow at narrow widths, text that's
-   too small to read, touch targets too close together, horizontal
-   scrolling, images that stretch or crop poorly, and content that
-   disappears at certain widths.
-5. **Test at every breakpoint** - Manually verify (or use browser DevTools
-   responsive mode) at each defined breakpoint and in between. Check:
-   layout integrity, readability, touch target sizes (min 44x44px), and
-   that no content is hidden or overlapping.
-6. **Handle media and interaction** - Ensure responsive images with srcset
-   or picture element, touch-friendly interactions (no hover-dependent
-   functionality on touch), and appropriate input types on mobile (tel,
-   email, number).
+1. **Audit the current state** - Find fixed widths, hardcoded pixels, missing
+   viewport meta tags, images without responsive handling, overflow at narrow
+   widths, and cramped touch targets. Check the repo's existing breakpoint
+   values and responsive utilities, then fix what you found.
+2. **Define the breakpoint strategy** - Reuse the repo's breakpoints if it has
+   them. Otherwise establish a mobile-first set: sm 640px, md 768px, lg 1024px,
+   xl 1280px, and document it for the team.
+3. **Implement mobile-first** - Start at the smallest screen and add complexity
+   as width grows. Prefer relative units (rem, em, %, vw), flexbox/grid for
+   layout, clamp() for fluid typography, aspect-ratio for media.
+4. **Test at every breakpoint** - Check each breakpoint and the widths between
+   them, in DevTools responsive mode or by hand: layout integrity,
+   readability, touch targets (min 44x44px), nothing hidden or overlapping.
+5. **Handle media and interaction** - Responsive images via srcset or picture,
+   no hover-only functionality on touch, and mobile-appropriate input types
+   (tel, email, number).
+
+## Verification
+
+- [ ] The repo's existing breakpoints were reused rather than a second scale
+      invented.
+- [ ] Layouts were built mobile-first, and no `!important` was used to override
+      the cascade.
+- [ ] No horizontal overflow at the narrowest supported width, and no truncated
+      labels.
+- [ ] Every breakpoint was actually tested, with the viewport widths recorded.
+- [ ] Content hidden at a breakpoint has a stated UX reason; nothing was hidden
+      to dodge a layout problem.
+- [ ] Images use `srcset` and `sizes`, and no functionality depends on hover
+      alone.
 
 ## Rules
 

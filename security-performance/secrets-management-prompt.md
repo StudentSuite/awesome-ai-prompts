@@ -14,42 +14,43 @@ clear pattern for handling secrets going forward.
 
 ## Steps
 
-1. **Scan for secrets in code** - Search the entire codebase for hardcoded
-   API keys, tokens, passwords, connection strings, private keys, and any
-   other sensitive values. Check: source files, config files, env files
-   committed to the repo, Dockerfiles, CI configs, and test fixtures. Use
-   pattern matching for common secret formats (AWS keys, JWT tokens,
-   database URLs with passwords).
-2. **Scan git history** - Check past commits for secrets that have been
-   removed from the current code but remain in git history. Use `git log -p`
-   with grep patterns, or a dedicated tool like `trufflehog` or `gitleaks`
-   if available.
-3. **Classify findings** - Categorize each finding by severity:
-   - **Critical** - Active credentials that could grant access (API keys,
-     database passwords, private keys)
-   - **High** - Secrets in git history that need rotation
-   - **Medium** - Placeholder or example secrets that should still be
-     removed for hygiene
-   - **Low** - Non-sensitive values that look like secrets but aren't
-4. **Remediate** - For each finding:
-   - Move the secret to an environment variable or secrets manager
-   - Replace the hardcoded value with a reference to the env var
-   - Update the code to read from the new source
-   - Add the secret name to `.env.example` (without the value) so new
-     contributors know what's needed
-5. **Set up the pattern** - Create or update `.env.example` with all
-   required secrets (names only, no values). Update `.gitignore` to exclude
-   `.env` files. Document the secret setup process in the README.
-6. **Verify** - Confirm no secrets remain in source code. If git history
-   contains secrets, document the rotation plan (the actual rotation must
-   happen out-of-band).
+1. **Scan code and history** - Search the whole codebase for hardcoded API
+   keys, tokens, passwords, connection strings, and private keys: source,
+   config, committed env files, Dockerfiles, CI configs, test fixtures. Then
+   scan git history for secrets already removed from HEAD, with `git log -p`
+   plus grep patterns or a scanner such as `trufflehog` or `gitleaks`.
+2. **Classify every finding** - Rank by severity: **Critical** - active
+   credentials that could grant access (API keys, database passwords, private
+   keys); **High** - secrets in git history needing rotation; **Medium** -
+   placeholder or example secrets still worth removing for hygiene; **Low** -
+   values that only look like secrets.
+3. **Remediate and set the pattern** - Move each secret to an environment
+   variable or secrets manager, replace the hardcoded value with a reference,
+   update the code to read from the new source, list every required name in
+   `.env.example` with no values, ignore `.env` in `.gitignore`, and document
+   the setup process in the README.
+4. **Verify** - Re-scan source and confirm nothing remains. If git history
+   holds secrets, document the rotation plan; the actual rotation happens
+   out-of-band.
+
+## Verification
+
+- [ ] The whole codebase and the git history were both scanned, with the
+      scanner named.
+- [ ] Every finding is classified by severity and live-versus-example.
+- [ ] Any real secret found in history was revoked or rotated, not merely
+      deleted from HEAD.
+- [ ] `.env.example` lists every variable the app needs, with placeholder
+      values only.
+- [ ] No secret value appears in source, logs, or error messages.
+- [ ] A re-scan confirms nothing remains, with output shown.
 
 ## Rules
 
-- Never commit actual secret values as examples - use placeholder strings
-  like `your-api-key-here`.
+- Never commit actual secret values as examples - use placeholder strings like
+  `your-api-key-here`.
 - Never log secrets or include them in error messages.
-- If secrets are found in git history, do not just remove them from HEAD -
-  they need rotation and history rewriting or acknowledgment.
+- If secrets are found in git history, do not just remove them from HEAD - they
+  need rotation and history rewriting or acknowledgment.
 - If the project uses a secrets manager (Vault, AWS Secrets Manager, etc.),
   integrate with it rather than introducing a new solution.

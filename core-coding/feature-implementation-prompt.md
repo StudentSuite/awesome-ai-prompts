@@ -38,6 +38,15 @@ guess - read the relevant code first and verify every claim you make.
 8. **Self-review** - Re-read your diff as a reviewer: is the fix correct, are
    the tests meaningful, is there anything dead, duplicated, or confusing?
 
+## Verification
+
+- [ ] The relevant code, its callers, and the surrounding tests were read before editing.
+- [ ] The plan named the files to change, the edge cases, and how it would be verified before implementation started.
+- [ ] The change is the smallest one that satisfies the requirement, with no speculative features and no new dependency.
+- [ ] Tests assert real behavior including edge cases, and the repo's own test, lint, format, and type commands were run, with output shown.
+- [ ] The feature was exercised as a user would where practical, and the diff was re-read as a reviewer.
+- [ ] No commented-out code, debug prints, or TODOs remain, and unrelated code is untouched.
+
 ## Rules
 
 - Never modify unrelated code. If you find a pre-existing bug, flag it as a

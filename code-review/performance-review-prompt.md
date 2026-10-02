@@ -11,7 +11,7 @@ Keywords: performance review, slow code, profiling, hot spots, speed up, optimiz
 Review the performance of `[file / module / endpoint]` in this repository.
 Find real inefficiencies and propose concrete fixes backed by evidence.
 
-## Scope to cover
+## Steps
 
 1. **Algorithmic complexity** - Identify O(n^2) or worse operations where O(n)
    or O(n log n) is achievable: nested loops over collections, repeated
@@ -31,18 +31,24 @@ Find real inefficiencies and propose concrete fixes backed by evidence.
    memoization, unoptimized images, large bundle sizes, layout thrashing,
    or excessive DOM manipulation.
 
-## Method
-
-1. **Read the code path** - Trace the execution from entry point to completion.
+7. **Read the code path** - Trace the execution from entry point to completion.
    Identify every operation and its cost. Do not guess - read the actual code.
-2. **Cite evidence** - For each finding, reference the specific file:line and
+8. **Cite evidence** - For each finding, reference the specific file:line and
    explain the performance impact with concrete numbers where possible (query
    count, loop iterations, memory size).
-3. **Propose minimal fixes** - Suggest the smallest change that addresses each
+9. **Propose minimal fixes** - Suggest the smallest change that addresses each
    issue: an index, a batch query, an early exit, a memoization cache. Follow
    the repo's existing patterns.
-4. **Estimate impact** - Rate each finding as High/Medium/Low impact based on
-   how frequently the code path runs and how much time it saves.
+10. **Estimate impact** - Rate each finding as High/Medium/Low impact based on
+    how frequently the code path runs and how much time it saves.
+
+## Verification
+
+- [ ] Every finding names a file:line and the concrete cost: query count, iterations, or bytes.
+- [ ] Each finding is rated High, Medium, or Low by how often the path runs and how much time it saves.
+- [ ] Every proposed fix is the smallest change that addresses the finding.
+- [ ] Each fix was checked against correctness rather than assumed safe.
+- [ ] Paths already swept and found fast are listed, not just the problems.
 
 ## Rules
 

@@ -4,6 +4,9 @@ Copy-paste the block below into any AI coding agent to turn a skill gap into
 a concrete, project-based learning roadmap with checkpoints you can actually
 verify.
 
+A phased roadmap: goal statement, current-state assessment, phases with
+projects/checkpoints/time estimates, review cadence, and the capstone.
+
 Keywords: learning roadmap, study plan, skill gap, curriculum, milestones, how to learn
 
 ---
@@ -38,10 +41,13 @@ checkpoints that prove progress - not a list of courses.
    blocked?) and permission to re-scope after each checkpoint instead of
    silently slipping.
 
-## Output
+## Verification
 
-A phased roadmap: goal statement, current-state assessment, phases with
-projects/checkpoints/time estimates, review cadence, and the capstone.
+- [ ] The goal is stated as something buildable, not as a vague skill aspiration.
+- [ ] Each phase produces a runnable or publishable artifact.
+- [ ] Every phase has a self-test that proves completion, plus a time budget.
+- [ ] Fundamentals are front-loaded only where they unblock a later phase.
+- [ ] The plan is budgeted against hours per week, padded for life, with a weekly review cadence.
 
 ## Rules
 

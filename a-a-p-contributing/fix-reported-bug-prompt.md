@@ -33,14 +33,17 @@ without a reproduced failure is not a fix - it is a guess.
    and a PR description showing the reproduced failure, the root cause, and the
    verification output.
 
+## Verification
+
+- [ ] The failing reproduction ran before any edit, with its actual output captured.
+- [ ] The root cause names a file and line, with `git log` or `git blame` evidence for when it appeared.
+- [ ] The same reproduction passes after the fix, with before and after output shown.
+- [ ] `check-links.sh`, `check-consistency.sh`, markdownlint, and `bash -n` where applicable all ran, with output shown.
+- [ ] The diff contains no unrelated edits.
+
 ## Rules
 
 - No claim of a fix without the reproduced failure and the passed checks shown.
 - No unrelated edits and no silent convention changes.
 - If the reported bug cannot be reproduced, say so and ask instead of
   inventing a fix.
-
-## Verification
-
-The after-state of the reproduction no longer fails, and every gate named in
-step 4 passed with its output shown.

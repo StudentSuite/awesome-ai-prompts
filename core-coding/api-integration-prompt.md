@@ -31,6 +31,14 @@ Read the actual API docs and the existing code before writing anything.
    Use the repo's existing test doubles (mocks/fixtures/cassettes), and
    confirm the test suite runs green.
 
+## Verification
+
+- [ ] Request and response shapes, auth, rate limits, and error semantics were read from the real docs, not inferred from the URL.
+- [ ] The repo's existing HTTP client, error handling, logging, and config patterns were reused rather than replaced.
+- [ ] Callers depend on a typed boundary, not on the wire format.
+- [ ] Timeouts, bounded retries with backoff, 4xx and 5xx mapping, pagination, and rate limits are all handled, with no infinite retry and no swallowed error.
+- [ ] Credentials come from config or secrets, and the test suite covers success, error mapping, retries, empty responses, and malformed payloads, with output shown green.
+
 ## Rules
 
 - Never paste sample code from API docs into the codebase as-is - adapt it to

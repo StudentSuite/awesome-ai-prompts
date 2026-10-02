@@ -1,60 +1,59 @@
 # Reusable prompt: incident response
 
-Copy-paste the block below into any AI coding agent to debug a live incident
-or write a post-mortem - structured triage, root-cause analysis, and
-actionable follow-ups, not blame.
+Copy-paste the block below into any AI coding agent to debug a live incident or
+write a post-mortem - structured triage, root-cause analysis, and actionable
+follow-ups, not blame.
 
 Keywords: incident, outage, on call, severity, mitigation, postmortem, sev1
 
 ---
 
-Help me debug this incident or write a post-mortem for `[incident description
-/ error / symptom]`. The goal: understand what happened, fix it, prevent it
-from happening again, and document it honestly.
+Help me debug this incident or write a post-mortem for
+`[incident description / error / symptom]`. The goal: understand what happened,
+fix it, prevent it from happening again, and document it honestly.
 
-## For live debugging
+## Steps
 
-1. **Triage** - Establish the current state: What's broken? When did it start?
-   What changed recently (deploys, config changes, traffic spikes)? Is it
-   affecting all users or a subset? Gather the evidence: error logs, metrics
-   dashboards, recent deployments, and alerts that fired.
-2. **Contain** - What can be done right now to reduce impact? Roll back the
-   last deploy, scale up, disable the broken feature, route traffic away.
-   Do this first, then investigate root cause.
-3. **Investigate** - Trace the failure from the symptom to the root cause:
-   read the error stack trace, follow the code path, check the database
-   state, verify external service responses. Use the repo's debugging tools
-   and logs. Do not guess - gather evidence.
-4. **Fix** - Apply the minimal fix that addresses the root cause. Verify the
-   fix works by monitoring the metrics and logs after deployment. Do not
-   layer fixes on top of fixes.
-5. **Verify recovery** - Confirm the service is healthy: error rates dropped,
-   latency normalized, and affected functionality works. Check for secondary
-   issues (cascading failures, data inconsistencies).
+1. **Triage** - What's broken, when did it start, what changed (deploys,
+   config, traffic spikes), all users or a subset? Gather error logs, metrics
+   dashboards, recent deploys, and the alerts that fired.
+2. **Contain, then investigate** - Cut impact now: roll back the deploy, scale
+   up, disable the feature, route traffic away. Then trace symptom to root
+   cause through stack traces, code paths, database state, and external
+   responses. Do not guess.
+3. **Fix minimally, verify recovery** - Smallest fix for the root cause, not
+   layered fixes. Confirm recovery on error rate, latency, and saturation, and
+   check for cascading failures or data inconsistencies.
+4. **Timeline, cause, and impact** - Reconstruct what happened, when, and in
+   what order from alerts, deploys, and logs. Name the technical cause with
+   code-level detail, not "a bug was introduced." Quantify users affected,
+   duration, and data loss, then say specifically what failed in the system or
+   process, systemic rather than personal.
+5. **Action items** - Concrete, owned, with deadlines: code fixes, process
+   changes, monitoring additions. Each one prevents a specific aspect of this
+   incident from recurring.
 
-## For post-mortem writing
+## Verification
 
-1. **Timeline** - Reconstruct the timeline from alerts, deploys, and logs.
-   What happened, when, and in what order.
-2. **Root cause** - What was the underlying technical cause? Be specific:
-   code-level detail, not "a bug was introduced."
-3. **Impact** - Quantify: users affected, duration, data loss (if any),
-   revenue impact (if applicable).
-4. **What went well** - What detection, response, or mitigation worked?
-   Preserve these.
-5. **What went wrong** - What failed in the system or the process? Be
-   specific and factual.
-6. **Action items** - Concrete, assigned, with deadlines: code fixes,
-   process changes, monitoring additions. Each action must prevent a
-   specific aspect of this incident from recurring.
+- [ ] Containment happened before investigation, and the impact reduction is
+      stated.
+- [ ] The root cause is specific and evidence-backed, or explicitly marked
+      uncertain with the supporting evidence listed.
+- [ ] Recovery is confirmed against error rate, latency, and saturation rather
+      than assumed from a restart.
+- [ ] The timeline is reconstructed from alerts, deploys, and logs, with times.
+- [ ] Impact is quantified in users, duration, and data loss.
+- [ ] Action items are assigned with owners and deadlines, and none of them is
+      a bare instruction to add more tests.
+- [ ] No individual is blamed; causes are systemic.
 
 ## Rules
 
-- Never assign blame to individuals - focus on systemic causes and
-  process improvements.
-- Never write "add more tests" as an action item without specifying what
-  tests and what they would catch.
-- Never skip the containment step during a live incident to investigate
-  root cause - reduce impact first.
-- If the root cause is uncertain, say so and list what evidence supports
-  each hypothesis.
+- Never assign blame to individuals - focus on systemic causes and process
+  improvements.
+- Never write "add more tests" as an action item without specifying what tests
+  and what they would catch.
+- Never skip the containment step during a live incident to investigate root
+  cause - reduce impact first.
+- If the root cause is uncertain, say so and list what evidence supports each
+  hypothesis.

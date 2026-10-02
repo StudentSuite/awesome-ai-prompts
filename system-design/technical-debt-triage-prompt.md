@@ -4,6 +4,9 @@ Copy-paste the block below into any AI coding agent to inventory a codebase's
 technical debt and get a prioritized paydown plan grounded in evidence, not
 vibes.
 
+A table: item, evidence, effort, risk of inaction, verdict, first step. Then
+the top three actions you would take this week and why.
+
 Keywords: technical debt, triage, prioritization, payoff, maintenance plan, what to fix first
 
 ---
@@ -15,27 +18,33 @@ outdated dependencies, drift between docs and behavior, TODO clusters.
 
 ## Steps
 
-1. **Survey** - Scan the repo systematically: module coupling and size
-   hotspots (largest files/functions), test coverage gaps on critical paths,
-   dependency staleness, TODO/FIXME/HACK density, config sprawl, doc/code
-   drift.
-2. **Verify impact** - For each candidate item, confirm it actually hurts:
-   find evidence (bug reports touching that area, slow CI stages, repeated
+1. **Survey** - Scan the repo systematically: module coupling and size hotspots
+   (largest files/functions), test coverage gaps on critical paths, dependency
+   staleness, TODO/FIXME/HACK density, config sprawl, doc/code drift.
+2. **Verify impact** - For each candidate item, confirm it actually hurts: find
+   evidence (bug reports touching that area, slow CI stages, repeated
    workarounds). Discard items with no observable cost.
-3. **Quantify crudely but honestly** - Estimate effort (S/M/L) and the risk
-   of leaving it (what breaks, what it blocks). Prefer measured signals (test
+3. **Quantify crudely but honestly** - Estimate effort (S/M/L) and the risk of
+   leaving it (what breaks, what it blocks). Prefer measured signals (test
    counts, bundle size, build time) over adjectives.
 4. **Triage** - Sort into: fix now (blocks current work or risks incidents),
    schedule (real cost, not urgent), accept (cost exceeds payoff - document
    why), delete (dead code/config - removing beats refactoring).
-5. **Plan** - For "fix now" and "schedule" items: a concrete first step, how
-   to do it incrementally without a big-bang rewrite, and how to verify the
+5. **Plan** - For "fix now" and "schedule" items: a concrete first step, how to
+   do it incrementally without a big-bang rewrite, and how to verify the
    improvement (metric before/after).
 
-## Output
+## Verification
 
-A table: item, evidence, effort, risk of inaction, verdict, first step. Then
-the top three actions you would take this week and why.
+- [ ] The survey used the repo's own tooling, and each candidate was checked
+      against real impact rather than size alone.
+- [ ] Every item carries an effort estimate and a risk-of-ignoring estimate,
+      both crude but honest.
+- [ ] Items are sorted into fix now, schedule, and ignore, with the reason for
+      each placement.
+- [ ] Every fix-now item has a concrete first step and a way to verify it.
+- [ ] Dead code is flagged for deletion rather than scheduled for refactoring.
+- [ ] No diffs were produced; this is a plan.
 
 ## Rules
 

@@ -36,6 +36,14 @@ normalized data model that supports the required queries without over-engineerin
 7. **Verify** - Run the migration against a test database. Confirm the tables
    create cleanly, constraints fire correctly, and sample queries work.
 
+## Verification
+
+- [ ] No table duplicates one that already exists in the codebase.
+- [ ] Naming, types, nullability, and timestamp columns match the repo's existing schema conventions.
+- [ ] Referential integrity is enforced by foreign keys with explicit ON DELETE behavior, not only in application code.
+- [ ] Every index is justified by a stated WHERE, JOIN, or ORDER BY pattern.
+- [ ] The migration ran against a test database, and a constraint was shown firing on a violating row.
+
 ## Rules
 
 - Never drop or rename columns in a migration without a backward-compatible

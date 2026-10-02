@@ -11,7 +11,7 @@ Refactor the code I point you at in this repository. The goal is cleaner,
 more maintainable code with **identical external behavior**. Treat the test
 suite as the contract.
 
-## Method
+## Steps
 
 1. **Read first** - Understand the code and its callers before touching
    anything. Note every place the behavior is observable (return values,
@@ -29,6 +29,14 @@ suite as the contract.
 5. **Finish clean** - Remove dead code you created, keep naming consistent
    with the repo, and run the full suite plus lint/format/type checks at the
    end.
+
+## Verification
+
+- [ ] Current behavior is pinned by characterization tests that pass before any change, if the suite did not already cover it.
+- [ ] The suite ran after every step, and no test was altered to match new behavior unless the behavior change was intended and stated.
+- [ ] The diff contains no feature work, no formatting-only churn, and no renamed or re-signed public API.
+- [ ] Dead code created along the way was removed.
+- [ ] The full suite plus the repo's own lint, format, and type checks pass, with output shown.
 
 ## Rules
 
