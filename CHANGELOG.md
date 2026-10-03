@@ -19,6 +19,7 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `code-review/data-model-review-prompt.md` - schema, migration, and index review with evidence.
 - `testing-quality/property-based-testing-prompt.md` - property-based tests with generated inputs.
 - `mobile-dev/push-notifications-deep-links-prompt.md` - notifications and deep-link verification.
+- `mobile-dev/mobile-ui-audit-fix-prompt.md` - remediate every finding from a mobile UI audit with evidence-backed fixes, verification matrix, and behavior guard.
 - `data-ai/data-quality-validation-prompt.md` - data contracts, checks, and failure response.
 - aligned all 28 spec prompts with the field contract in `spec-prompt-schema-prompt.md`, and added the
   missing `[spec]` H1 suffix to the five prompts registered in `SPEC_PROMPTS` without it.
