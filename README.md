@@ -258,7 +258,7 @@ described above.
 - [Career & learning](#career--learning) (7)
 - [Frontend & UI](#frontend--ui) (13) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Data & AI](#data--ai) (13) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [Mobile development](#mobile-development) (7) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [Mobile development](#mobile-development) (8) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 
 ## Contributing to this repo
 
@@ -408,6 +408,7 @@ described above.
 - [mobile-app-develop-prompt.md](mobile-dev/mobile-app-develop-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - build a mobile feature and prove it works on both platforms: offline, permissions, deep links, lifecycle, with a platform verification matrix.
 - [mobile-performance-prompt.md](mobile-dev/mobile-performance-prompt.md) - find and fix mobile performance from measurements: startup, frame rate, app size, memory, network.
 - [mobile-ui-audit-prompt.md](mobile-dev/mobile-ui-audit-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - audit a mobile UI against platform conventions: touch targets, safe areas, accessibility, states, theming, with file:line fixes.
+- [mobile-ui-audit-fix-prompt.md](mobile-dev/mobile-ui-audit-fix-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - remediate every finding from a mobile UI audit (AUDIT.md) with evidence-backed fixes, verification matrix, and behavior guard.
 - [mobile-ui-overhaul-prompt.md](mobile-dev/mobile-ui-overhaul-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - overhaul a mobile UI end-to-end: target design spec, token layer, reimplemented screens, with before/after proof on every platform.
 - [website-to-mobile-app-prompt.md](mobile-dev/website-to-mobile-app-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - turn a website into a mobile app, choosing the adaptation strategy from the site's actual architecture: wrapper vs shared-logic vs native.
 - [mobile-app-project-setup-prompt.md](mobile-dev/mobile-app-project-setup-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - bootstrap a new mobile app: argued stack choice, feature-based structure, navigation skeleton, both platforms building from a clean clone on CI.
