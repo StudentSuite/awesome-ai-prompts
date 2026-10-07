@@ -259,7 +259,7 @@ described above.
 - [Frontend & UI](#frontend--ui) (13) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Data & AI](#data--ai) (13) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Mobile development](#mobile-development) (8) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
-- [System & Exploration](#system--exploration) (1)
+- [System & Exploration](#system--exploration) (1) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 
 ## Contributing to this repo
 
@@ -466,4 +466,4 @@ Every translation is written and tested by a person. See
 
 ## System & Exploration
 
-- [drive-space-investigator-prompt.md](system-and-exploration/drive-space-investigator-prompt.md) - Strictly read-only drive space investigator that scans near-capacity disks, finds largest files and waste/regenerable items, and produces a comprehensive, review-only report.
+- [drive-space-investigator-prompt.md](system-and-exploration/drive-space-investigator-prompt.md) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px"> - Strictly read-only drive space investigator that scans near-capacity disks, finds largest files and waste/regenerable items, and produces a comprehensive, review-only report.

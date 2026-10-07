@@ -48,6 +48,7 @@ CATEGORY_ICONS = {
     "git-github": "git-branch",
     "mobile-dev": "smartphone",
     "security-performance": "shield",
+    "system-and-exploration": "laptop",
     "system-design": "layers",
     "testing-quality": "flask-conical",
 }
