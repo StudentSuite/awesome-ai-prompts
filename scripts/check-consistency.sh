@@ -16,7 +16,7 @@ cd "$repo" || exit 1
 BASE_REF="${BASE_REF:-origin/main}"
 fail=0
 
-CATEGORIES="a-a-p-contributing career-learning code-review core-coding data-ai devops-deploy docs-delivery frontend-ui git-github mobile-dev security-performance system-design testing-quality"
+CATEGORIES="a-a-p-contributing career-learning code-review core-coding data-ai devops-deploy docs-delivery frontend-ui git-github mobile-dev security-performance system-design testing-quality system-and-exploration"
 
 # Authoritative list of [spec] prompts. Must stay in sync with the badge
 # images in README.md (see section 5 below).
@@ -37,6 +37,7 @@ meta_for() {
     mobile-dev)           echo "Mobile development|mobile-development" ;;
     security-performance) echo "Security & performance|security--performance" ;;
     system-design)        echo "System design|system-design" ;;
+    system-and-exploration) echo "System & Exploration|system--exploration" ;;
     testing-quality)      echo "Testing & quality|testing--quality" ;;
     *)                    return 1 ;;
   esac

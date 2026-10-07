@@ -259,6 +259,7 @@ described above.
 - [Frontend & UI](#frontend--ui) (13) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Data & AI](#data--ai) (13) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
 - [Mobile development](#mobile-development) (8) <img src="docs/media/spec-badge.svg" alt="spec" style="vertical-align:-3px">
+- [System & Exploration](#system--exploration) (1)
 
 ## Contributing to this repo
 
@@ -462,3 +463,7 @@ and "never delete the staging branch" are one word apart and produce opposite
 actions, and no gate can tell afterwards that a translation inverted a rule.
 Every translation is written and tested by a person. See
 [CONTRIBUTING.md](CONTRIBUTING.md#translations) if you want to add one.
+
+## System & Exploration
+
+- [drive-space-investigator-prompt.md](system-and-exploration/drive-space-investigator-prompt.md) - Strictly read-only drive space investigator that scans near-capacity disks, finds largest files and waste/regenerable items, and produces a comprehensive, review-only report.
